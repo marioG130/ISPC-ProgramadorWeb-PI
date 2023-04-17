@@ -1,5 +1,9 @@
 .container {
-  padding: 30px 0;
+
+    text-align: center;
+     width: 700px;
+     height: 700px;
+     padding: 30px 0;
   
 }
 /* Falta agregar paleta de colores */

@@ -125,7 +125,7 @@ td,th{
 
 
 .logoSomos{
-    width: 35%;
+    width: 15%;
     text-align: -webkit-center;
 }
 
@@ -252,5 +252,12 @@ td,th{
         font-size: 14px;
     }
     
+
+}
+
+
+.img {
+
+text-align: center;
 
 }
