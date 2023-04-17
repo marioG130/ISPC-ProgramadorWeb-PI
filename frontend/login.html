@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/bootstrap-5.2.1.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/login.css">
+    
+    <title>Login TEMIRO</title>
+</head>
+<body>
+    
+    <section class="form-box">
+
+        <!-- Acá podría ubicarse el logo de la óptica -->
+        <h1 class="form-title">Iniciar sesión</h1>
+        <form action="" class="needs-validation" novalidate >
+            <input type="text" placeholder="Usuario" class="transfor" required minlength="5" maxlength="30">
+            <div class="invalid-feedback">
+               Por favor ingrese su nombre de usuario (entre 5 y 30 caract.)<br><br>
+            </div> 
+            <input type="password" placeholder="Contraseña" class="transfor" required minlength="8" maxlength="80">
+            <div class="invalid-feedback">
+               Por favor ingrese su contraseña (entre 8 y 80 caract.)<br><br>
+            </div>  
+            <button type="submit" class="btn">Ingresar</button>
+        </form>
+        <p>¿No tiene una cuenta? Entrar en  
+           <a class="enlace" href="formulario-registro.html"> Registrarse</a>
+        </p>
+    
+    </section>
+
+    <script src="js/bootstrap-5.2.1.bundle.min.js"></script>
+    <script src="js/validacionLogin.js"></script>   
+</body>
+</html>
