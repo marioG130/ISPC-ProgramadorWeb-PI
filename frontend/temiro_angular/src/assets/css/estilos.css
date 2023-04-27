@@ -1,0 +1,263 @@
+
+@font-face {
+    font-family: 'roboto';
+    src: url('fuentes/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+html {
+    font-size: 12px;
+  }
+:root {
+    --white: #ffffffff;
+    --celeste: #78baeb;
+    --verde: #51f576;
+    --azul: #0a6bf2;
+    --gris: #24303c;
+    --negro: #000000;
+    --veryBig: calc(1em + 1vw);
+    --big: calc(0.26em + 1vw);
+    --medium: calc(0.22em + 1vw);
+    --small: calc(0.16em + 1vw);
+    --verysmall: calc(0.12em + 1vw);
+  }
+
+.bodyContacto{
+    display: block;
+    margin: 8px;
+}
+
+.headerContacto{
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.cajaContacto{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.logoContacto{
+    width: 35%;
+    text-align: -webkit-center;  
+}
+
+.mainContacto{
+    width: 940px;
+    margin: 0 auto;
+    display: block;   
+}
+
+.formContacto{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin:20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    background: orange;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+.tableContacto{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color:white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+.footerContacto{
+    text-align: center;
+    padding:40px;
+}
+
+.copyrightContacto{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin:20px;
+    text-align: center;
+}
+
+.headerSomos{
+    text-align: -webkit-center;
+    font-size: large;
+}
+
+
+.logoSomos{
+    width: 15%;
+    text-align: -webkit-center;
+}
+
+.imgsomos{
+    margin-top: 2%;
+    width: 100%;
+    text-align: -webkit-center;
+    padding-top: 5px;
+}
+
+.title-somos{
+    font-size: x-large;
+    text-align: -webkit-center;
+}
+
+.p1text-somos{
+    font-size: x-large;
+    text-align: -webkit-center;
+    margin-bottom: 2%;
+    
+}
+
+.text-img{
+    background-color: var(--white);
+    text-align: -webkit-center;
+}
+
+.subtitle-somos{
+    margin-top: 2%;
+    font-size: x-large;
+    text-align: -webkit-center;
+}
+
+.temiro-ofrece{
+    text-align: -webkit-center;
+    align-items: center;
+    font-size: x-large;
+}
+
+.footer-somos {
+    text-align: -webkit-center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 14px;
+}
+
+.Terminos{
+    background-color: var(--white);
+}
+
+.logoFAQ{
+    width: 25%;
+    margin-top: 3%;
+}
+
+.title-FAQ{
+    margin: 3%;
+    font-size: var(--veryBig);
+}
+
+.FAQ{
+    background-color: var(--white);
+    display:flexbox;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-FAQ{
+    height: 60%;
+    margin: 0%;
+ 
+}
+
+ .contenido-FAQ{
+    margin-left: 10%;
+    width: 77%;
+    background-color: var(--white);
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    font-size: var(--medium);
+    text-align: left;
+ }
+
+ .footer-faq{
+    margin-top: 5%;
+    font-size: var(--medium);
+}
+
+@media only screen and (min-width: 360px) and (max-width: 992px) {
+
+    .logoFAQ{
+        width: 35%;
+        margin-top: 3%;
+    }
+    .title-FAQ{
+        margin: 3%;
+        font-size: 20px;
+    }
+    .FAQ{
+        background-color: var(--celeste);
+        display:flexbox;
+        align-items: center;
+        text-align: center;
+    }
+    .contenedor-FAQ{
+        height: 60%;
+        margin: 0%;
+      
+    
+     }
+     .contenido-FAQ{
+        margin-left: 10%;
+        width: 77%;
+        height: 60%;
+        background-color: var(--celeste);
+        display: flex;
+        justify-content:center;
+        align-items: flex-start;
+        font-size: 14px;
+     }
+    .footer-faq{
+        margin-top: 5%;
+        font-size: 14px;
+    }
+    
+
+}
+
+
+.img {
+
+text-align: center;
+
+}
