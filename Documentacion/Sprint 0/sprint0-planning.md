@@ -23,7 +23,7 @@ En la misma realizamos lo siguiente:
 
 ![Pila completa 66 _ Conoce a Jitsi - Google Chrome 18_4_2023 22_08_28](https://user-images.githubusercontent.com/106987139/233762672-8e575288-e82e-4b9a-b83c-49caa4562aa7.png)
 
-<div></div>
+<div>
 # Sprint review y Sprint retrospective meeting del Sprint 0
 ### Reunión del día sábado 22/04/2023 11:00 hs
 
@@ -31,8 +31,8 @@ Siendo las 11 horas del día 22 de abril de 2023 comienza la reunión del grupo 
 Sprint planning (Sprint 1)
 
 Para el Sprint 1 se estableció que Mariano Delfino sea el scrum master. Se tomó la decisión de colocar toda la documentación y registro de las reuniones como archivos editables dentro del repositorio para que sea más fácil trabajar con los mismos a medida que sea necesario modificarlos. Se revisó la lluvia de ideas realizada para historias de usuario para la siguiente etapa (e-commerce), acordando que cada uno tome 4 para desarrollar. Se establecieron los roles principales de cada uno, si bien todos estarán atentos a cada parte del proyecto, para la parte de front-end Gonzalo y Noelia serán los responsables, para la parte de back-end Mario y Tatiana mientras que para la documentación Fernanda y Alejandro serán los encargados. Siendo las 12:15 se da por finalizada la reunión, confirmándose la siguiente para el martes a las 21:30 horas.
-<div></div>
+
 ![22 de Abril1](https://user-images.githubusercontent.com/106089568/234434966-267125bf-465f-4065-afb1-bf9b9a42d4ea.png)
 
-
+</div>
 
