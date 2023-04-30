@@ -10,10 +10,8 @@ import { SectionComponent } from './section/section.component';
 
 @NgModule({
   declarations: [
-    NavbarComponent,
-    BodyComponent,
-    FooterComponent,
-    SectionComponent
+    
+    
   ],
   imports: [
     CommonModule,
