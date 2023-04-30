@@ -7,6 +7,7 @@ import { NavbarComponent } from './home/navbar/navbar.component';
 import { FooterComponent } from './home/footer/FooterComponent';
 import { BodyComponent } from './home/body/body.component';
 import { SectionComponent } from './home/section/section.component';
+import { RegistroComponent } from './home/registro/registro.component';
 
 
 
@@ -22,13 +23,14 @@ import { SectionComponent } from './home/section/section.component';
     NavbarComponent,
     FooterComponent,
     BodyComponent,
-    SectionComponent
+    SectionComponent,
+    RegistroComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
