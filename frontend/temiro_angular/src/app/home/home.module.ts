@@ -4,7 +4,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/FooterComponent';
 import { SectionComponent } from './section/section.component';
-import { RegistroComponent } from './registro/registro.component';
 
 
 
@@ -14,13 +13,13 @@ import { RegistroComponent } from './registro/registro.component';
     NavbarComponent,
     BodyComponent,
     FooterComponent,
-    SectionComponent,
-    RegistroComponent
+    SectionComponent
+
   ],
   imports: [
     CommonModule,
     ]
-  
-    
+
+
 })
 export class HomeModule { }
