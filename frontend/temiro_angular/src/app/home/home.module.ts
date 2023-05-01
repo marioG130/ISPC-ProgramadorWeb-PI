@@ -14,7 +14,6 @@ import { SectionComponent } from './section/section.component';
     BodyComponent,
     FooterComponent,
     SectionComponent
-
   ],
   imports: [
     CommonModule,

@@ -10,13 +10,6 @@ import { SectionComponent } from './home/section/section.component';
 import { RegistroComponent } from './home/registro/registro.component';
 
 
-
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +23,6 @@ import { RegistroComponent } from './home/registro/registro.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
