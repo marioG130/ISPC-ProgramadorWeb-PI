@@ -6,11 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { FooterComponent } from './home/footer/FooterComponent';
 import { BodyComponent } from './home/body/body.component';
-
-
-
-
-
+import { SectionComponent } from './home/section/section.component';
+import { RegistroComponent } from './home/registro/registro.component';
 
 
 @NgModule({
@@ -19,15 +16,13 @@ import { BodyComponent } from './home/body/body.component';
     NavbarComponent,
     FooterComponent,
     BodyComponent,
-    
-    
+    SectionComponent,
+    RegistroComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
