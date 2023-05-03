@@ -8,7 +8,7 @@ import { FooterComponent } from './home/footer/FooterComponent';
 import { BodyComponent } from './home/body/body.component';
 import { SectionComponent } from './home/section/section.component';
 import { RegistroComponent } from './home/registro/registro.component';
-import { TermycondicionesComponent } from './termycondiciones/termycond/termycondiciones.component';
+
 
 
 @NgModule({
@@ -19,7 +19,6 @@ import { TermycondicionesComponent } from './termycondiciones/termycond/termycon
     BodyComponent,
     SectionComponent,
     RegistroComponent,
-    TermycondicionesComponent,
     ],
   imports: [
     BrowserModule,
