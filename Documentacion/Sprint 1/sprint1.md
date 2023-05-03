@@ -30,27 +30,19 @@ Quedamos en lo siguiente:
 
 ![25 de abril](https://user-images.githubusercontent.com/106987139/235297280-411840e0-deec-44ed-ae2f-2c6b1d7c5b63.png)
 
-29/04/23
+# DAILY SCRUM MEETING 2
+## Sábado 29/04/23
+Comienza la reunión a la hora pautada (11:00 horas), en la misma participaron Mario, Mariano, Tatiana, Gonzalo, Noelia, Fernanda y Alejandro. 
 
-- django 4.2
-- Se asignaron las Us a:
+Se estableció a la versión django 4.2 como la versión con la que se va a trabajar. Además se asignaron las siguiente Us:
 - Mariano: fundir US 4 y 24
 	   US 13 
-- Mario: inicializa django
-- casos de usos
-- 
-
 -Tatiana:
  registros de US
-
-- Gonza y Noe:
-
-- Ale y Fer: terminar sprint y repo y se linkea
-armar tk
-
-- Gonza y Noe: 
-
-Noe: preguntas frecuentes y diseño
-
-Sabados 7hs a 8 hs
-Miércoles 21hs a 22 hs
+Además se acuerda de poner atención y armar las tk correspondientes
+- Gonza y Noe: front-end
+- Mario: inicializa django
+- Noe: preguntas frecuentes y diseño
+- Ale y Fer: trabajar con la documentación
+Se establecen nuevos ghorarios y dias para las reuniones grupales, siendo estas los Sabados 7hs a 8 hs y los Miércoles 21hs a 22 hs
+La reunión termina 12:30 horas
