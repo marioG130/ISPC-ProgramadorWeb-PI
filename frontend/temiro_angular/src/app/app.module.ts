@@ -8,7 +8,6 @@ import { FooterComponent } from './home/footer/FooterComponent';
 import { BodyComponent } from './home/body/body.component';
 import { SectionComponent } from './home/section/section.component';
 import { RegistroComponent } from './home/registro/registro.component';
-import { TermycondicionesComponent } from './termycondiciones/termycond/termycondiciones.component';
 
 
 
@@ -20,10 +19,6 @@ import { TermycondicionesComponent } from './termycondiciones/termycond/termycon
     BodyComponent,
     SectionComponent,
     RegistroComponent,
-<<<<<<< HEAD
-=======
-    TermycondicionesComponent,
->>>>>>> 53c22b15925d9c5857bc45e9fff46a88312aff76
     ],
   imports: [
     BrowserModule,
