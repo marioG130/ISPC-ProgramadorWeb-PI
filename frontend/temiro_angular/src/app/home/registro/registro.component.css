@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --white: #ffffffff;
   --celeste: #78baeb;
   --verde: #51f576;
@@ -9,11 +9,12 @@
   --medium: 18px;
   --small: 14px;
   --verysmall: 10px;
-}
+}*/
 
 * {
   margin: 0;
   padding: 0;
+  margin-bottom: 60px;
   box-sizing: border-box;
 }
 
