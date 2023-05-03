@@ -11,6 +11,7 @@ import { RegistroComponent } from './home/registro/registro.component';
 import { TermycondicionesComponent } from './termycondiciones/termycond/termycondiciones.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,10 @@ import { TermycondicionesComponent } from './termycondiciones/termycond/termycon
     BodyComponent,
     SectionComponent,
     RegistroComponent,
+<<<<<<< HEAD
+=======
     TermycondicionesComponent,
+>>>>>>> 53c22b15925d9c5857bc45e9fff46a88312aff76
     ],
   imports: [
     BrowserModule,
