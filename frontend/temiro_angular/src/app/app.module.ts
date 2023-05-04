@@ -8,6 +8,7 @@ import { FooterComponent } from './home/footer/FooterComponent';
 import { BodyComponent } from './home/body/body.component';
 import { SectionComponent } from './home/section/section.component';
 import { RegistroComponent } from './home/registro/registro.component';
+import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.component';
 
 
 
@@ -19,6 +20,7 @@ import { RegistroComponent } from './home/registro/registro.component';
     BodyComponent,
     SectionComponent,
     RegistroComponent,
+    QuienesSomosComponent
     ],
   imports: [
     BrowserModule,

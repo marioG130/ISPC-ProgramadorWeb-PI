@@ -6,6 +6,8 @@ import { TermycondicionesComponent } from './termycondiciones/termycond/termycon
 import { SectionComponent } from './home/section/section.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import {FaqComponent } from './home/faq/faq.component';
+import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.component';
+
 
 const routes: Routes = [
   { path: '', component: BodyComponent},
@@ -14,6 +16,7 @@ const routes: Routes = [
   {path: 'termycond', component: TermycondicionesComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'faq', component: FaqComponent},
+  {path: 'quienes-somos', component: QuienesSomosComponent}
 ];
 
 @NgModule({
