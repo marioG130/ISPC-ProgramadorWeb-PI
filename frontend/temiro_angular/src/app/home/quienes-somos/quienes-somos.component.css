@@ -1,0 +1,42 @@
+.logoSomos{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;  
+}
+
+.imgsomos{
+    margin-top: 2%;
+    width: 100%;
+    text-align: -webkit-center;
+    padding-top: 5px;
+     
+}
+
+.title-somos{
+    font-size: x-large;
+    text-align: -webkit-center;
+}
+
+.p1text-somos{
+    font-size: x-large;
+    text-align: -webkit-center;
+    margin-bottom: 2%;
+    
+}
+
+.text-img{
+    background-color: var(--white);
+    text-align: -webkit-center;
+}
+
+.subtitle-somos{
+    margin-top: 2%;
+    font-size: x-large;
+    text-align: -webkit-center;
+}
+
+.temiro-ofrece{
+    text-align: -webkit-center;
+    align-items: center;
+    font-size: x-large;
+}
