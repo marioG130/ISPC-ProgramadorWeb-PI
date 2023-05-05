@@ -7,7 +7,7 @@ import { SectionComponent } from './home/section/section.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import {FaqComponent } from './home/faq/faq.component';
 import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.component';
-
+import { ContactoComponent } from './home/contacto/contacto.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent},
@@ -16,7 +16,8 @@ const routes: Routes = [
   {path: 'termycond', component: TermycondicionesComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'faq', component: FaqComponent},
-  {path: 'quienes-somos', component: QuienesSomosComponent}
+  {path: 'quienes-somos', component: QuienesSomosComponent},
+  {path: 'contacto', component: ContactoComponent},
 ];
 
 @NgModule({

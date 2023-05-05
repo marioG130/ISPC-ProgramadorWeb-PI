@@ -5,9 +5,7 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/FooterComponent';
 import { SectionComponent } from './section/section.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
-
-
-
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +13,8 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     BodyComponent,
     FooterComponent,
     SectionComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    ContactoComponent
   ],
   imports: [
     CommonModule,
