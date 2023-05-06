@@ -549,7 +549,8 @@ Instalación y mantenimiento stack Django
 Sprint 3.2
 
 <div id='id19' />
-####3.2.1 Sprint 0
+
+#### 3.2.1 Sprint 0
 | N° de Sprint  | 0  |
 | ------------ | ------------ |
 | Sprint Backlog  |   |
@@ -559,6 +560,8 @@ Sprint 3.2
 ------------
 <div id='id20' />
 
+#### 3.2.2 Sprint 1
+
 | N° de Sprint  | 1  |
 | ------------ | ------------ |
 | Sprint Backlog  |   |
@@ -566,6 +569,8 @@ Sprint 3.2
 | Calendario  | Inicio: 24/04/23 - Finalización: 05/05/23  |
 
 <div id='id21' />
+
+#### 3.2.3 Sprint 2
 
 | N° de Sprint  | 2  |
 | ------------ | ------------ |
