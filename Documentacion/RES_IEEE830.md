@@ -156,7 +156,10 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 <div id='id6' />
 
 #### 1.5 Referencias
+
 | Título del Documento  | Referencia  |
+=======
+| Titulo del Documento  | Referencia  |
 | ------------ | ------------ |
 | Standard IEEE 830 - 1998  | IEEE  |
 
@@ -477,7 +480,9 @@ Como Administrador:
 
 ------------
 
-###### US20 - Información del Producto
+
+###### US20 - Informacion del Producto
+
 * Como cliente
 * quiero visualizar toda la información acerca de un producto 
 * para poder decidirme si lo compro.
