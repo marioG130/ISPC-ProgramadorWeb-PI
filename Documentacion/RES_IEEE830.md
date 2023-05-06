@@ -42,10 +42,16 @@ Está basado y es conforme con el estándar IEEE Std 830-1998.
 2.3 [Restricciones](#id11)
 ####  [3 REQUISITOS ESPECÍFICOS](#id12)
 3.1.1 [Product Backlog US1 a US5](#id13)
+3.1.2 [Product Backlog US6 a US10](#id14)
+3.1.3 [Product Backlog US11 a US15](#id15)
+3.1.2 [Product Backlog US16 aUS20](#id16)
+3.1.2 [Product Backlog US21 en adelante](#id17)
+3.2 [Sprints](#id18)
+3.2.1 [Sprint0](#id19)
+3.2.1 [Sprint 1](#id20)
 3.1.2 [Product Backlog US6 A US10](#id14)
 3.1.3 [Product Backlog US11 A US15](#id15)
 3.1.2 [Product Backlog Resto de US](#id16)
-
 3.2 [Sprints](#id17)
 3.2.1 [Sprint0](#id18)
 3.2.1 [Sprint 1](#id19)
@@ -243,8 +249,6 @@ Criterios de aceptación:
 El diseñador presentará al dueño del producto diferentes prototipos y éste elegirá el que considere más adecuado de acuerdo a sus expectativas.
 
 
-------------
-
 ######US05 - Ver ¿Quiénes Somos?
 * COMO: Product Owner (o dueño del negocio y sitio web) …
 
@@ -262,9 +266,8 @@ Servicio de repuestos y reparaciones.
 
 ------------
 
-
-
 <div id='id14' />
+
 ######US06 - Ver Productos y Precios
 * como usuario
 * quiero Poder visualizar los productos por categoría, Rangos de precios de mayor a menor precio, Marcas de armazones.
@@ -275,8 +278,6 @@ Como usuario: Ingresar al sitio y poder visualizar los productos por categorías
 
 ------------
 
-
-
 ######US07 - Ver Términos y Condiciones
 * Como usuario
 * Quiero tener pautas claras en cuanto a los términos y políticas de privacidad del sitio.
@@ -285,7 +286,6 @@ Como usuario: Ingresar al sitio y poder visualizar los productos por categorías
 * Criterios de aceptación:la ubicación de la misma no será fija siempre que la misma sea visible,que la información de la misma se actualice cuando surja cualquier cambio de políticas.
 
 ------------
-
 
 ###### Ver Sección FAQ
 Como:
@@ -310,8 +310,6 @@ podrá ver las preguntas realizadas por otros usuarios con mayor frecuencia.
 
 ------------
 
-
-
 ###### US09 - Registro de Usuario
 * Como usuario(visitante no registrado)
 * quiero registrarme en el sitio 
@@ -326,11 +324,13 @@ podrá ver las preguntas realizadas por otros usuarios con mayor frecuencia.
 
 ------------
 
-
 ###### US10 - Login de Usuario
 * Como usuario (visitante registrado)
 * Quiero registrar datos solicitados por el sistema 
 * Para acceder a funcionalidades de productos y servicios restringidos a visitantes no registrados.
+
+<div id='id15' />
+
 ###### US11 - Pedidos de Usuario
 * Como: Usuario registrado
 * Quiero: Realizar un pedido de elementos oftalmologicos a la Optica Temiro
@@ -362,6 +362,7 @@ podrá ver las preguntas realizadas por otros usuarios con mayor frecuencia.
 ------------
 
 ###### US14 - Editar datos de Usuario
+
 * Como:
 Usuario Registrado
 
@@ -381,6 +382,8 @@ form con datos personales ya precargados donde se puedan modificar
 Ser un usuario registrado,
 Ingresar a la cuenta,
 podra ver su información personal
+
+------------
 
 ###### US15 - Dashboard de Administración
 * como: Dueño
@@ -405,9 +408,153 @@ Gestión de Datos.
 Ser un usuario registrado,
 Ingresar a la cuenta,
 Podrá ver las operaciones que podrá realizar.
-<div id='id15' />
 
+
+------------
 <div id='id16' />
+######US16 - Consultar Detalles de Pedidos
+* Como:
+Usuario Admnistrador
+
+* Quiero:
+Tener informacion detallada de los pedidos
+
+* Para:
+tener informacion trascendental para la toma de decisiones con respecto a que es lo que tiene salida y que no
+
+* Descripcion:
+se realizara una base de datos con datos de ventas, pedidos, vendedores, marcas, Cristales, clientes.
+
+* Debe contener:
+tablas con bases de datos SQL con los pedidos realizados por los clientes, estadisticas de los pedidos, marcas, cristales
+
+* Criterios de aceptacion:
+Ser un usuario Administrador,
+Ingresar a la cuenta,
+podra ver los pedidos realizados, podra ver estadisticas de las marcas mas vendidas, precios
+
+------------
+
+######US17 - Obtener Stock de productos
+* Como usuario (Administrador del sitio)
+* Quiero cuantificar el tipo y cantidad de productos más requeridos por los clientes
+* Para estimar el estado actual del stock de existentes y faltantes.
+
+------------
+
+
+######US18 - Presupuestos Pedidos
+* Como usuario (Administrador), 
+* quiero especificar una sección (o subsección) de consultas generales 
+* para que los usuarios (no necesariamente registrados) puedan solicitar presupuesto.
+
+------------
+
+######US19 - Definir productos y precios
+* como Administrador
+* quiero poder registrar un nuevo producto o su respectiva actualización de un producto existente.
+* Para: mantener actualizado el inventario con sus precios actuales.
+
+Criterios de aceptación:
+Como Administrador:
+1.Si el producto es nuevo se procede a asignarle un código de producto.
+2.Para la modificación de la cantidad de un producto,se procede a realizar una búsqueda,ya sea por nombre de producto o por su respectivo código.
+3.Mostrar una lista de los productos,la cual servirá como catálogo de productos.
+
+------------
+
+######US20 - Informacion del Producto
+* Como cliente
+* quiero visualizar toda la información acerca de un producto 
+* para poder decidirme si lo compro.
+
+* Se mostrará la imagen del producto.
+Se mostrará el nombre, la descripción, el precio y el stock.
+Se podrá suscribir a él o comprarlo, (si el cliente inicio sesión).
+
+------------
 <div id='id17' />
+
+######US21 - Catálogo
+* Como dueño
+* quiero que el sitio web contenga un catálogo con todos los productos y servicios disponibles por la Óptica TeMiro.
+* para tener un control de los productos que se ofrecen
+
+* Los productos del catálogo deben contener código, nombre del producto, marca, precio e imágenes. Deberá aparecer una descripción si se tiene el producto en stock.
+
+###### US22 - Modulo Carrito de Compras
+* Como comprador,
+* Quiero poder ver y agregar productos al carrito de compra.
+* Para tener una experiencia de compra acorde a mis necesidades
+
+Criterios de aceptación:
+
+• Verificar que el usuario pueda agregar y eliminar ítems al carrito de compra.
+• Que pueda visualizar el producto con (Nombre,Imagen,Precio).
+•La opción de poder comprar.
+
+------------
+
+######US23 - Categorías de Productos
+* Como Administrador:
+
+* Quiero Agregar productos con imagen e información
+* para mostrar los productos en el catalogo correspondiente.
+* Criterios de Aceptación :
+Crear categorías y asociar a un producto nuevo.
+Los nuevos productos se asocian a una categoría para su fácil búsqueda.
+
+------------
+
+######US90 - General - Documentación
+* Como: Desarrollador
+* Quiero: Modificar a medida que vamos progresando con tareas las especificaciones IEEE830
+* Para: Adecuar al desarrollo del programa las especificaciones
+
+------------
+
+######US91 - General - Develop
+* Tareas generales para el desarrollo del proyecto
+
+* Tareas generales de FRONTEND
+
+* Instalación y mantenimiento stack Angular
+Tareas generales de BACKEND
+
+* Mantenimiento esquema general BBDD
+Instalación y mantenimiento stack Django
+
+------------
+
+######US92 - General - Deploy
+* Tareas generales de deploy del proyecto en los diferentes entornos: desarrollo, pruebas y producción
+
+
 <div id='id18' />
+Sprint 3.2
+
 <div id='id19' />
+####3.2.1 Sprint 0
+| N° de Sprint  | 0  |
+| ------------ | ------------ |
+| Sprint Backlog  |   |
+| Responsabilidades  | se solicita el proyecto que han trabajado y aplicado todos los contenidos dados en el módulo de la cursada previa (HTML5, CSS3, BOOTSTRAP, JAVASCRIPT) para extraer recursos necesarios y asi continuar desde ese punto con las nuevas solicitudes. Revisar la estructura web Semántica, responsive (RWD) |
+| Calendario  | Inicio: 10/04/23 - Finalización: 21/04/23  |
+
+------------
+<div id='id20' />
+
+| N° de Sprint  | 1  |
+| ------------ | ------------ |
+| Sprint Backlog  |   |
+| Responsabilidades  | Convertir los archivos .html del proyecto previo, en una SPA en Angular con módulos (Layouts/Shared y Pages son un ejemplo) con sus components correspondientes. (HOME, REGISTRO, LOGIN, DASHBOARD). Crear módulos y componentes para la tienda virtual o ecommerce. (PRODUCTO o SERVICIOS, PRODUCTO INDIVIDUAL, COMPRA).Subir en la carpeta documentación las tablas actualizadas de la base de datos: Diseño conceptual al que ya hemos visto como DER: Diagrama Entidad-Relación. Diseño Lógico que consta de la Normalización y el Modelo Relacional. Diseño Físico que es el script legible de la DB en MySQL. Crear un Diagrama de Clases y Casos de Uso para facilitar el modelado en POO.
+| Calendario  | Inicio: 24/04/23 - Finalización: 05/05/23  |
+
+<div id='id21' />
+
+| N° de Sprint  | 2  |
+| ------------ | ------------ |
+| Sprint Backlog  |   |
+| Responsabilidades  |  |
+| Calendario  |  |
+
