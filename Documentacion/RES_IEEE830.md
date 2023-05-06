@@ -1,6 +1,4 @@
 
-
-
 ------------
 
 
@@ -48,10 +46,15 @@ Está basado y es conforme con el estándar IEEE Std 830-1998.
 3.1.3 [Product Backlog US11 a US15](#id15)
 3.1.2 [Product Backlog US16 aUS20](#id16)
 3.1.2 [Product Backlog US21 en adelante](#id17)
-
 3.2 [Sprints](#id18)
 3.2.1 [Sprint0](#id19)
 3.2.1 [Sprint 1](#id20)
+3.1.2 [Product Backlog US6 A US10](#id14)
+3.1.3 [Product Backlog US11 A US15](#id15)
+3.1.2 [Product Backlog Resto de US](#id16)
+3.2 [Sprints](#id17)
+3.2.1 [Sprint0](#id18)
+3.2.1 [Sprint 1](#id19)
 
 ------------
 
@@ -61,17 +64,14 @@ Está basado y es conforme con el estándar IEEE Std 830-1998.
 
 Este documento es una Especificación de Requisitos Software (ERS) para el Sistema de información para el negocio Temiro Óptica. Esta especificación se ha estructurado basándose en las directrices dadas por el estándar IEEE Práctica Recomendada para Especificaciones de Requisitos Software ANSI/IEEE 830, 1998.
 Introducción
-
 <div id='id2' />
 
 #### 1.1 Propósito
 El presente documento tiene como propósito definir las especificaciones funcionales, para el desarrollo de un sistema de información web correspondiente a un centro dedicado a la oftalmología llamado Temiro Óptica orientado a la gestión y acceso tanto del personal de la entidad como de los potenciales usuarios.
-
 <div id='id3' />
 
 #### 1.2 Alcance
 Esta especificación de requisitos se orienta a que el sistema permitirá la gestión y organización de los productos y servicios específicos del rubro y administrar los procesos de comercialización. Asimismo, del lado del cliente, el sistema permitirá el acceso a las opciones de productos, servicios y contacto con la entidad.
-
 <div id='id4' />
 
 #### 1.3 Personal involucrado
@@ -262,7 +262,6 @@ El sistema de información Temiro Óptica  será un producto diseñado para trab
 Criterios de aceptación:
 El diseñador presentará al dueño del producto diferentes prototipos y éste elegirá el que considere más adecuado de acuerdo a sus expectativas.
 
-------------
 
 ###### US05 - Ver ¿Quiénes Somos?
 * COMO: Product Owner (o dueño del negocio y sitio web) …
@@ -282,7 +281,8 @@ Servicio de repuestos y reparaciones.
 ------------
 
 <div id='id14' />
-######US06 - Ver Productos y Precios
+
+###### US06 - Ver Productos y Precios
 * como usuario
 * quiero Poder visualizar los productos por categoría, Rangos de precios de mayor a menor precio, Marcas de armazones.
 * para Tener más opciones a la hora de elegir un producto.
@@ -342,8 +342,6 @@ podrá ver las preguntas realizadas por otros usuarios con mayor frecuencia.
 * Como usuario (visitante registrado)
 * Quiero registrar datos solicitados por el sistema 
 * Para acceder a funcionalidades de productos y servicios restringidos a visitantes no registrados.
-
-------------
 
 <div id='id15' />
 
@@ -425,6 +423,7 @@ Ser un usuario registrado,
 Ingresar a la cuenta,
 Podrá ver las operaciones que podrá realizar.
 
+
 ------------
 <div id='id16' />
 
@@ -490,6 +489,7 @@ Se podrá suscribir a él o comprarlo, (si el cliente inicio sesión).
 
 ------------
 <div id='id17' />
+
 ###### US21 - Catálogo
 * Como dueño
 * quiero que el sitio web contenga un catálogo con todos los productos y servicios disponibles por la Óptica TeMiro.
