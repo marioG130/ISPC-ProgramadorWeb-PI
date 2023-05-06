@@ -9,13 +9,6 @@
 ## 2023
 
 ------------
-#### Instrucciones para el uso de este formato
-Este formato es una plantilla tipo para documentos de requisitos del software.
-
-Está basado y es conforme con el estándar IEEE Std 830-1998.
-
-------------
-
 
 
 #### Ficha del documento
