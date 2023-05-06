@@ -59,18 +59,22 @@ Está basado y es conforme con el estándar IEEE Std 830-1998.
 ------------
 
 <div id='id1' />
-###1 Introducción
+
+### 1 Introducción
 
 Este documento es una Especificación de Requisitos Software (ERS) para el Sistema de información para el negocio Temiro Óptica. Esta especificación se ha estructurado basándose en las directrices dadas por el estándar IEEE Práctica Recomendada para Especificaciones de Requisitos Software ANSI/IEEE 830, 1998.
 Introducción
 <div id='id2' />
-####1.1 Propósito
+
+#### 1.1 Propósito
 El presente documento tiene como propósito definir las especificaciones funcionales, para el desarrollo de un sistema de información web correspondiente a un centro dedicado a la oftalmología llamado Temiro Óptica orientado a la gestión y acceso tanto del personal de la entidad como de los potenciales usuarios.
 <div id='id3' />
-####1.2 Alcance
+
+#### 1.2 Alcance
 Esta especificación de requisitos se orienta a que el sistema permitirá la gestión y organización de los productos y servicios específicos del rubro y administrar los procesos de comercialización. Asimismo, del lado del cliente, el sistema permitirá el acceso a las opciones de productos, servicios y contacto con la entidad.
 <div id='id4' />
-####1.3 Personal involucrado
+
+#### 1.3 Personal involucrado
 |Nombre | Callejas, Gonzalo  |
 | ------------ | ------------ |
 |   Rol | Desarrollador  |
@@ -138,7 +142,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 ------------
 
 <div id='id5' />
-####1.4 Definiciones, acrónimos y abreviaturas
+
+#### 1.4 Definiciones, acrónimos y abreviaturas
 
 | Nombre  | Descripción  |
 | ------------ | ------------ |
@@ -150,7 +155,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | RNF | Requerimiento No Funcional |
 
 <div id='id6' />
-####1.5 Referencias
+
+#### 1.5 Referencias
 | Titulo del Documento  | Referencia  |
 | ------------ | ------------ |
 | Standard IEEE 830 - 1998  | IEEE  |
@@ -163,13 +169,17 @@ En la segunda sección, se proporciona una descripción general sobre la perspec
 Y en la tercera sección, se especifican en detalle los requisitos que deberá satisfacer el el sistema de información.
 
 <div id='id8' />
-###2 Descripción General
+
+### 2 Descripción General
+
 <div id='id9' />
-####2.1 Perspectiva del producto
+
+#### 2.1 Perspectiva del producto
 El sistema de información Temiro Óptica  será un producto diseñado para trabajar en entornos WEB, lo que permitirá su utilización intuitiva, rápida y eficaz, además de que permitirá a los usuarios (visitantes/potenciales compradores) el acceso a los diferentes componentes del producto de acuerdo a los roles y permisos otorgados por el sistema.
 
 <div id='id10' />
-####2.2 Características de los usuarios
+
+#### 2.2 Características de los usuarios
 | Tipo de usuario | Administrador/es  |
 | ------------ | ------------ |
 | Formación  | Manejo de herramientas informáticas avanzadas que permitan el desarrollo integral del proyecto. |
@@ -191,14 +201,18 @@ El sistema de información Temiro Óptica  será un producto diseñado para trab
 | Actividades  | Observa e indaga información del sistema con la finalidad de realizar tareas de registro (hacer “loguin”), consultas exhaustivas sobre las disponibilidades del producto y posibles gestión para su adquisición, así como consultas específicas al administrador/gestor del sistema.   |
 
 <div id='id11' />
-###2.3 Restricciones
+
+### 2.3 Restricciones
 - Interfaz para ser usada con internet.
 - Lenguajes y tecnologías en uso: HTML5, CSS3, Bootstrap 5, JavaScript,  MySQL y Python.
 - El sistema de información deberá tener una interfaz sencilla que posibilite un manejo intuitivo para el usuario contemplando estándares de accesibilidad (Tener en cuenta a usuarios de la tercera edad o con disminución visual).
 
 <div id='id12' />
+
 ### 3 Requisitos específicos
+
 <div id='id13' />
+
 #### 3.1 Product Backlog
 ###### US01 - Definición del Nombre del Negocio
 * COMO: Product Owner (o dueño del negocio y sitio web)…
@@ -249,7 +263,7 @@ Criterios de aceptación:
 El diseñador presentará al dueño del producto diferentes prototipos y éste elegirá el que considere más adecuado de acuerdo a sus expectativas.
 
 
-######US05 - Ver ¿Quiénes Somos?
+###### US05 - Ver ¿Quiénes Somos?
 * COMO: Product Owner (o dueño del negocio y sitio web) …
 
 * NECESITO: Un espacio para describir de qué trata nuestro espacio, profesión, qué ofrecemos y cómo. Para que el visitante pueda interesarse e informarse desde una primera visita. Trasmitiendo confianza y brindando atención a sus necesidades desde el comienzo.
@@ -268,7 +282,7 @@ Servicio de repuestos y reparaciones.
 
 <div id='id14' />
 
-######US06 - Ver Productos y Precios
+###### US06 - Ver Productos y Precios
 * como usuario
 * quiero Poder visualizar los productos por categoría, Rangos de precios de mayor a menor precio, Marcas de armazones.
 * para Tener más opciones a la hora de elegir un producto.
@@ -278,7 +292,7 @@ Como usuario: Ingresar al sitio y poder visualizar los productos por categorías
 
 ------------
 
-######US07 - Ver Términos y Condiciones
+###### US07 - Ver Términos y Condiciones
 * Como usuario
 * Quiero tener pautas claras en cuanto a los términos y políticas de privacidad del sitio.
 * Para saber para qué se van a utilizar los datos,si los datos se van a compartir con otras personas,las medidas de seguridad que van a tener los datos,dónde se van a guardar tus datos y qué responsabilidades asume la empresa respecto a los servicios que presta.
@@ -287,7 +301,7 @@ Como usuario: Ingresar al sitio y poder visualizar los productos por categorías
 
 ------------
 
-###### Ver Sección FAQ
+###### US08 - Ver Sección FAQ
 Como:
 Usuario registrado
 
@@ -341,7 +355,7 @@ podrá ver las preguntas realizadas por otros usuarios con mayor frecuencia.
 
 ------------
 
-######US12 - Trámites de Usuario
+###### US12 - Trámites de Usuario
 * Como: Usuario registrado
 * Quiero: Realizar un trámite en la Optica Temiro, por ejemplo enviarle una receta
 * Para: Cumplir con ese trámite, por ejemplo que la Optica confeccione mis lentes según la receta
@@ -412,7 +426,8 @@ Podrá ver las operaciones que podrá realizar.
 
 ------------
 <div id='id16' />
-######US16 - Consultar Detalles de Pedidos
+
+###### US16 - Consultar Detalles de Pedidos
 * Como:
 Usuario Admnistrador
 
@@ -435,7 +450,7 @@ podra ver los pedidos realizados, podra ver estadisticas de las marcas mas vendi
 
 ------------
 
-######US17 - Obtener Stock de productos
+###### US17 - Obtener Stock de productos
 * Como usuario (Administrador del sitio)
 * Quiero cuantificar el tipo y cantidad de productos más requeridos por los clientes
 * Para estimar el estado actual del stock de existentes y faltantes.
@@ -443,14 +458,14 @@ podra ver los pedidos realizados, podra ver estadisticas de las marcas mas vendi
 ------------
 
 
-######US18 - Presupuestos Pedidos
+###### US18 - Presupuestos Pedidos
 * Como usuario (Administrador), 
 * quiero especificar una sección (o subsección) de consultas generales 
 * para que los usuarios (no necesariamente registrados) puedan solicitar presupuesto.
 
 ------------
 
-######US19 - Definir productos y precios
+###### US19 - Definir productos y precios
 * como Administrador
 * quiero poder registrar un nuevo producto o su respectiva actualización de un producto existente.
 * Para: mantener actualizado el inventario con sus precios actuales.
@@ -463,7 +478,7 @@ Como Administrador:
 
 ------------
 
-######US20 - Informacion del Producto
+###### US20 - Informacion del Producto
 * Como cliente
 * quiero visualizar toda la información acerca de un producto 
 * para poder decidirme si lo compro.
@@ -475,7 +490,7 @@ Se podrá suscribir a él o comprarlo, (si el cliente inicio sesión).
 ------------
 <div id='id17' />
 
-######US21 - Catálogo
+###### US21 - Catálogo
 * Como dueño
 * quiero que el sitio web contenga un catálogo con todos los productos y servicios disponibles por la Óptica TeMiro.
 * para tener un control de los productos que se ofrecen
@@ -495,7 +510,7 @@ Criterios de aceptación:
 
 ------------
 
-######US23 - Categorías de Productos
+###### US23 - Categorías de Productos
 * Como Administrador:
 
 * Quiero Agregar productos con imagen e información
@@ -506,14 +521,14 @@ Los nuevos productos se asocian a una categoría para su fácil búsqueda.
 
 ------------
 
-######US90 - General - Documentación
+###### US90 - General - Documentación
 * Como: Desarrollador
 * Quiero: Modificar a medida que vamos progresando con tareas las especificaciones IEEE830
 * Para: Adecuar al desarrollo del programa las especificaciones
 
 ------------
 
-######US91 - General - Develop
+###### US91 - General - Develop
 * Tareas generales para el desarrollo del proyecto
 
 * Tareas generales de FRONTEND
@@ -526,7 +541,7 @@ Instalación y mantenimiento stack Django
 
 ------------
 
-######US92 - General - Deploy
+###### US92 - General - Deploy
 * Tareas generales de deploy del proyecto en los diferentes entornos: desarrollo, pruebas y producción
 
 
@@ -534,7 +549,8 @@ Instalación y mantenimiento stack Django
 Sprint 3.2
 
 <div id='id19' />
-####3.2.1 Sprint 0
+
+#### 3.2.1 Sprint 0
 | N° de Sprint  | 0  |
 | ------------ | ------------ |
 | Sprint Backlog  |   |
@@ -544,6 +560,8 @@ Sprint 3.2
 ------------
 <div id='id20' />
 
+#### 3.2.2 Sprint 1
+
 | N° de Sprint  | 1  |
 | ------------ | ------------ |
 | Sprint Backlog  |   |
@@ -552,9 +570,10 @@ Sprint 3.2
 
 <div id='id21' />
 
+#### 3.2.3 Sprint 2
+
 | N° de Sprint  | 2  |
 | ------------ | ------------ |
 | Sprint Backlog  |   |
 | Responsabilidades  |  |
 | Calendario  |  |
-
