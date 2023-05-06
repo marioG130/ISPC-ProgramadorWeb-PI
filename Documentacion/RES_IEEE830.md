@@ -2,8 +2,7 @@
 ------------
 
 
-# Especificación de requisitos de softwareEspecificación de requisitos de software
-
+# Especificación de requisitos de software
 ## Proyecto:  Temiro Óptica
 
 
@@ -79,8 +78,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | ------------ | ------------ |
 |   Rol | Desarrollador  |
 |  Categoria Profesional | Estudiante   |
-|   Responsabilidad| Diseño y Programación del sitema   |
-| Informacion de contacto  | gonzalocallejas4@gmail.com  |
+|   Responsabilidad| Diseño y Programación del sistema   |
+| Información de contacto  | gonzalocallejas4@gmail.com  |
 
 ------------
 
@@ -88,8 +87,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | ------------ | ------------ |
 |   Rol | Desarrollador  |
 |  Categoria Profesional | Estudiante   |
-|   Responsabilidad| Diseño y Programación del sitema   |
-| Informacion de contacto  | mguerra13@gmail.com  |
+|   Responsabilidad| Diseño y Programación del sistema   |
+| Información de contacto  | mguerra13@gmail.com  |
 
 ------------
 
@@ -97,8 +96,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | ------------ | ------------ |
 |   Rol | Desarrolladora  |
 |  Categoria Profesional | Estudiante   |
-|   Responsabilidad| Diseño y Programación del sitema   |
-| Informacion de contacto  | gonzalocallejas4@gmail.com  |
+|   Responsabilidad| Diseño y Programación del sistema   |
+| Información de contacto  | gonzalocallejas4@gmail.com  |
 
 ------------
 
@@ -106,8 +105,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | ------------ | ------------ |
 |   Rol | Desarrollador  |
 |  Categoria Profesional | Estudiante   |
-|   Responsabilidad| Diseño y Programación del sitema   |
-| Informacion de contacto  | urbinatatiana077@gmail.com  |
+|   Responsabilidad| Diseño y Programación del sistema   |
+| Información de contacto  | urbinatatiana077@gmail.com  |
 
 ------------
 
@@ -117,8 +116,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | ------------ | ------------ |
 |   Rol | Desarrollador  |
 |  Categoria Profesional | Estudiante   |
-|   Responsabilidad| Diseño y Programación del sitema   |
-| Informacion de contacto  | ferchy341@yahoo.com.ar |
+|   Responsabilidad| Diseño y Programación del sistema   |
+| Información de contacto  | ferchy341@yahoo.com.ar |
 
 ------------
 
@@ -126,8 +125,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | ------------ | ------------ |
 |   Rol | Desarrollador  |
 |  Categoria Profesional | Estudiante   |
-|   Responsabilidad| Diseño y Programación del sitema   |
-| Informacion de contacto  | aleprieto@mi.unc.edu.ar  |
+|   Responsabilidad| Diseño y Programación del sistema   |
+| Información de contacto  | aleprieto@mi.unc.edu.ar  |
 
 ------------
 
@@ -135,8 +134,8 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 | ------------ | ------------ |
 |   Rol | Desarrollador/Scrum Master  |
 |  Categoria Profesional | Estudiante   |
-|   Responsabilidad| Diseño y Programación del sitema   |
-| Informacion de contacto  | marianod2003@gmail.com |
+|   Responsabilidad| Diseño y Programación del sistema   |
+| Información de contacto  | marianod2003@gmail.com |
 
 
 ------------
@@ -157,6 +156,9 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 <div id='id6' />
 
 #### 1.5 Referencias
+
+| Título del Documento  | Referencia  |
+=======
 | Titulo del Documento  | Referencia  |
 | ------------ | ------------ |
 | Standard IEEE 830 - 1998  | IEEE  |
@@ -195,7 +197,7 @@ El sistema de información Temiro Óptica  será un producto diseñado para trab
 
 ------------
 
-| Tipo de usuario  | Visitiante/s-Potencial/es comprador/es  |
+| Tipo de usuario  | Visitante/s-Potencial/es comprador/es  |
 | ------------ | ------------ |
 | Formación  | Manejo básico de entornos web y habilidades digitales para interactuar con los requerimientos del sistema.  |
 | Actividades  | Observa e indaga información del sistema con la finalidad de realizar tareas de registro (hacer “loguin”), consultas exhaustivas sobre las disponibilidades del producto y posibles gestión para su adquisición, así como consultas específicas al administrador/gestor del sistema.   |
@@ -266,7 +268,7 @@ El diseñador presentará al dueño del producto diferentes prototipos y éste e
 ###### US05 - Ver ¿Quiénes Somos?
 * COMO: Product Owner (o dueño del negocio y sitio web) …
 
-* NECESITO: Un espacio para describir de qué trata nuestro espacio, profesión, qué ofrecemos y cómo. Para que el visitante pueda interesarse e informarse desde una primera visita. Trasmitiendo confianza y brindando atención a sus necesidades desde el comienzo.
+* NECESITO: Un espacio para describir de qué trata nuestro espacio, profesión, qué ofrecemos y cómo. Para que el visitante pueda interesarse e informarse desde una primera visita. Transmitiendo confianza y brindando atención a sus necesidades desde el comienzo.
 
 * PROPUESTA: Somos una firma que brinda un servicio de alta calidad a la salud visual.
 Con la finalidad de atender las diferentes necesidades de nuestros clientes, contamos con un equipo de profesionales altamente capacitados y dispuestos a brindarle mediante un trato eficiente y cordial, la mejor solución a su problema.
@@ -309,10 +311,10 @@ Quiero:
 Revisar un registro de preguntas frecuentes
 
 Para:
-Orientarme como usuario si hay alguna duda con respecto a alguna sección determinada por ejemplo, como rellenar el Login
+Orientarme como usuario si hay alguna duda con respecto a alguna sección determinada por ejemplo, cómo rellenar el Login
 
 Descripción:
-* la seccion FAQ debera tener información actualizada de las preguntas más frecuentes realizadas por los usuarios para hacer dinámico la interacción con el mismo
+* la sección FAQ deberá tener información actualizada de las preguntas más frecuentes realizadas por los usuarios para hacer dinámico la interacción con el mismo
 
 * Debe contener:
 preguntas realizadas por usuarios con sus respectivas respuestas
@@ -347,9 +349,9 @@ podrá ver las preguntas realizadas por otros usuarios con mayor frecuencia.
 
 ###### US11 - Pedidos de Usuario
 * Como: Usuario registrado
-* Quiero: Realizar un pedido de elementos oftalmologicos a la Optica Temiro
+* Quiero: Realizar un pedido de elementos oftalmológicos a la Optica Temiro
 * Para: Comprar (pagando) por esos elementos
-* Descripción: Los usuarios que se hayan previamente registrado en el sitio web, y luego de haber ingresado al mismo (haber hecho "login"), podrán realizar pedidos de cualquiera de los productos y servicios ofrecidos por la Optica Temiro. Los productos son los que aparecen en el catálogo (con sus respectivos precios), y en los datos del usuario constarán la forma de pago preferida y la dirección y forma de envío preferidas.
+* Descripción: Los usuarios que se hayan previamente registrado en el sitio web, y luego de haber ingresado al mismo (haber hecho "login"), podrán realizar pedidos de cualquiera de los productos y servicios ofrecidos por la Óptica Temiro. Los productos son los que aparecen en el catálogo (con sus respectivos precios), y en los datos del usuario constarán la forma de pago preferida y la dirección y forma de envío preferidas.
 
 * Criterio de aceptación: Un usuario registrado debe poder pedir (comprar) un conjunto de productos e indicar la forma de pago y la dirección del envío.
 
@@ -357,19 +359,19 @@ podrá ver las preguntas realizadas por otros usuarios con mayor frecuencia.
 
 ###### US12 - Trámites de Usuario
 * Como: Usuario registrado
-* Quiero: Realizar un trámite en la Optica Temiro, por ejemplo enviarle una receta
-* Para: Cumplir con ese trámite, por ejemplo que la Optica confeccione mis lentes según la receta
+* Quiero: Realizar un trámite en la Óptica Temiro, por ejemplo enviarle una receta
+* Para: Cumplir con ese trámite, por ejemplo que la Óptica confeccione mis lentes según la receta
 * Descripción: Los usuarios que se hayan previamente registrado en el sitio web, y luego de haber ingresado al mismo (haber hecho "login"), podrán realizar los trámites habilitados en el sitio. Por ejemplo podrán hacer consultas sobre productos que no existan en el catálogo, podrán adjuntar recetas para que se elaboren lentes a medida, podrán reservar turnos para atención personalizada.
 
-* Criterio de aceptación: Un usuario registrado, debe poder ingresar al sitio web, y allí debe poder realizar los diversos trámites habilitados por la Optica.
+* Criterio de aceptación: Un usuario registrado, debe poder ingresar al sitio web, y allí debe poder realizar los diversos trámites habilitados por la Óptica.
 
 ------------
 
 ###### US13 - Historial Acciones de Usuario
 * Como: Usuario registrado
 * Quiero: Consultar el historial de acciones que fuí realizando en el tiempo
-* Para: Poder ver el estado de las mismas, y las respuestas que tuvieron por parte de la Optica.
-* Descripción: Los usuarios que se hayan previamente registrado en el sitio web, y luego de haber ingresado al mismo (haber hecho "login"), podrán consultar su propio historial de acciones efectudas: por ejemplo los pedidos de presupuesto, compras, trámites, todos con su fecha y hora en que fueron realizados y el estado o devolución por parte de la Optica. Este listado de acciones estará ordenado por fecha, y deberá ser posible filtrar el rango de esas fechas.
+* Para: Poder ver el estado de las mismas, y las respuestas que tuvieron por parte de la Óptica.
+* Descripción: Los usuarios que se hayan previamente registrado en el sitio web, y luego de haber ingresado al mismo (haber hecho "login"), podrán consultar su propio historial de acciones efectuadas: por ejemplo los pedidos de presupuesto, compras, trámites, todos con su fecha y hora en que fueron realizados y el estado o devolución por parte de la Óptica. Este listado de acciones estará ordenado por fecha, y deberá ser posible filtrar el rango de esas fechas.
 
 * Criterio de aceptación: Un usuario registrado, debe poder ingresar al sitio web, y allí debe poder consultar un listado con las acciones realizadas a lo largo del tiempo.
 
@@ -387,7 +389,7 @@ cambiar información personal
 informar cambios de domicilio, teléfono, cambio en la graduación en una receta
 
 * Descripción:
-se creara una pagina tipo form para actualizar datos del cliente
+se creará una página tipo form para actualizar datos del cliente
 
 * Debe contener:
 form con datos personales ya precargados donde se puedan modificar
@@ -432,21 +434,21 @@ Podrá ver las operaciones que podrá realizar.
 Usuario Admnistrador
 
 * Quiero:
-Tener informacion detallada de los pedidos
+Tener información detallada de los pedidos
 
 * Para:
-tener informacion trascendental para la toma de decisiones con respecto a que es lo que tiene salida y que no
+tener información trascendental para la toma de decisiones con respecto a que es lo que tiene salida y que no
 
-* Descripcion:
-se realizara una base de datos con datos de ventas, pedidos, vendedores, marcas, Cristales, clientes.
+* Descripción:
+se realizará una base de datos con datos de ventas, pedidos, vendedores, marcas, Cristales, clientes.
 
 * Debe contener:
-tablas con bases de datos SQL con los pedidos realizados por los clientes, estadisticas de los pedidos, marcas, cristales
+tablas con bases de datos SQL con los pedidos realizados por los clientes, estadísticas de los pedidos, marcas, cristales
 
-* Criterios de aceptacion:
+* Criterios de aceptación:
 Ser un usuario Administrador,
 Ingresar a la cuenta,
-podra ver los pedidos realizados, podra ver estadisticas de las marcas mas vendidas, precios
+podrá ver los pedidos realizados, podrá ver estadisticas de las marcas más vendidas, precios
 
 ------------
 
@@ -478,7 +480,9 @@ Como Administrador:
 
 ------------
 
+
 ###### US20 - Informacion del Producto
+
 * Como cliente
 * quiero visualizar toda la información acerca de un producto 
 * para poder decidirme si lo compro.
