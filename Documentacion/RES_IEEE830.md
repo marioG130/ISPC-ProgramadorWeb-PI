@@ -15,7 +15,9 @@
 
 | Fecha  | Revisión  | Autor  | Verificado Dep. Calidad  |
 | ------------ | ------------ | ------------ | ------------ |
-| 2023  |   |   |   |   |
+| 21/04/2023  | 1  | Mariano Delfino  | Mario Guerra  | 
+| 06/05/2023  | 2  | Mariano Delfino  | Tatiana Urbina  | 
+
 
 ------------
 
@@ -149,10 +151,7 @@ Esta especificación de requisitos se orienta a que el sistema permitirá la ges
 <div id='id6' />
 
 #### 1.5 Referencias
-
 | Título del Documento  | Referencia  |
-=======
-| Titulo del Documento  | Referencia  |
 | ------------ | ------------ |
 | Standard IEEE 830 - 1998  | IEEE  |
 
@@ -473,9 +472,7 @@ Como Administrador:
 
 ------------
 
-
-###### US20 - Informacion del Producto
-
+###### US20 - Información del Producto
 * Como cliente
 * quiero visualizar toda la información acerca de un producto 
 * para poder decidirme si lo compro.
@@ -511,7 +508,7 @@ Criterios de aceptación:
 * Como Administrador:
 
 * Quiero Agregar productos con imagen e información
-* para mostrar los productos en el catalogo correspondiente.
+* para mostrar los productos en el catálogo correspondiente.
 * Criterios de Aceptación :
 Crear categorías y asociar a un producto nuevo.
 Los nuevos productos se asocian a una categoría para su fácil búsqueda.
