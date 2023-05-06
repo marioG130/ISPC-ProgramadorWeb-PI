@@ -9,8 +9,10 @@ import { BodyComponent } from './home/body/body.component';
 import { SectionComponent } from './home/section/section.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-
+//import { LoginServive } from './login/login.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.compon
     BodyComponent,
     SectionComponent,
     RegistroComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    LoginComponent,
+    DashboardComponent,
     ],
   imports: [
     BrowserModule,
@@ -30,3 +34,4 @@ import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.compon
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+//LoginService; dentro de provider?

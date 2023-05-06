@@ -8,3 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'temiro_angular';
 }
+
+//export class AppComponent implements OnInit{ constructor(private loginService:LoginService){}
+//ngOnInit(): void{};
+//estaLogeado(){ return this.loginService.estaLogueado();} logout(){ this.loginService.logout();}}

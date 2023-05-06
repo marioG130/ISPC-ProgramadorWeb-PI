@@ -20,9 +20,13 @@
             <li class="nav-item">
               <a class="nav-link" href="contacto">Contacto</a>
             </li>
-            <li class="nav-item " >
-              <a routerLink="" class="nav-link text-info" href="">Ingresar</a>
-            </li>
+            <li class="nav-item">
+              <!-- en li *ngIf="!estaLogueado()"-->
+              <a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">Ingresar</a>
+            </li> 
+            <!-- <li class="nav-item" *ngIf="estaLogueado()">
+              <a class="nav-link" (click)="logout()" ó routerLink="/" class="nav-link text-info" href="logout">Salir</a>
+            </li>-->
             <li class="nav-item">
               <a class="nav-link text-info" href="registro" data-target="#modallogin">Registrarse</a>
             </li>
