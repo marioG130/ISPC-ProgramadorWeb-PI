@@ -10,5 +10,5 @@ ISPC cohorte 2022
 Se implementará una solución informática para la "Optica Temiro" de tipo web,
 con acceso de posibles compradores y acceso para la administración del negocio.
 
-[[Sitio Web en GitHub Pages](https://mariog130.github.io/ISPC-FullStack-2022/frontend/)]
+[[Frontend proyecto anterior (2022)](https://mariog130.github.io/ISPC-FullStack-2022/frontend/)]
 
