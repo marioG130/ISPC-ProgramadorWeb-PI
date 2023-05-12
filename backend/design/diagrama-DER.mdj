@@ -1147,9 +1147,9 @@
 										"$ref": "AAAAAAGD3brXoI5JW8U="
 									},
 									"font": "Arial;13;1",
-									"left": 488,
+									"left": 520,
 									"top": 333,
-									"width": 204,
+									"width": 223.28271484375,
 									"height": 13,
 									"text": "detalleVenta"
 								},
@@ -1165,6 +1165,21 @@
 									"subViews": [
 										{
 											"_type": "ERDColumnView",
+											"_id": "AAAAAAGIEEQPnea5/GU=",
+											"_parent": {
+												"$ref": "AAAAAAGD3brXoI5LQ2k="
+											},
+											"model": {
+												"$ref": "AAAAAAGIEEQPdea2u6A="
+											},
+											"font": "Arial;13;0",
+											"left": 525,
+											"top": 356,
+											"width": 213.28271484375,
+											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
 											"_id": "AAAAAAGD3bsBF45XDFA=",
 											"_parent": {
 												"$ref": "AAAAAAGD3brXoI5LQ2k="
@@ -1173,9 +1188,9 @@
 												"$ref": "AAAAAAGD3bsBBo5U71s="
 											},
 											"font": "Arial;13;0",
-											"left": 493,
-											"top": 356,
-											"width": 194,
+											"left": 525,
+											"top": 371,
+											"width": 213.28271484375,
 											"height": 13
 										},
 										{
@@ -1188,9 +1203,9 @@
 												"$ref": "AAAAAAGD3bsPLI5aPeI="
 											},
 											"font": "Arial;13;0",
-											"left": 493,
-											"top": 371,
-											"width": 194,
+											"left": 525,
+											"top": 386,
+											"width": 213.28271484375,
 											"height": 13
 										},
 										{
@@ -1203,9 +1218,9 @@
 												"$ref": "AAAAAAGD3bsaRI5gna4="
 											},
 											"font": "Arial;13;0",
-											"left": 493,
-											"top": 386,
-											"width": 194,
+											"left": 525,
+											"top": 401,
+											"width": 213.28271484375,
 											"height": 13
 										},
 										{
@@ -1218,24 +1233,24 @@
 												"$ref": "AAAAAAGD3cMEeo64+tg="
 											},
 											"font": "Arial;13;0",
-											"left": 493,
-											"top": 401,
-											"width": 194,
+											"left": 525,
+											"top": 416,
+											"width": 213.28271484375,
 											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 488,
+									"left": 520,
 									"top": 351,
-									"width": 204,
-									"height": 68
+									"width": 223.28271484375,
+									"height": 83
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 488,
+							"left": 520,
 							"top": 328,
-							"width": 204,
-							"height": 91,
+							"width": 223.28271484375,
+							"height": 106,
 							"nameLabel": {
 								"$ref": "AAAAAAGD3brXoI5KKaI="
 							},
@@ -1424,7 +1439,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 577,
-									"top": 526,
+									"top": 533,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -1458,7 +1473,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 577,
-									"top": 437,
+									"top": 452,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -1475,7 +1490,7 @@
 								"$ref": "AAAAAAGD3aHzPYyChh8="
 							},
 							"lineStyle": 2,
-							"points": "592:648;592:418",
+							"points": "592:648;592:433",
 							"nameLabel": {
 								"$ref": "AAAAAAGD3cLAwY6pUQU="
 							},
@@ -4040,13 +4055,22 @@
 					"columns": [
 						{
 							"_type": "ERDColumn",
+							"_id": "AAAAAAGIEEQPdea2u6A=",
+							"_parent": {
+								"$ref": "AAAAAAGD3brXoI5HBH4="
+							},
+							"name": "idDetalleVenta",
+							"type": "BIGINT",
+							"primaryKey": true
+						},
+						{
+							"_type": "ERDColumn",
 							"_id": "AAAAAAGD3bsBBo5U71s=",
 							"_parent": {
 								"$ref": "AAAAAAGD3brXoI5HBH4="
 							},
 							"name": "idVenta",
-							"type": "INTEGER",
-							"primaryKey": true,
+							"type": "BIGINT",
 							"foreignKey": true,
 							"referenceTo": {
 								"$ref": "AAAAAAGD3aau9I0S9w8="
@@ -4060,7 +4084,6 @@
 							},
 							"name": "idProducto",
 							"type": "INTEGER",
-							"primaryKey": true,
 							"foreignKey": true,
 							"referenceTo": {
 								"$ref": "AAAAAAGD3aYIEIzVa4Y="

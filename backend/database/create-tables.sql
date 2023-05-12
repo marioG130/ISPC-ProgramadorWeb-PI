@@ -86,11 +86,12 @@ CREATE TABLE producto (
 );
 
 CREATE TABLE detalleVenta (
-    idVenta INTEGER NOT NULL,
+    idDetalleVenta BIGINT NOT NULL,
+    idVenta BIGINT NOT NULL,
     idProducto INTEGER NOT NULL,
     cantidad SMALLINT NOT NULL,
     descuento FLOAT NOT NULL,
-    PRIMARY KEY (idVenta, idProducto)
+    PRIMARY KEY (idDetalleVenta)
 );
 
 CREATE TABLE usuario (
