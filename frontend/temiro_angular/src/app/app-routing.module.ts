@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarrocomprasComponent } from './carrito/carrocompras/carrocompras.component';
+import { CarrocomprasComponent } from './dashboard/carrito/carrocompras.component';
 import { BodyComponent } from './home/body/body.component';
-import { TermycondicionesComponent } from './termycondiciones/termycond/termycondiciones.component';
-import { SectionComponent } from './home/section/section.component';
+import { TermycondicionesComponent } from './home/termycondiciones/termycondiciones.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import {FaqComponent } from './home/faq/faq.component';
 import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.component';
