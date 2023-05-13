@@ -1,22 +1,23 @@
-<section class="form-box">
-
+<div class="cont">
+  <div class="form-box">
     <!-- ¿logo de la óptica? -->
     <h1 class="form-title">Iniciar sesión</h1>
     <form action="dashboard" class="needs-validation" novalidate > <!--#miFormulario="ngForm" (ngSubmit)="login(miFormulario)" action="/action_page.php" method="get"-->
         <input type="text" placeholder="Usuario" class="transfor" required minlength="5" maxlength="30"> <!--ngModel-->
         <div class="invalid-feedback">
-           Por favor ingrese su nombre de usuario (entre 5 y 30 caract.)<br><br>
-        </div> 
+          Por favor ingrese su nombre de usuario (entre 5 y 30 caract.)<br><br>
+        </div>
         <input type="password" placeholder="Contraseña" class="transfor" required minlength="8" maxlength="80"> <!--ngModel-->
         <div class="invalid-feedback">
-           Por favor ingrese su contraseña (entre 8 y 80 caract.)<br><br>
-        </div>  
+          Por favor ingrese su contraseña (entre 8 y 80 caract.)<br><br>
+        </div>
         <!--<a href="dashboard"> </a>-->
-        <button type="submit" class="btn">Ingresar</button>
+        <button type="submit" class="btn btn-azul">Ingresar</button>
         <!--<a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">-->
     </form>
-    <p>¿No tiene una cuenta? Entrar en  
-       <a class="enlace" href="registro"> Registrarse</a>
+    <p>¿No tiene una cuenta? Entrar en
+      <a class="enlaces-negros" href="registro"> Registrarse</a>
     </p>
+</div>
 
-</section>
+</div>
