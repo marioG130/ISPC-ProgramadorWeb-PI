@@ -10,14 +10,23 @@ html {
 }
 
 .bodyContacto {
-    display: block;
-    margin: 8px;
+    width: min(60rem , 100%);
+    background: #78baeb;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    color: rgb(5, 3, 3);
+    box-shadow: 7px 13px 37px #000000;
 }
 
 .mainContacto {
-    width: 940px;
+    width: 70rem;
     margin: 0 auto;
-    display: block;   
+    display: block;
+
 }
 
 .formContacto {
@@ -47,7 +56,7 @@ form label, form legend {
     font-size: 18px;
     font-weight: bold;
     color:white;
-    background: orange;
+    background: #0a6bf2;
     border:none;
     border-radius: 5px;
     transition: 1s all;
@@ -55,7 +64,6 @@ form label, form legend {
 }
 
 .enviar:hover {
-    background: darkorange;
     transform: scale(1.2);
 }
 
