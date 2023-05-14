@@ -1,3 +1,15 @@
+/*:root {
+  --white: #ffffffff;
+  --celeste: #78baeb;
+  --verde: #51f576;
+  --azul: #0a6bf2;
+  --gris: #24303c;
+  --negro: #000000;
+  --big: 22px;
+  --medium: 18px;
+  --small: 14px;
+  --verysmall: 10px;
+}*/
 
 * {
   margin: 0;
@@ -6,12 +18,16 @@
   box-sizing: border-box;
 }
 
+/*body {
+  background-color: #0a6bf2;
+}*/
+
 h4{
   text-align: center;
 }
 
 .form-register {
-  width: min(30rem, 100%);
+  width: min(25rem, 100%);
   background: #78baeb;
   padding: 30px;
   margin: auto;
@@ -56,10 +72,20 @@ h4{
   text-decoration: underline;
 }
 
-.form-register .btn{
-  width: min(30rem, 100%);
+.form-register .btn {
+  width: 250px;
+  color: cornsilk;
+  text-transform: uppercase;
+  border: 0;
+  background: none;
+  display: block;
   margin: 30px auto;
   padding: 15px 10px;
+  text-align: center;
+  border: 1.5px solid rgb(47, 12, 245);
+  outline: none;
+  border-radius: 15px;
+  transition: 0.25s;
 }
 
 

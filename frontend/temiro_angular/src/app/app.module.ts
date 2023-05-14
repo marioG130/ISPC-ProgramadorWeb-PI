@@ -9,6 +9,7 @@ import { BodyComponent } from './home/body/body.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import { QuienesSomosComponent } from './home/quienes-somos/quienes-somos.component';
 import { LoginComponent } from './home/login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarrocomprasComponent } from './dashboard/carrito/carrocompras.component';
 import { TermycondicionesComponent } from './home/termycondiciones/termycondiciones.component';
 
@@ -23,6 +24,7 @@ import { TermycondicionesComponent } from './home/termycondiciones/termycondicio
     RegistroComponent,
     QuienesSomosComponent,
     LoginComponent,
+    DashboardComponent,
     CarrocomprasComponent,
     TermycondicionesComponent
     ],
