@@ -10,7 +10,7 @@ html {
 }
 
 .bodyContacto {
-    width: min(60rem , 100%);
+    width: min(45rem , 100%);
     background: #78baeb;
     padding: 30px;
     margin: auto;
@@ -22,15 +22,21 @@ html {
     box-shadow: 7px 13px 37px #000000;
 }
 
-.mainContacto {
-    width: 50rem;
-    margin: 0 auto;
-    display: block;
+.titulo{
+  text-align: center;
+  font-weight: 600;
+}
 
+.mainContacto {
+    width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .formContacto {
-    margin: 40px 0;
+  width: 90%;
+  margin: 40px 0;
 }
 
 form label, form legend {
@@ -43,7 +49,7 @@ form label, form legend {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
-    width: 50%;
+    width: 100%;
 }
 
 .checkbox {
@@ -51,9 +57,9 @@ form label, form legend {
 }
 
 .enviar {
-    width: 40%;
+    width: 150px;
     padding: 15px 0;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color:white;
     background: #0a6bf2;
@@ -61,14 +67,15 @@ form label, form legend {
     border-radius: 5px;
     transition: 1s all;
     cursor:pointer;
+    margin-left: 230px;
 }
 
-.enviar:hover {
-    transform: scale(1.2);
+.input-padron{
+  width: 100%;
 }
 
 .tableContacto {
-    margin: 40px 40px;
+    margin: 30px 30px;
 }
 
 thead {
@@ -79,5 +86,5 @@ thead {
 
 td,th {
     border: 1px solid #000000;
-    padding: 8px 15px;
+    padding: 4px 10px;
 }

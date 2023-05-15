@@ -1,39 +1,33 @@
-<div>
-  <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-        <a class="navbar-brand" href="Home">
-          <img src="./assets/img/marcaoptica.jpg" alt="logo óptica">
-              Óptica Temiro
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="quienes-somos">¿Quiénes Somos?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="carrito">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <!-- en li *ngIf="!estaLogueado()"-->
-              <a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">Ingresar</a>
-            </li>
-            <!-- <li class="nav-item" *ngIf="estaLogueado()">
-              <a class="nav-link" (click)="logout()" ó routerLink="/" class="nav-link text-info" href="logout">Salir</a>
-            </li>-->
-            <li class="nav-item">
-              <a class="nav-link text-info" href="registro" data-target="#modallogin">Registrarse</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-info" href="carrito" data-target="#modallogin">Carrito de Compras</a>
-            </li>
-          </ul>
-        </div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/img/marcaoptica.jpg" width="80px" alt="logo ópticaTeMiro">
+      </a>
+      <ul class="navbar-nav d-flex justify-content-center align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="quienes-somos">¿Quiénes Somos?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carrito">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <!-- en li *ngIf="!estaLogueado()"-->
+          <a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">Ingresar</a>
+        </li>
+        <!-- <li class="nav-item" *ngIf="estaLogueado()">
+          <a class="nav-link" (click)="logout()" ó routerLink="/" class="nav-link text-info" href="logout">Salir</a>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link text-info" href="registro" data-target="#modallogin">Registrarse</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>

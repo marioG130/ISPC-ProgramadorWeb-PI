@@ -1,3 +1,18 @@
 #header img {
     width: 80px;
   }
+
+  .navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar{
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    .navbar-brand{
+        display: none;
+    }
+  }

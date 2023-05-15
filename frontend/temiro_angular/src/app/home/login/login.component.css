@@ -9,6 +9,9 @@
     font-size: 22px;
     margin-bottom: 20px;
 }
+.cont{
+  height: 700px;
+}
 
 .form-box {
     width: min(30rem, 100%);
