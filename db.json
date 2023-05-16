@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "RegistroUsuarios": [
+    {},
+    {
+      "fullname": "maria gonzalez",
+      "email": "maria@gmail.com",
+      "username": "maria2020",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "fullname": "hector rodriguez",
+      "email": "hector@gmail.com",
+      "username": "hector2020",
+      "password": "qwe12345",
+      "id": 2
+    },
+    {},
+    {
+      "fullname": "eric dominguez",
+      "email": "eric20@gmail.com",
+      "username": "eric2020",
+      "password": "qwe12345",
+      "id": 3
+    },
+    {
+      "fullname": "gustavo suarez",
+      "email": "gustavo2020@gmail.com",
+      "username": "gustavo2023",
+      "password": "12345qwe",
+      "id": 4
+    },
+    {
+      "fullname": "guillermo benitez",
+      "email": "guille2020@gmail.com",
+      "username": "guille2020",
+      "password": "12345",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
