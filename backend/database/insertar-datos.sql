@@ -1,4 +1,25 @@
 
+-- Los siguientes truncate borran completamente los datos de todas las tablas,
+-- y deberían ejecutarse en el orden inverso de las integridades referenciales
+
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE servicio;
+TRUNCATE TABLE abono;
+TRUNCATE TABLE doctor;
+TRUNCATE TABLE detalleVenta;
+TRUNCATE TABLE venta;
+TRUNCATE TABLE factura;
+TRUNCATE TABLE vendedor;
+TRUNCATE TABLE stock;
+TRUNCATE TABLE producto;
+TRUNCATE TABLE tipoProducto;
+TRUNCATE TABLE cliente;
+TRUNCATE TABLE usuario;
+TRUNCATE TABLE ciudad;
+TRUNCATE TABLE departamento;
+TRUNCATE TABLE provincia;
+SET FOREIGN_KEY_CHECKS = 1;
+
 
 --
 -- Dumping data for table `provincia`
@@ -21,7 +42,7 @@ INSERT INTO `departamento` VALUES (1,'Capital',1),(2,'La Plata',2),(3,'Rosario',
 --
 
 
-INSERT INTO `ciudad` VALUES (1,'Córdooba',1),(2,'VillaCarlos Paz',1),(3,'Alta Gracia',1),(4,'Bell Ville',1),(5,'Río Cuarto',1),(6,'Jesús María',1),(7,'San Agustín',1),(8,'Juárez Celman',1),(9,'Ischilín',1),(10,'Villa María',1);
+INSERT INTO `ciudad` VALUES (1,'Córdoba',1),(2,'VillaCarlos Paz',1),(3,'Alta Gracia',1),(4,'Bell Ville',1),(5,'Río Cuarto',1),(6,'Jesús María',1),(7,'San Agustín',1),(8,'Juárez Celman',1),(9,'Ischilín',1),(10,'Villa María',1);
 
 
 --
@@ -45,7 +66,7 @@ INSERT INTO `cliente` VALUES (111,111,'Avalos','Matias',4456877,'Isasmendi 876 B
 --
 
 
-INSERT INTO `tipoproducto` VALUES (11,'Cont.Color'),(12,'Cont.Aume.'),(13,'Lectura'),(14,'Polariz.'),(15,'Filtro UV'),(16,'Monofoc.'),(17,'Bifocales'),(18,'FiltroAzul'),(19,'Descanso'),(20,'Tendencia');
+INSERT INTO `tipoProducto` VALUES (11,'Cont.Color'),(12,'Cont.Aume.'),(13,'Lectura'),(14,'Polariz.'),(15,'Filtro UV'),(16,'Monofoc.'),(17,'Bifocales'),(18,'FiltroAzul'),(19,'Descanso'),(20,'Tendencia');
 
 
 --
@@ -93,7 +114,7 @@ INSERT INTO `venta` VALUES (1,4,111,1,'2023-04-29','Bifocales','Finalizada'),(2,
 --
 
 
-INSERT INTO `detalleventa` VALUES (1,3,301,1,0),(2,4,302,1,0),(3,7,303,1,0),(4,2,304,1,0),(5,10,305,1,0),(6,8,306,1,0),(7,1,307,1,0),(8,6,308,1,0),(9,5,309,1,0),(10,9,310,1,0);
+INSERT INTO `detalleVenta` VALUES (1,3,301,1,0),(2,4,302,1,0),(3,7,303,1,0),(4,2,304,1,0),(5,10,305,1,0),(6,8,306,1,0),(7,1,307,1,0),(8,6,308,1,0),(9,5,309,1,0),(10,9,310,1,0);
 
 
 --

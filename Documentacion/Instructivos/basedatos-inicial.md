@@ -17,3 +17,15 @@
         > \q
 
 * Observar que el script "create-tables.sql" borra completamente todas las tablas y su contenido, por lo que deberán generarse nuevos scripts para llenar las tablas con datos relacionados entre si. El script "create-tables.sql" debe usarse cada vez que se hagan cambios a la estructura de las tablas para empezar todo desde cero.
+
+
+## Carga inicial de datos a la DB:
+
+Se debe ejecutar el script "insertar-datos.sql" ubicado en el repositorio. Puede ser ejecutado desde Workbench o DBeaver, o bien desde el programa de consola "mysql". A continuación se describe la ejecución desde el prompt usando la misma conexión que el proyecto de Django:
+
+        $ cd < donde este la carpeta backend/temiro_django >
+        $ python manage.py dbshell
+        [OpticaTeMiroDb]> show tables;                          --> 25 rows
+        [OpticaTeMiroDb]> \. ../database/insertar-datos.sql
+        [OpticaTeMiroDb]> select * from producto;               --> 10 rows    
+        [OpticaTeMiroDb]> \q

@@ -2,16 +2,16 @@
 
 ## 1) Identificar la ISSUE
 
-Es necesario que todas las modificaciones al codigo (documentacion, frontend, backend) estén referenciadas a una issue. No se debe trabajar por fuera de las issues. Si no se puede identificar la issue hay dos alternativas: O bien crearla como nueva (si o si referida a una US-User Story existente, con el número de TK siguiente a las ya existentes en esa US) y cuidando de no generar issues duplicadas, o bien consultar en el grupo de WhatsApp.<br/>
+Es necesario que todas las modificaciones al codigo (documentacion, frontend, backend) estén referenciadas a una issue en GitHub. No se debe trabajar por fuera de las issues. Si no se puede identificar la issue hay dos alternativas: O bien crearla como nueva (si o si referida a una US-User Story existente, con el número de TK siguiente a las ya existentes en esa US) y cuidando de no generar issues duplicadas, o bien consultar en el grupo de WhatsApp.<br/>
 Al momento de buscar las issues conviene hacerlo desde la vista del proyecto, empezando por la vista de [User Stories](https://github.com/users/marioG130/projects/4/views/4), y luego ir pasando por el [SPRINT0](https://github.com/users/marioG130/projects/4/views/5), luego el [SPRINT1](https://github.com/users/marioG130/projects/4/views/6) y luego el [SPRINT2](https://github.com/users/marioG130/projects/4/views/7). En todas estas vistas el orden es alfabetico (las US están ordenadas y las TK también), lo que facilita la búsqueda.
 
-## 2) Ingresar a la issue elgida
+## 2) Ingresar a la issue elegida
 
-Para ello hacer click en la issue del proyecto, ahi muestra un resumen, ir al link de la derecha "Open in new tab" y abrirá la issue completa en una nueva pestaña. En la issue, en el panel lateral, en "Development" hacer click en "Create a branch". Ahi propone un nombre automático, por ejemplo **Branch name = 56-tk03-2-estructura-general**, si se lo modifica no tocar la primera parte (el numero de issue para GitHub y el numero de issue para nosotros). Luego en **Repo destination = marioG130/ISPC-ProgramadorWeb-PI**, y apretar "Change branch source" y seleccionar en "Branch source" a **develop**. Luego hacer click en **[x] Checkout locally**, y finalmente apretar el botón "Create branch". En ese momento se habrá creado una nueva rama para hacer los cambios deseados.
+Para ello hacer click en la issue del proyecto, ahi muestra un resumen, ir al link de la derecha "Open in new tab" y abrirá la issue completa en una nueva pestaña. En la issue, en el panel lateral, en "Development" hacer click en "Create a branch". Ahi propone un nombre automático, por ejemplo **Branch name = 56-tk03-2-estructura-general**, si se lo modifica no tocar la primera parte (el numero de issue para GitHub y el numero de issue para nosotros). Puede convenir acortar un poco el nombre para facilitar su lectura y escritura, y puede convenir colocarle un numero al final para referencias diferentes ramas de la misma TK. **No usar** ramas anteriores, siempre usar una **nueva** rama, renombrar con un numero al final para tener siempre una nueva. Luego en **Repo destination = marioG130/ISPC-ProgramadorWeb-PI**, y apretar "Change branch source" y seleccionar en "Branch source" a **develop**. Luego hacer click en **[x] Checkout locally**, y finalmente apretar el botón "Create branch". En ese momento se habrá creado una nueva rama para hacer los cambios deseados.
 
-## 3) Trabajar sobre la rama
+## 3) Trabajar sobre la rama en local
 
-A continuación se describen los comandos para trabajar en consola local en nuestras computadoras. Cuando se empieza a trabajar en la issue es importante estar ubicados en la rama de desarrollo "develop" y hacer un **pull** antes de pasarse a la rama particular. Si se vuelve a trabajar otro dia en el mismo tema, antes de subir los cambios, igualmente conviene volver a traer la "develop" por las dudas otro compañero haya hecho cambios que afecten en lo que estoy trabajando.
+A continuación se describen los comandos para trabajar en consola local en nuestras computadoras. Cuando se empieza a trabajar en la issue es importante verificar que todo esté bien antes de hacer nada. Hay que estar ubicados en la rama de desarrollo "develop" y hacer un **pull** antes de pasarse a la rama particular. Si se vuelve a trabajar otro dia en el mismo tema, antes de subir los cambios, igualmente conviene volver a traer la "develop" por las dudas otro compañero haya hecho cambios que afecten en lo que estoy trabajando.
 
     $ cd <al directorio base donde se ubica el repo local>
     $ git checkout develop
@@ -21,7 +21,7 @@ A continuación se describen los comandos para trabajar en consola local en nues
         Tu rama está actualizada con 'origin/develop'.
         nada para hacer commit, el árbol de trabajo está limpio
 
-En lo que sigue se usa el ejemplo de la tarea "56-tk03-2-.....", eso será diferente en cada caso, igualmente verificar siempre que se está trabajando sobre la issue correcta (en base al número de la tknn), ya que en algún momento pueden haber varias ramas particulares que estén activas.
+Si hay algún tipo de error en lo anterior (archivos en color rojo) lo mas coneveniente es renombrar ese directorio (por las dudas) y volver a clonar desde cero el repo. En lo que sigue se usa el ejemplo de la tarea "56-tk03-2-.....", eso será diferente en cada caso, igualmente verificar siempre que se está trabajando sobre la issue correcta (en base al número de la tknn), ya que en algún momento pueden haber varias ramas particulares que estén activas.
 
     $ git fetch origin
     $ git branch
@@ -32,6 +32,7 @@ En lo que sigue se usa el ejemplo de la tarea "56-tk03-2-.....", eso será difer
         Rama '56-tk03-2-estructura-general' configurada para hacer seguimiento a la rama remota '56-tk03-2-estructura-general' de 'origin'.
         Cambiado a nueva rama '56-tk03-2-estructura-general'
 
+    $ git pull
     $ git status
         En la rama 56-tk03-2-estructura-general
         Tu rama está actualizada con 'origin/56-tk03-2-estructura-general'.
@@ -41,15 +42,15 @@ En lo que sigue se usa el ejemplo de la tarea "56-tk03-2-.....", eso será difer
         * 56-tk03-2-estructura-general
         develop
 
-Se hacen todos los cambios deseados en los archivos:
+Luego se hacen todos los cambios deseados en los archivos. Puede convenir COPIAR los ARCHIVOS a un directorio trabajo EXTERNO, luego EDITAR ARCHIVOS, y finalmente COPIAR los ARCHIVOS MODIFICADOS devuelta al directorio donde está el repo. Luego se cierra el commit:
 
     $ git add ....     <-- para agregar archivos modificados
     $ git rm ....      <-- para borrar archivos
     $ git mv ....      <-- para cambiar de lugar archivos
-    $ git add -A       <-- incorpora modif., agregados, borrados
+    $ git add -A       <-- incorpora modif., agregados, borrados todo a la vez
     $ git status
          Cambios a ser confirmados:
-         ....... verificar que todo esté bien
+         ....... verificar que todo esté bien y todos los archivos en color verde
     $ git commit -m '... mensaje ....'
 
 Se suben los cambios al repo (se puede subir mas de un commit)
@@ -70,7 +71,7 @@ El pull request fue cerrado, se pueden ver todos los [pull request cerrados](htt
 
 Para verificar que todo esté bien, entar al [repo en Github](https://github.com/marioG130/ISPC-ProgramadorWeb-PI) al enlace donde está la [cantidad de commits](https://github.com/marioG130/ISPC-ProgramadorWeb-PI/commits/main) y verificar que con mi usuario aparezcan 1 commit con el comentario que puse en el commit.
 
-Finalmente, la rama que usé se puede opcionalmente borrar (si no voy a trabajar mas en esa issue). Para hacerlo, ir al enlace de las [ramas](https://github.com/marioG130/ISPC-ProgramadorWeb-PI/branches) y apretar el ultimo iconito de Trash. Alternativamente, se puede entrar en el pull-request (cerrado) que corresponde y apretar el botón "Delete branch". En el repo local (en nuestra computadora) esa rama todavía existe, si se quiere borrar hay que hacer un "git branch -d nnnnn".
+Finalmente, la rama que se usó se debe borrar. Para hacerlo, ir al enlace de las [ramas](https://github.com/marioG130/ISPC-ProgramadorWeb-PI/branches) y apretar el ultimo iconito de Trash. Alternativamente, se puede entrar en el pull-request (cerrado) que corresponde y apretar el botón "Delete branch". En el repo local (en nuestra computadora) esa rama todavía existe, si se quiere borrar hay que hacer un "git branch -d nnnnn" (ver mas abajo).
 
 
 ## 5) Hacer el merge con la rama principal "main"
@@ -90,7 +91,7 @@ Al final, para que nos quede todo bien en nuestra computadora local:
     $ git pull                <-- debe traer el ultimo commit que hice
     $ git status
 
-Opcionalmente puede convenir borrar las ramas de trabajo local (que ya no se van a usar). Por ejemplo, a continuación hay dos ramas extras en local que ya fueron subidas anteriomente, ahora se borran, y al final solo queda activa la rama "develop":
+Finalmente se debe borrar la rama temporal de trabajo local (que ya no se va a usar). Por ejemplo, a continuación hay dos ramas extras en local que ya fueron subidas anteriomente, ahora se borran, y al final solo queda activa la rama "develop":
 
     $ git branch
         43-tk13-3-modelo-bbdd-para-el-historial-de-usuario
