@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
-
-.contenedor{
+.contenedor {
     max-width: 1200px;
     padding: 10px;
     margin: auto;
@@ -9,8 +7,9 @@
     /* oculto lo que queda fuera del .contenedor */
     contain: paint;
 }
+
 /* SECCION CONTENEDOR DE ITEMS */
-.contenedor .contenedor-items{
+.contenedor .contenedor-items {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -20,7 +19,8 @@
     width: 100%;
     transition: .3s;
 }
-.contenedor .contenedor-items .item{
+
+.contenedor .contenedor-items .item {
     max-width: 200px;
     margin: auto;
     border: 1px solid #666;
@@ -28,27 +28,31 @@
     padding: 20px;
     transition: .3s;
 }
-.contenedor .contenedor-items .item .img-item{
+
+.contenedor .contenedor-items .item .img-item {
     width: 100%;
 }
-.contenedor .contenedor-items .item:hover{
+
+.contenedor .contenedor-items .item:hover {
     box-shadow: 0 0 10px #666;
     scale: 1.05;
 }
-.contenedor .contenedor-items .item .titulo-item{
+
+.contenedor .contenedor-items .item .titulo-item {
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
-.contenedor .contenedor-items .item .precio-item{
+
+.contenedor .contenedor-items .item .precio-item {
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
 }
 
-.contenedor .contenedor-items .item .boton-item{
+.contenedor .contenedor-items .item .boton-item {
     display: block;
     margin: 10px auto;
     border: none;
@@ -58,8 +62,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 /* seccion carrito */
-.carrito{
+.carrito {
     border: 1px solid #666;
     width: 35%;
     margin-top: 30px;
@@ -73,13 +78,15 @@
     margin-right: -100%;
     opacity: 0;
 }
-.carrito .header-carrito{
+
+.carrito .header-carrito {
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 30px 0;
 }
-.carrito .carrito-item{
+
+.carrito .carrito-item {
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
@@ -87,20 +94,24 @@
     border-bottom: 1px solid #666;
     padding: 20px;
 }
-.carrito .carrito-item img{
+
+.carrito .carrito-item img {
     margin-right: 20px;
 }
-.carrito .carrito-item .carrito-item-titulo{
+
+.carrito .carrito-item .carrito-item-titulo {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
-.carrito .carrito-item .selector-cantidad{
+
+.carrito .carrito-item .selector-cantidad {
     display: inline-block;
     margin-right: 25px;
 }
-.carrito .carrito-item .carrito-item-cantidad{
+
+.carrito .carrito-item .carrito-item-cantidad {
     border: none;
     font-size: 18px;
     background-color: transparent;
@@ -109,7 +120,8 @@
     padding: 5px;
     text-align: center;
 }
-.carrito .carrito-item .selector-cantidad i{
+
+.carrito .carrito-item .selector-cantidad i {
     font-size: 18px;
     width: 32px;
     height: 32px;
@@ -119,13 +131,15 @@
     border: 1px solid #000;
     cursor: pointer;
 }
-.carrito .carrito-item .carrito-item-precio{
+
+.carrito .carrito-item .carrito-item-precio {
     font-weight: bold;
     display: inline-block;
     font-size: 18px;
     margin-bottom: 5px;
 }
-.carrito .carrito-item .btn-eliminar{
+
+.carrito .carrito-item .btn-eliminar {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -142,7 +156,8 @@
     background: transparent;
     z-index: 20;
 }
-.carrito .carrito-item .btn-eliminar i{
+
+.carrito .carrito-item .btn-eliminar i {
     pointer-events: none;
 }
 
@@ -150,6 +165,7 @@
     background-color: #f3f3f3;
     padding: 30px;
 }
+
 .carrito-total .fila{
     display: flex;
     justify-content: space-between;
@@ -158,7 +174,8 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
-.carrito-total .btn-pagar{
+
+.carrito-total .btn-pagar {
     display: block;
     width: 100%;
     border: none;
@@ -173,7 +190,8 @@
     cursor: pointer;
     transition: .3s;
 }
-.carrito-total .btn-pagar:hover{
+
+.carrito-total .btn-pagar:hover {
     scale: 1.05;
 }
 
@@ -188,5 +206,4 @@
     .carrito{
         width: 100%;
     }
-  }
-
+}

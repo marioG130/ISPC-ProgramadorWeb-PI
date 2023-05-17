@@ -1,20 +1,18 @@
-<div>
-  <div class="form-register">
-    <form action="">
-      <h4>Formulario Registro</h4>
-      <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required minlength="5" maxlength="30">
-      <input class="controls" type="text" name="usuario" id="usuario" placeholder="Usuario" required minlength="5" maxlength="30">
-      <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo" required minlength="8" maxlength="40">
-      <span id="correoOk"></span>
-      <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required minlength="8" maxlength="80">
-      <p>
-        <input type="checkbox" name="Aceptar" id="checkbox"> Acuerdo
-        <a class="enlaces-negros" target="_blank" href="termycond" required>Terminos y Condiciones</a>
-      </p>
-      <button type="submit" class="btn btn-azul">Registrar</button>
-      <p>
-        <a class="enlaces-negros" href="login">¿Ya tengo Cuenta?</a>
-      </p>
-    </form>
-  </div>
+<div class="form-register">
+  <form [formGroup]="signupForm" (ngSubmit)="signup()">
+    <h4>Formulario Registro</h4>
+    <input formControlName="fullname" class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required minlength="5" maxlength="30">
+    <input formControlName="username" class="controls" type="text" name="usuario" id="usuario" placeholder="Usuario" required minlength="5" maxlength="30">
+    <input formControlName="email" class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo" required minlength="8" maxlength="40">
+    <span id="correoOk"></span>
+    <input formControlName="password" class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required minlength="8" maxlength="80">
+    <p>
+      <input type="checkbox" name="Aceptar" id="checkbox"> Acuerdo
+      <a class="enlaces-negros" target="_blank" href="termycond" required>Terminos y Condiciones</a>
+    </p>
+    <button type="submit" class="btn btn-azul">Registrar</button>
+    <p>
+      <a class="enlaces-negros" href="login">¿Ya tengo Cuenta?</a>
+    </p>
+  </form>
 </div>
