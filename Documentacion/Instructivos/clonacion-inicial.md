@@ -26,3 +26,9 @@ Para ver las otras ramas remotas:
         remotes/origin/develop
         remotes/origin/feature
         remotes/origin/main
+
+Para comenzar a trabajar:
+
+    $ git checkout develop
+    $ git pull
+    $ git status
