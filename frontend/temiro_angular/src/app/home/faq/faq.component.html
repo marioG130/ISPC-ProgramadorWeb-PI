@@ -31,11 +31,11 @@
     </button>
   </div>
   <!-- Terminal -->
-  <div class="terminal" ngSwitch="selection.value">
+  <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>Podes pagar con cualquiera de estos medios y tu
         <br>compra va a estar 100% protegida. Y si el producto
         <br>no es lo que esperabas, te devolveremos el dinero.
-        <br>Elegí entre cualquiera de estos medios de pago...
+        <br>Elegí entre alguna de estas formas de pago...
 
 - Tarjeta de crédito: Visa, Mastercard, Nativa
   (hasta 6 pagos sin interés);
@@ -46,14 +46,14 @@
 - Efectivo con Pago Fácil o Rapipago (en 1 pago).</pre>
       <pre *ngSwitchCase="'material'">Podes recibir el producto en tu domicilio mientras
         <br>estés ubicado dentro de la Argentina. Calculas el
-        <br>costo y tiempo de envío desde la compra y luego
+        <br>costo y tiempo de envío desde la compra, y luego
         <br>pagas todo junto. Otra opción es retirar el producto
         <br>en nuestra sucursal o por Correo Argentino, a través
         <br>de una persona designada, la cual debe presentar su
         <br>DNI y el código de seguimiento que figura en el
-        <br>email de envío o en tu cuenta. Y también puede hacer
+        <br>email de "envío" o en tu cuenta. Y también puede hacer
         <br>el retiro cualquier mayor de edad, en caso de que la
-        <br>persona designada no pueda hacerlo con la siguiente
+        <br>persona designada no pueda hacerlo, con la siguiente
         <br>documentación a presentar…
 
 - DNI;
@@ -67,30 +67,30 @@
 - El formulario de autorización completo.</pre>
       <pre *ngSwitchCase="'pwa'">Si tuvieras algún problema con la compra, estaremos
         <br>ahí para ayudarte. Lo primero que debes hacer es:
-        <br>Iniciar un reclamo a través de la sección consultas
-        <br>para solucionar lo antes posible la cuestión.
+        <br>Iniciar un "reclamo" a través de la sección "consultas"
+        <br>para solucionar la cuestión, lo antes posible.
         <br>Si completaste el pago desde nuestro sitio y llegas
         <br>a tener una dificultad, te devolvemos el 100% del
         <br>dinero. Porque tu compra siempre debe ser segura.</pre>
       <pre *ngSwitchCase="'dependency'">Si ya sos cliente registrado, que compraste en otra
         <br>oportunidad en nuestra tienda online y superas los
         <br>$50.000 en la compra de nuevos productos, tienes el
-        <br>beneficio del envío sin cargo.</pre>
+        <br>beneficio del "envío sin cargo".</pre>
       <pre *ngSwitchCase="'test'">Si la compra está en preparación, podes cancelarla
         <br>desde el estado de la compra. Si la compra ya está
         <br>en camino, podes rechazarla cuando llegue o no
         <br>retirarla del correo. Si elegiste envío a domicilio,
-        <br>cuando el paquete llegue pídele al transportista que
+        <br>cuando el paquete llegue, pídele al transportista que
         <br>se lo lleve de vuelta. Si elegiste retirar en la
         <br>sucursal, no vayas a buscar el paquete. Si ya
         <br>recibiste la compra, podes devolverla.</pre>
       <pre *ngSwitchCase="'build'">Podrás hacer una devolución del producto que
         <br>compraste, siempre y cuando, este en excelentes
         <br>condiciones y empaquetado, además de realizar el
-        <br>pedido a través de la sección consultas dentro de las
-        <br>48 horas hábiles desde que recibes dicho paquete.
-        <br>Para eso te contactaremos por email o
-        <br>telefónicamente para darte un código el cual te
+        <br>pedido de "devolución" a través de la sección "consultas"
+        <br>dentro de las 48 horas hábiles desde que recibes dicho
+        <br>paquete. Luego, te contactaremos por email o
+        <br>telefónicamente para darte un "código" el cual te
         <br>respaldara para entregar el producto en el local
         <br>o para que un transportista de nuestro negocio lo
         <br>pase a buscar en tu domicilio. Y te devolvemos el

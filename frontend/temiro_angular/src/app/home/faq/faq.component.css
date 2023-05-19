@@ -17,7 +17,7 @@ p {
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
+  margin: 50px auto 32px;
   padding: 0 16px;
   max-width: 960px;
   flex-direction: column;
@@ -85,7 +85,7 @@ svg.material-icons:not(:last-child) {
   border-radius: 6px;
   padding-top: 45px;
   margin-top: 8px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   overflow: hidden;
   background-color: rgb(15, 15, 16);
 }
