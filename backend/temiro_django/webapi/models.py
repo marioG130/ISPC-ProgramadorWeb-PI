@@ -5,30 +5,36 @@ from django.db import models
 class Provincia(models.Model):
     idprovincia = models.IntegerField(db_column='idProvincia', primary_key=True)
     nombre = models.CharField(max_length=40)
-
+    def __unicode__(self):
+        return self.nombre
     class Meta:
-        managed = False
         db_table = 'provincia'
+        managed = False
+        verbose_name_plural = 'Provincias'
 
 
 class Departamento(models.Model):
     iddepartamento = models.IntegerField(db_column='idDepartamento', primary_key=True)
     nombre = models.CharField(max_length=40)
     idprovincia = models.ForeignKey('Provincia', models.DO_NOTHING, db_column='idProvincia')
-
+    def __unicode__(self):
+        return self.nombre
     class Meta:
-        managed = False
         db_table = 'departamento'
+        managed = False
+        verbose_name_plural = 'Departamentos'
 
 
 class Ciudad(models.Model):
     idciudad = models.IntegerField(db_column='idCiudad', primary_key=True)
     nombre = models.CharField(max_length=40)
     iddepartamento = models.ForeignKey('Departamento', models.DO_NOTHING, db_column='idDepartamento')
-
+    def __unicode__(self):
+        return self.nombre
     class Meta:
-        managed = False
         db_table = 'ciudad'
+        managed = False
+        verbose_name_plural = 'Ciudades'
 
 
 # ---- Tablas referidas a los clientes
@@ -40,10 +46,12 @@ class Usuario(models.Model):
     password = models.CharField(max_length=30)
     email = models.CharField(max_length=40)
     aceptatc = models.IntegerField(db_column='aceptaTC')
-
+    def __unicode__(self):
+        return self.usuario
     class Meta:
-        managed = False
         db_table = 'usuario'
+        managed = False
+        verbose_name_plural = 'Usuarios'
 
 
 class Cliente(models.Model):
@@ -58,10 +66,12 @@ class Cliente(models.Model):
     telefono = models.CharField(max_length=20, blank=True, null=True)
     celular = models.CharField(max_length=20, blank=True, null=True)
     fechanac = models.DateField(db_column='fechaNac')
-
+    def __unicode__(self):
+        return self.nombre + ' ' + self.apellido
     class Meta:
-        managed = False
         db_table = 'cliente'
+        managed = False
+        verbose_name_plural = 'Clientes'
 
 
 # ---- Tablas referidas a los productos
@@ -69,10 +79,12 @@ class Cliente(models.Model):
 class TipoProducto(models.Model):
     idtipoproducto = models.SmallIntegerField(db_column='idTipoProducto', primary_key=True)
     descripcion = models.CharField(max_length=10)
-
+    def __unicode__(self):
+        return self.descripcion
     class Meta:
-        managed = False
         db_table = 'tipoProducto'
+        managed = False
+        verbose_name_plural = 'Tipos Producto'
 
 
 class Producto(models.Model):
@@ -82,19 +94,23 @@ class Producto(models.Model):
     preciocosto = models.IntegerField(db_column='precioCosto')
     precio = models.IntegerField()
     fechaingreso = models.DateField(db_column='fechaIngreso')
-
+    def __unicode__(self):
+        return self.descripcion
     class Meta:
-        managed = False
         db_table = 'producto'
+        managed = False
+        verbose_name_plural = 'Productos'
 
 
 class Stock(models.Model):
     idproducto = models.IntegerField(db_column='idProducto', primary_key=True)
     cantidad = models.IntegerField()
-
+    def __unicode__(self):
+        return str(self.cantidad)
     class Meta:
-        managed = False
         db_table = 'stock'
+        managed = False
+        verbose_name_plural = 'Stocks'
 
 
 # ---- Tablas referidas a las ventas
@@ -107,10 +123,12 @@ class Vendedor(models.Model):
     telefono = models.CharField(max_length=20, blank=True, null=True)
     celular = models.CharField(max_length=20, blank=True, null=True)
     email = models.CharField(max_length=40)
-
+    def __unicode__(self):
+        return self.nombre + ' ' + self.apellido
     class Meta:
-        managed = False
         db_table = 'vendedor'
+        managed = False
+        verbose_name_plural = 'Vendedores'
 
 
 class Factura(models.Model):
@@ -122,10 +140,12 @@ class Factura(models.Model):
     fechacierre = models.DateField(db_column='fechaCierre')
     direccionenvio = models.CharField(db_column='direccionEnvio', max_length=40)
     idciudad = models.ForeignKey(Ciudad, models.DO_NOTHING, db_column='idCiudad')
-
+    def __unicode__(self):
+        return str(self.total)
     class Meta:
-        managed = False
         db_table = 'factura'
+        managed = False
+        verbose_name_plural = 'Facturas'
 
 
 class Venta(models.Model):
@@ -136,10 +156,12 @@ class Venta(models.Model):
     fecha = models.DateField()
     descripcion = models.CharField(max_length=50)
     estado = models.CharField(max_length=30)
-
+    def __unicode__(self):
+        return self.descripcion
     class Meta:
-        managed = False
         db_table = 'venta'
+        managed = False
+        verbose_name_plural = 'Ventas'
 
 
 class DetalleVenta(models.Model):
@@ -148,10 +170,12 @@ class DetalleVenta(models.Model):
     idproducto = models.ForeignKey('Producto', models.DO_NOTHING, db_column='idProducto')
     cantidad = models.SmallIntegerField()
     descuento = models.FloatField()
-
+    def __unicode__(self):
+        return str(self.cantidad)
     class Meta:
-        managed = False
         db_table = 'detalleVenta'
+        managed = False
+        verbose_name_plural = 'Detalle Ventas'
 
 
 # ---- Tablas referidas a servicios adicionales
@@ -166,10 +190,12 @@ class Doctor(models.Model):
     telefono = models.CharField(max_length=20, blank=True, null=True)
     celular = models.CharField(max_length=20, blank=True, null=True)
     email = models.CharField(max_length=40)
-
+    def __unicode__(self):
+        return self.nombre + ' ' + self.apellido
     class Meta:
-        managed = False
         db_table = 'doctor'
+        managed = False
+        verbose_name_plural = 'Doctores'
 
 
 class Abono(models.Model):
@@ -179,10 +205,12 @@ class Abono(models.Model):
     estado = models.CharField(max_length=30)
     valor = models.IntegerField()
     fecha = models.DateField()
-
+    def __unicode__(self):
+        return self.descripcion
     class Meta:
-        managed = False
         db_table = 'abono'
+        managed = False
+        verbose_name_plural = 'Abonos'
 
 
 class Servicio(models.Model):
@@ -192,8 +220,10 @@ class Servicio(models.Model):
     estado = models.CharField(max_length=30)
     valor = models.IntegerField()
     fecha = models.DateField()
-
+    def __unicode__(self):
+        return self.descripcion
     class Meta:
-        managed = False
         db_table = 'servicio'
+        managed = False
+        verbose_name_plural = 'Servicios'
 

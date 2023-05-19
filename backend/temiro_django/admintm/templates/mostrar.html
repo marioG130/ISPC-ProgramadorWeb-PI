@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html lang="en">  
+  <head>  
+        <meta charset="UTF-8">  
+        <title>Lista de Productos</title>  
+        {% load static %}  
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/> 
+  </head>  
+  <body>  
+    <table class="table table-striped table-bordered table-sm">  
+        <thead class="thead-dark">  
+        <tr>  
+            <th>ID Producto</th>  
+            <th>Descripcion</th>  
+            <th>Precio</th>  
+            <th>Acciones</th>  
+        </tr>  
+        </thead>  
+        <tbody>  
+    {% for producto in productos %}  
+        <tr>  
+            <td>{{ producto.idproducto }}</td>  
+            <td>{{ producto.descripcion }}</td>  
+            <td>{{ producto.precio }}</td>  
+            <td>  
+                <a href="/admintm/editar/{{ producto.idproducto }}"><span class="glyphicon glyphicon-pencil" >Editar</span></a>  
+                <a href="/admintm/borrar/{{ producto.idproducto }}">Borrar</a>  
+            </td>  
+        </tr>  
+    {% endfor %}  
+        </tbody>  
+    </table>  
+    <br>  
+    <br>  
+    <center><a href="/admintm/prod" class="btn btn-primary">Agregar Nuevo Prod.</a></center>  
+  </body>  
+</html>
