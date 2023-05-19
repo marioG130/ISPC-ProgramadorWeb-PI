@@ -16,6 +16,7 @@ import { RegistroComponent }         from './home/registro/registro.component';
 import { TermycondicionesComponent } from './home/termycondiciones/termycondiciones.component';
 
 import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
+import { FaqComponent } from './home/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras
     QuienesSomosComponent,
     LoginComponent,
     CarrocomprasComponent,
-    TermycondicionesComponent
+    TermycondicionesComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
