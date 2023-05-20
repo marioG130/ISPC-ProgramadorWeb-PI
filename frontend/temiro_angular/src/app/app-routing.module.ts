@@ -11,7 +11,7 @@ import { RegistroComponent }         from './home/registro/registro.component';
 import { TermycondicionesComponent } from './home/termycondiciones/termycondiciones.component';
 
 import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
-import { ProductosComponent } from './productos/productos.component';
+import { ProductosComponent } from './dashboard/productos/productos.component';
 
 const routes: Routes = [
   {path: '', component: BodyComponent},
