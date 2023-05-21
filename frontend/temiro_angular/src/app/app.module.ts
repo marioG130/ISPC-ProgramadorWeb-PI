@@ -18,6 +18,7 @@ import { TermycondicionesComponent } from './home/termycondiciones/termycondicio
 import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
 import { FaqComponent } from './home/faq/faq.component';
 import { ProductosComponent }     from './dashboard/productos/productos.component';
+import { ProductoComponent } from './dashboard/productos/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProductosComponent }     from './dashboard/productos/productos.componen
     TermycondicionesComponent,
     FaqComponent,
     ProductosComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
