@@ -1,0 +1,61 @@
+<div id="Productos" class="mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center text-uppercase p-3">
+                                  <!-- Interpolacion -->
+        <h2 style="color:black " class="texto-blanco titulo">{{titulo}}</h2> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+                                      <!-- Interpolacion -->
+          <img class="card-img-top" src="{{ examenvisual }}" alt="Foto examenvisual">
+          <div class="card-body">
+            <div class="badges">
+              <span class="badge badge-warning"></span>
+            </div>                                  <!-- (Event) Binding -->
+            <button class="btn btn-primary" (click)="incrementarvisual(1)"><h5 class="card-title seccion-texto">Examen Visual</h5></button>
+            <h3>{{ numerovisual }}</h3>
+            <p class="card-text seccion-texto">Los exámenes visuales o graduación de la vista y todo lo que tiene que ver con la optometría forman el núcleo de nuestra filosofía de
+               empresa,Durante el examen se realizarán TODAS las pruebas necesarias para conseguir un diagnóstico preciso del defecto visual.De esta forma, encontraremos la mejor
+                solución a los problemas que refiere el paciente.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+                                    <!-- Property Binding -->
+          <img class="card-img-top" [src]="tallerdemontaje" alt="Foto anteojos Recetados">
+          <div class="card-body">
+            <div class="badges">               <!-- Property Binding -->
+            <span class="badge badge-warning"><div inerhtml="textotaller"></div></span>
+            </div>
+                    <!-- Property Binding -->                            <!-- (Event) Binding -->
+            <button [disabled]="desabilitado" class="btn btn-primary" (click)="incrementartaller()"><h5 class="card-title seccion-texto">Taller de Montaje</h5></button>
+            <h3>{{ numerotaller }}</h3>
+            <p class="card-text seccion-texto">Otro de nuestros puntos importantes es que disponemos de un taller de montaje de gafas propio.Este completo taller de montaje con
+               que contamosnos permite montar cualquiera de los tipos de gafas disponibles actualmente en el mercado y no tener que enviar montajes a otros talleres, evitando así
+                el sobrecoste y la demora de tiempo que ello conlleva.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="./assets/img/lentesrotos.jpg" alt="lentes rotos">
+          <div class="card-body">
+            <div class="badges">
+              <span class="badge badge-warning">Seguro Rotura Lentes</span>
+            </div>
+                                            <!-- (Event) Binding -->
+            <button class="btn btn-primary" (click)="incrementarseguro()"><h5 class="card-title seccion-texto">Seguro de Rotura para Lentes </h5></button>
+            <h3>{{ numeroseguro }}</h3>
+            <p class="card-text seccion-texto"> Aunque las lentes que más se utilizan últimamente son las orgánicas (difíciles de romper), cuando te compres unas gafas graduadas en
+               TemiroOptica, además de la garantía propia que tendrán tus gafas, llevarás incluido un seguro de rotura para los cristales.  Este seguro de rotura es totalmente 
+               gratuito y siempre está incluido en la compra de tus gafas graduadas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
