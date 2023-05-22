@@ -52,10 +52,10 @@
       "description": "Anteojo de sol Gaal 1004 ngm g15 Color del cristal Negro Estilo Rectangular Genero Unisex Color Negro",
       "category": "Lentes de sol",
       "id": 1,
-      "price": 12000.00,
+      "price": 12000,
       "identifier": "Anteojo de sol Gaal 1004 ngm g15",
       "Stock": "Disponible",
-      "img": "../../assets/img/lente de sol.jpg", 
+      "img": "../../assets/img/lente de sol.jpg",
       "qty": 1
     },
     {
@@ -63,10 +63,10 @@
       "description": "Anteojo Blue Filter Gaal 2004 tr bf14 Color del cristal Transparente Estilo Redondo Genero Unisex Color Dorado opaco",
       "category": "Lentes Blue Filter",
       "id": 1,
-      "price": 15000.00,
+      "price": 15000,
       "identifier": "Anteojo Blue Filter Gaal 2004 tr bf14",
       "Stock": "Disponible",
-      "img": "../../assets/img/lentes bluefilter.jpg", 
+      "img": "../../assets/img/lentes bluefilter.jpg",
       "qty": 1
     }
   ]

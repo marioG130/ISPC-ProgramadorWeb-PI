@@ -11,7 +11,6 @@ import { QuienesSomosComponent }     from './quienes-somos/quienes-somos.compone
 import { ContactoComponent }         from './contacto/contacto.component';
 import { TermycondicionesComponent } from './termycondiciones/termycondiciones.component';
 
-import { CarrocomprasComponent }     from '../dashboard/carrocompras/carrocompras.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { CarrocomprasComponent }     from '../dashboard/carrocompras/carrocompra
     QuienesSomosComponent,
     ContactoComponent,
     TermycondicionesComponent,
-    CarrocomprasComponent
   ],
   imports: [
     CommonModule,

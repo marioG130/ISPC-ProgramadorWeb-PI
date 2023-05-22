@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
                     });
             if(user) {
                 alert("Ingreso Exitoso");
-                this.router.navigate(["carrito"])
+                this.router.navigate(["productos"])
             } else {
                 alert("Usuario no encontrado !");
             }
