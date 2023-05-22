@@ -1,221 +1,96 @@
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 20px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1 {
-    margin: 8px 0;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
-
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
-
-  .card svg.material-icons path {
-    fill: #888;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
-
-  .card {
-    all: unset;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 500px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  .card-container .card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
-  }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .terminal {
-    position: relative;
-    width: 500%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    margin-bottom: 80px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
-
-</style>
 
 <div class="content" role="main">
-
   <h1>PREGUNTAS FRECUENTES</h1>
   <p>Haz click en la pregunta de tu interés y la respuesta
   <br>saldrá en la pantalla del final de la página.</p>
-
   <input type="hidden" #selection>
-
   <div class="card-container">
     <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>¿Cómo pagar mi compra?</span>
     </button>
-
     <button class="card card-small" (click)="selection.value = 'material'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>¿Cómo recibir o retirar mi producto?</span>
     </button>
-
     <button class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>¿Cómo protegen a los compradores?</span>
     </button>
-
     <button class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>¿Cómo funciona el beneficio de envíos gratis?</span>
     </button>
-
     <button class="card card-small" (click)="selection.value = 'test'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>¿Cómo hacer una cancelación de compra?</span>
     </button>
-
     <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>¿Cómo hacer una devolución de producto?</span>
     </button>
   </div>
-
   <!-- Terminal -->
-  <div class="terminal" ngSwitch="selection.value">
+  <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>Podes pagar con cualquiera de estos medios y tu
         <br>compra va a estar 100% protegida. Y si el producto
         <br>no es lo que esperabas, te devolveremos el dinero.
-        <br>Elegí entre cualquiera de estos medios de pago...
+        <br>Elegí entre alguna de estas formas de pago...
 
 - Tarjeta de crédito: Visa, Mastercard, Nativa
   (hasta 6 pagos sin interés);
-        
+
 - Tarjeta de débito: Visa, Mastercard, Nativa
   (hasta 6 pagos sin interés);
-        
+
 - Efectivo con Pago Fácil o Rapipago (en 1 pago).</pre>
       <pre *ngSwitchCase="'material'">Podes recibir el producto en tu domicilio mientras
         <br>estés ubicado dentro de la Argentina. Calculas el
-        <br>costo y tiempo de envío desde la compra y luego
+        <br>costo y tiempo de envío desde la compra, y luego
         <br>pagas todo junto. Otra opción es retirar el producto
         <br>en nuestra sucursal o por Correo Argentino, a través
         <br>de una persona designada, la cual debe presentar su
         <br>DNI y el código de seguimiento que figura en el
-        <br>email de envío o en tu cuenta. Y también puede hacer
+        <br>email de "envío" o en tu cuenta. Y también puede hacer
         <br>el retiro cualquier mayor de edad, en caso de que la
-        <br>persona designada no pueda hacerlo con la siguiente
+        <br>persona designada no pueda hacerlo, con la siguiente
         <br>documentación a presentar…
 
 - DNI;
-        
+
 - Fotocopia del DNI de la persona designada;
-        
+
 - El código de seguimiento;
-        
+
 - El mail de aviso de paquete en sucursal impreso;
-        
+
 - El formulario de autorización completo.</pre>
       <pre *ngSwitchCase="'pwa'">Si tuvieras algún problema con la compra, estaremos
         <br>ahí para ayudarte. Lo primero que debes hacer es:
-        <br>Iniciar un reclamo a través de la sección consultas
-        <br>para solucionar lo antes posible la cuestión.
+        <br>Iniciar un "reclamo" a través de la sección "consultas"
+        <br>para solucionar la cuestión, lo antes posible.
         <br>Si completaste el pago desde nuestro sitio y llegas
         <br>a tener una dificultad, te devolvemos el 100% del
         <br>dinero. Porque tu compra siempre debe ser segura.</pre>
       <pre *ngSwitchCase="'dependency'">Si ya sos cliente registrado, que compraste en otra
         <br>oportunidad en nuestra tienda online y superas los
         <br>$50.000 en la compra de nuevos productos, tienes el
-        <br>beneficio del envío sin cargo.</pre>
+        <br>beneficio del "envío sin cargo".</pre>
       <pre *ngSwitchCase="'test'">Si la compra está en preparación, podes cancelarla
         <br>desde el estado de la compra. Si la compra ya está
         <br>en camino, podes rechazarla cuando llegue o no
         <br>retirarla del correo. Si elegiste envío a domicilio,
-        <br>cuando el paquete llegue pídele al transportista que
+        <br>cuando el paquete llegue, pídele al transportista que
         <br>se lo lleve de vuelta. Si elegiste retirar en la
         <br>sucursal, no vayas a buscar el paquete. Si ya
         <br>recibiste la compra, podes devolverla.</pre>
       <pre *ngSwitchCase="'build'">Podrás hacer una devolución del producto que
         <br>compraste, siempre y cuando, este en excelentes
         <br>condiciones y empaquetado, además de realizar el
-        <br>pedido a través de la sección consultas dentro de las
-        <br>48 horas hábiles desde que recibes dicho paquete.
-        <br>Para eso te contactaremos por email o
-        <br>telefónicamente para darte un código el cual te
+        <br>pedido de "devolución" a través de la sección "consultas"
+        <br>dentro de las 48 horas hábiles desde que recibes dicho
+        <br>paquete. Luego, te contactaremos por email o
+        <br>telefónicamente para darte un "código" el cual te
         <br>respaldara para entregar el producto en el local
         <br>o para que un transportista de nuestro negocio lo
         <br>pase a buscar en tu domicilio. Y te devolvemos el

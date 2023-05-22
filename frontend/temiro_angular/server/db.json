@@ -1,0 +1,73 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "RegistroUsuarios": [
+    {
+      "fullname": "maria gonzalez",
+      "email": "maria@gmail.com",
+      "username": "maria2020",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "fullname": "hector rodriguez",
+      "email": "hector@gmail.com",
+      "username": "hector2020",
+      "password": "qwe12345",
+      "id": 2
+    },
+    {
+      "fullname": "eric dominguez",
+      "email": "eric20@gmail.com",
+      "username": "eric2020",
+      "password": "qwe12345",
+      "id": 3
+    },
+    {
+      "fullname": "gustavo suarez",
+      "email": "gustavo2020@gmail.com",
+      "username": "gustavo2023",
+      "password": "12345qwe",
+      "id": 4
+    },
+    {
+      "fullname": "guillermo benitez",
+      "email": "guille2020@gmail.com",
+      "username": "guille2020",
+      "password": "12345",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "producto": [
+    {
+      "name": "Lentes de Sol",
+      "description": "Anteojo de sol Gaal 1004 ngm g15 Color del cristal Negro Estilo Rectangular Genero Unisex Color Negro",
+      "category": "Lentes de sol",
+      "id": 1,
+      "price": 12000,
+      "identifier": "Anteojo de sol Gaal 1004 ngm g15",
+      "Stock": "Disponible",
+      "img": "../../assets/img/lente de sol.jpg",
+      "qty": 1
+    },
+    {
+      "name": "Lentes Blue Filter",
+      "description": "Anteojo Blue Filter Gaal 2004 tr bf14 Color del cristal Transparente Estilo Redondo Genero Unisex Color Dorado opaco",
+      "category": "Lentes Blue Filter",
+      "id": 1,
+      "price": 15000,
+      "identifier": "Anteojo Blue Filter Gaal 2004 tr bf14",
+      "Stock": "Disponible",
+      "img": "../../assets/img/lentes bluefilter.jpg",
+      "qty": 1
+    }
+  ]
+}

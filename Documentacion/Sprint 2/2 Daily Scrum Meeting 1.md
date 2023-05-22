@@ -1,0 +1,6 @@
+# Reunión del miercoles 10 de Mayo de 2023
+
+Siendo las 21 horas del día 10 de mayo de 2023 se realiza la daily nº 1 del Sprint 2. A la misma asisten Mario, Mariano, Tatiana, Noelia y Gonzalo, no pudiendo asistir Fernanda ni Alejandro. 
+La reunión se divide en dos partes. En la primera parte de dicha reunión se repasaron algunas cuestiones del proyecto que quedaron pendientes del sprint anterior y Se repasaron los requerimientos y algunas tareas del presente sprint en lo que respecta. Mario se encargará de librería bootstrap. Mariano revisará y acomodará el html y css de los componentes. Por último Tatiana se encargará del css de forma global (tipo de letra, tamaño de letra, colores) para que los componentes sean iguales.
+En la segunda parte de la reunión se acordaron tareas para el backend. Noelia se compromete a trabajar con el script inset en sqlScript que llene la base de datos, insert.. (producto, clientes, y usuarios). Gonza de json server httpclient y consumir en Angular. Mario de la generación de clases. Tatiana django admin y requerimiento Nº 2 de Backend. 
+Siendo las 22 horas se da por finalizada la reunión.
