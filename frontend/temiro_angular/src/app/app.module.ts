@@ -17,7 +17,6 @@ import { RegistroComponent }         from './home/registro/registro.component';
 import { TermycondicionesComponent } from './home/termycondiciones/termycondiciones.component';
 
 
-import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
@@ -34,7 +33,6 @@ import { ServiciosComponent }        from './dashboard/servicios/servicios.compo
     LoginComponent,
     RegistroComponent,
     TermycondicionesComponent,
-    CarrocomprasComponent,
     ProductosComponent,
     ProductoComponent,
     ServiciosComponent,
