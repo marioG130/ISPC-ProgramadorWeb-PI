@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from "@angular/forms"
+import { FormGroup, FormBuilder, Validators } from "@angular/forms"
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-registro',
@@ -9,8 +10,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+    myForm: FormGroup;
 
-    // Propiedad Publica que contiene Grupo Formularios
+    constructor(
+      public fb: FormBuilder
+    ) {
+      this.myForm = this.fb.group({
+        fullname: ['', [Validators.required]],
+        username: ['', [Validators.required]],
+        email: ['', [Validators.required]],
+        password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+      });
+    }
+   ngOnInit() { }
+   
+   saveData(){
+      console.log(this.myForm.value);
+    }
+  
+    }
+
+    /* Propiedad Publica que contiene Grupo Formularios
     public signupForm !: FormGroup;
 
     // Se inyecta el generador de Formularios dentro del constructor
@@ -34,4 +54,4 @@ export class RegistroComponent implements OnInit {
                 alert("Algo salió mal en el registro !")
             });
     }
-}
+}*/

@@ -1,16 +1,76 @@
 <div class="form-register">
-  <form [formGroup]="signupForm" (ngSubmit)="signup()">
+  <!--<form [formGroup]="signupForm" (ngSubmit)="signup()">-->
+  <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
     <h4>Formulario Registro</h4>
-    <input formControlName="fullname" class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required minlength="5" maxlength="30">
-    <input formControlName="username" class="controls" type="text" name="usuario" id="usuario" placeholder="Usuario" required minlength="5" maxlength="30">
-    <input formControlName="email" class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo" required minlength="8" maxlength="40">
+    
+    <!-- Apellido y nombre -->
+    <input formControlName="fullname"
+     class="controls"
+     imput type="text" 
+     name="nombre" 
+     id="nombre" 
+     placeholder="Nombre y Apellido" 
+     required minlength="5" 
+     maxlength="30">
+      <div>
+      <div> *ngIF="myForm.get("fullname").errors && myForm.get("fullname").dirty">
+      <p>*ngIF="myForm.get("fullname").hasError("required")">Apellido y Nombre Requerido</p>
+      </div>
+      </div>
+     
+      <!-- Usuario -->
+    <input formControlName="username"
+     class="controls"
+     imput type="text"
+     name="usuario"
+     id="usuario"
+     placeholder="Usuario"
+     required minlength="5"
+     maxlength="30">
+      <div>
+      <div> *ngIF="myForm.get("username").errors && myForm.get("username").dirty">
+      <p>*ngIF="myForm.get("username").hasError("required")">Nombre de Usuario Requerido</p>
+      </div>
+      </div>
+    
+    <!-- Email -->
+    <input formControlName="email"
+     class="controls"
+     imput type="email"
+     name="email"
+     id="email"
+     placeholder="Ingrese su Correo"
+     required minlength="8" 
+     maxlength="40">
     <span id="correoOk"></span>
-    <input formControlName="password" class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required minlength="8" maxlength="80">
+      <div>
+      <div> *ngIF="myForm.get("email").errors && myForm.get("email").dirty">
+      <p>*ngIF="myForm.get("email").hasError("required")">Correo Requerido</p>
+      </div>
+      </div>
+
+    <!-- Password -->
+    <input formControlName="password"
+     class="controls"
+     imput type="password"
+     name="password"
+     id="password"
+     placeholder="Ingrese su Contraseña"
+     required minlength="8"
+     maxlength="80">
+       <div>
+       <div> *ngIF="myForm.get("password").errors && myForm.get("password").dirty">
+       <p>*ngIF="myForm.get("password").hasError("required")">Contraseña requerida</p>
+       <p>*ngIF="myForm.get("password").hasError("minLength")">minimo 5 caracteres</p>
+       <p>*ngIF="myForm.get("password").hasError("maxLength")">maximo 10 caracteres</p>
+       </div>
+       </div>
+
     <p>
       <input type="checkbox" name="Aceptar" id="checkbox"> Acuerdo
       <a class="enlaces-negros" target="_blank" href="termycond" required>Terminos y Condiciones</a>
     </p>
-    <button type="submit" class="btn btn-azul">Registrar</button>
+    <button type="submit" [disabled]="myForm.invalid" class="btn btn-azul">Registrar</button>
     <p>
       <a class="enlaces-negros" href="login">¿Ya tengo Cuenta?</a>
     </p>

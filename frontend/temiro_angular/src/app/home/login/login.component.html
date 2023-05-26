@@ -1,20 +1,41 @@
 <div class="cont form-box">
     <!-- ¿logo de la óptica? -->
     <h1 class="form-title">Iniciar sesión</h1>
-    <form [formGroup]="loginForm"  (ngSubmit)="login()" >
-        <input formControlName="username" type="text" placeholder="Usuario" class="transfor" required minlength="5" maxlength="30"> <!--ngModel-->
-        <div class="invalid-feedback">
-          Por favor ingrese su nombre de usuario (entre 5 y 30 caract.)<br><br>
-        </div>
-        <input formControlName="password" type="password" placeholder="Contraseña" class="transfor" required minlength="8" maxlength="80"> <!--ngModel-->
-        <div class="invalid-feedback">
-          Por favor ingrese su contraseña (entre 8 y 80 caract.)<br><br>
-        </div>
+     <!--<form [formGroup]="loginForm"  (ngSubmit)="login()"> -->
+      <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+        
+        <!-- Usuario -->
+       <input formControlName="username"
+         imput type="text"
+         placeholder="Usuario"
+         class="transfor"
+         required minlength="5"
+         maxlength="30"> <!--ngModel-->
+           <div>
+           <div> *ngIF="myForm.get("username").errors && myForm.get("username").dirty">
+           <p>*ngIF="myForm.get("username").hasError("required")">Nombre de Usuario Requerido</p>
+           </div>
+           </div>
+         
+        <!-- Contraseña -->
+       <input formControlName="password"
+        imput type="password"
+         placeholder="Contraseña"
+         class="transfor"
+         required minlength="8"
+         maxlength="80"> <!--ngModel-->
+          <div>
+          <div> *ngIF="myForm.get("password").errors && myForm.get("password").dirty">
+          <p>*ngIF="myForm.get("password").hasError("required")">Contraseña requerida</p>
+          <p>*ngIF="myForm.get("password").hasError("minLength")">minimo 5 caracteres</p>
+          <p>*ngIF="myForm.get("password").hasError("maxLength")">maximo 10 caracteres</p>
+          </div>
+          </div>
         <!--<a href="dashboard"> </a>-->
-        <button type="submit" class="btn btn-azul">Ingresar</button>
+        <button type="submit" [disabled]="myForm.invalid" class="btn btn-azul">Ingresar</button>
         <!--<a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">-->
     </form>
-    <p>¿No tiene una cuenta? Entrar en
-      <a class="enlaces-negros" href="registro"> Registrarse</a>
-    </p>
+         <p>¿No tiene una cuenta? Entrar en
+         <a class="enlaces-negros" href="registro"> Registrarse</a>
+         </p>
 </div>
