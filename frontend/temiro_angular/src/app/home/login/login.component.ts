@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,29 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-    // Propiedad publica de inicio de sesion
+    myForm: FormGroup;
+
+    constructor(
+      public fb: FormBuilder
+    ) {
+      this.myForm = this.fb.group({
+        username: ['', [Validators.required]],
+        password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+      });
+    }
+   ngOnInit() { }
+   saveData(){
+      console.log(this.myForm.value);
+    }
+  
+  }
+
+
+ 
+
+
+
+    /* Propiedad publica de inicio de sesion
     public loginForm!: FormGroup
     loginForms: any;
 
@@ -40,4 +62,4 @@ export class LoginComponent implements OnInit {
             alert("Algo salio mal al hacer login !");
         })
     }
-}
+}*/
