@@ -1,0 +1,51 @@
+ 
+  <!--<h3>{{ products.nombre }}</h3>
+  <h4>{{ products.precio }}</h4>
+  <p>{{ products.descripcion }}</p>-->
+  
+<section class="contenedor-d">  
+    <h1 style="text-align: center;">Detalles del Producto</h1>
+    <!--(comentar este renglón) Contenedor de productos -->
+    <!--<div class="contenedor-items-d"> -->
+        <div class="item-d">
+            <h2 style="text-align: center;">{{ products.nombre }}</h2>
+            <div class="bloque">
+                <img src= "{{products.img}}" alt="" class="img-item-d">
+                <h4 class="desc-d"><b>Características:</b><br></h4>
+                    <h5> {{ products.caracteristicas }}</h5>
+            </div>
+            <span class="amp-d"><b>Especificaciones del Producto:</b> {{products.descripcion}}</span>
+            <div >
+                <a><button class="boton-item-d">Regresar</button></a>
+                <a><button class="boton-item-d">Agregar al carrito</button></a>
+            </div>
+            
+        </div>
+    <!--</div>-->
+
+    <!--
+    <div class="contenedor-items">
+        <div class="item">
+            <span class="titulo-item">Lentes Bluefilter</span>
+            <img src="assets/img/lentes bluefilter.jpg" alt="Lentes Filtro Azul" class="img-item">
+            <span class="">Diseñadas para reducir y filtrar la cantidad de rayos de luz azul que llega al ojo y ayudan a evitar que causen daños potenciales. Reducen la fatiga ocular y mejoran el contraste</span>
+            <button class="boton-item" (click)="producto()">Regresar</button>
+        </div>
+    </div>
+    <div class="contenedor-items">
+        <div class="item">
+            <span class="titulo-item">Gafas de Natación</span>
+            <img src="assets/img/gafas natacion.jfif" alt="Gafas De Natación" class="img-item">
+            <span class="">Proporcionan una buena visibilidad, son tu mejor elección si nadas por ocio y para mantenerte en forma, especialmente si no tienes costumbre de usar Gafas de Natación.</span>
+            <button class="boton-item" (click)="producto()">Regresar</button>
+        </div>
+    </div>
+    <div class="contenedor-items">
+        <div class="item">
+            <span class="titulo-item">Lentes de Lejos</span>
+            <img src="assets/img/lentes de lejos.jpg" alt="" class="img-item">
+            <span class="">Corrigen los problemas de visión y le devuelven una visión nítida.</span>
+            <button class="boton-item" (click)="producto()">Regresar</button>
+        </div>
+    </div> -->
+</section> 

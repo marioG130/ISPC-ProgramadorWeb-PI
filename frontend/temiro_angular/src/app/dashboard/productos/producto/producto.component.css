@@ -1,1 +1,92 @@
-/* css de componente producto */
+.contenedor {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content:space-around;
+    text-align: center;
+}
+
+.contenedor-items{
+    text-align: center;    
+    transition: .3s;
+    border-radius: 10px;
+    border: black;
+    margin-inline-start: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+}
+
+.img-item{
+    width: 80%;
+    height: 80%;
+}
+
+.boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: rgb(20, 5, 240);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* SECCION CONTENEDOR DE ITEMS
+.contenedor-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    transition: .3s;
+    border-radius: 10px;
+    border: black;
+}
+
+.contenedor .contenedor-items .item {
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item .img-item {
+    width: 100%;
+}
+
+.contenedor .contenedor-items .item:hover {
+    box-shadow: 0 0 10px #666;
+    scale: 1.05;
+}
+
+.contenedor .contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenedor .contenedor-items .item .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+} */

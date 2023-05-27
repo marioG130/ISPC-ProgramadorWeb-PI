@@ -13,6 +13,8 @@ import { TermycondicionesComponent } from './home/termycondiciones/termycondicio
 import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
+import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
+import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
 
 
 const routes: Routes = [
@@ -29,6 +31,8 @@ const routes: Routes = [
   {path: 'carrito', component: CarrocomprasComponent},
   {path: 'productos', component: ProductosComponent},
   {path: 'servicios', component: ServiciosComponent},
+  {path:'formuproductos', component: FormuProductosComponent},
+  {path: 'products/:productId', component: DetallesComponent}
 ];
 
 @NgModule({
