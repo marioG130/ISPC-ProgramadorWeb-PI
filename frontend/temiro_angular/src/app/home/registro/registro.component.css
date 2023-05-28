@@ -74,3 +74,30 @@ h4{
   display: block;
   margin-top: 0 !important;
 }
+
+
+.resultado {
+font-size: 22px;
+text-align: center;
+
+}
+
+.fullname{
+  font-size: large;
+  text-align: center;
+}
+
+.username{
+  font-size: large;
+  text-align: center;
+}
+
+.email{
+  font-size: large;
+  text-align: center;
+}
+
+.password{
+  font-size: large;
+  text-align: center;
+}

@@ -77,3 +77,19 @@ p {
         margin: 20px;
     }
 }
+
+.resultado {
+    font-size: 22px;
+    text-align: center;
+    
+    }
+
+.usuario {
+    font-size: large;
+    text-align: center;
+}    
+.contraseña {
+    font-size: large;
+    text-align: center;
+
+}

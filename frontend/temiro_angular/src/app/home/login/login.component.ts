@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
     myForm: FormGroup;
-
+    resultado!: string;
     constructor(
       public fb: FormBuilder
     ) {
@@ -23,6 +23,10 @@ export class LoginComponent implements OnInit {
    ngOnInit() { }
    saveData(){
       console.log(this.myForm.value);
+      if (this.myForm.valid)
+      this.resultado = "Ingreso Exitoso";
+    else
+      this.resultado = "Usuario y Contraseña Invalidos";
     }
   
   }
