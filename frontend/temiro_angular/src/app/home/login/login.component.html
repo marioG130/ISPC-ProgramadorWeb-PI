@@ -11,15 +11,19 @@
          class="transfor"
          required minlength="5"
          maxlength="30"> <!--ngModel-->
+         Validacion-de-Formularios
           <div class="usuario">
               <span *ngIf="this.myForm.get('username')?.errors?.['required']">
                Usuario Requerido!
               </span>
           </div>
+
+           
          
         <!-- Contraseña -->
        <input formControlName="password"
         imput type="password"
+        Validacion-de-Formularios
         placeholder="Contraseña"
         class="transfor"
         required minlength="8"
@@ -38,6 +42,8 @@
         <!--<a href="dashboard"> </a>-->
         <div class="resultado">{{resultado}}</div>
         <button type="submit"  class="btn btn-azul">Ingresar</button>
+
+         
         <!--<a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">-->
     </form>
          <p>¿No tiene una cuenta? Entrar en

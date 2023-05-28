@@ -1,6 +1,8 @@
 <div class="form-register">
   <!--<form [formGroup]="signupForm" (ngSubmit)="signup()">-->
+
   <form [formGroup]="myForm" (ngSubmit)="submit()" novalidate>
+
     <h4>Formulario Registro</h4>
     
     <!-- Apellido y nombre -->
@@ -12,11 +14,13 @@
      placeholder="Nombre y Apellido" 
      required minlength="5" 
      maxlength="30">
+
       <div class="fullname">
            <span *ngIf="this.myForm.get('fullname')?.errors?.['required']">
            Apellido y Nombre Requerido!
            </span>
       </div>
+      
      
       <!-- Usuario -->
     <input formControlName="username"
@@ -26,12 +30,14 @@
      id="usuario"
      placeholder="Usuario"
      required minlength="5"
+
      maxlength="10">
       
       <div class="username">
           <span *ngIf="this.myForm.get('username')?.errors?.['required']">
           Nombre De Usuario Requerido!
           </span>
+
       </div>
     
     <!-- Email -->
@@ -44,14 +50,17 @@
      required minlength="8" 
      maxlength="40">
     <span id="correoOk"></span>
-      <div class="email">
+
+
+     <div class="email">
            <span *ngIf="this.myForm.get('email')?.errors?.['required']">
             Email Requerido!
            </span>
            <span *ngIf="this.myForm.get('email')?.errors?.['email']">
             (El mail no es válido)
           </span>
-      </div>
+     </div>
+      
 
     <!-- Password -->
     <input formControlName="password"
@@ -60,6 +69,7 @@
      name="password"
      id="password"
      placeholder="Ingrese su Contraseña"
+
      required minlength="5"
      maxlength="15">
       <div class="password">
@@ -74,12 +84,15 @@
            </span>
       </div>
 
+
     <p>
       <input type="checkbox" name="Aceptar" id="checkbox"> Acuerdo
       <a class="enlaces-negros" target="_blank" href="termycond" required>Terminos y Condiciones</a>
     </p>
+
     <div class="resultado">{{resultado}}</div>
     <button type="submit"  class="btn btn-azul">Registrar</button>
+
     <p>
       <a class="enlaces-negros" href="login">¿Ya tengo Cuenta?</a>
     </p>
