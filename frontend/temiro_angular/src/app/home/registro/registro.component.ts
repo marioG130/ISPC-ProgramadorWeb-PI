@@ -12,21 +12,36 @@ import { Router } from '@angular/router';
 export class RegistroComponent implements OnInit {
     myForm: FormGroup;
 
+    resultado!: string;
+
+
     constructor(
       public fb: FormBuilder
     ) {
       this.myForm = this.fb.group({
         fullname: ['', [Validators.required]],
         username: ['', [Validators.required]],
-        email: ['', [Validators.required]],
+
+        email: ['', [Validators.required, Validators.email]],
+
+
         password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
       });
     }
    ngOnInit() { }
    
-   saveData(){
+
+   submit(){
       console.log(this.myForm.value);
+      if (this.myForm.valid)
+      this.resultado = "Todos los datos son válidos";
+      else
+      this.resultado = "Hay datos inválidos en el formulario";
+    
+    
     }
+
+
   
     }
 

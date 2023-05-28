@@ -1,6 +1,8 @@
 <div class="form-register">
   <!--<form [formGroup]="signupForm" (ngSubmit)="signup()">-->
-  <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+
+  <form [formGroup]="myForm" (ngSubmit)="submit()" novalidate>
+
     <h4>Formulario Registro</h4>
     
     <!-- Apellido y nombre -->
@@ -12,11 +14,13 @@
      placeholder="Nombre y Apellido" 
      required minlength="5" 
      maxlength="30">
-      <div>
-      <div> *ngIF="myForm.get("fullname").errors && myForm.get("fullname").dirty">
-      <p>*ngIF="myForm.get("fullname").hasError("required")">Apellido y Nombre Requerido</p>
+
+      <div class="fullname">
+           <span *ngIf="this.myForm.get('fullname')?.errors?.['required']">
+           Apellido y Nombre Requerido!
+           </span>
       </div>
-      </div>
+      
      
       <!-- Usuario -->
     <input formControlName="username"
@@ -26,11 +30,14 @@
      id="usuario"
      placeholder="Usuario"
      required minlength="5"
-     maxlength="30">
-      <div>
-      <div> *ngIF="myForm.get("username").errors && myForm.get("username").dirty">
-      <p>*ngIF="myForm.get("username").hasError("required")">Nombre de Usuario Requerido</p>
-      </div>
+
+     maxlength="10">
+      
+      <div class="username">
+          <span *ngIf="this.myForm.get('username')?.errors?.['required']">
+          Nombre De Usuario Requerido!
+          </span>
+
       </div>
     
     <!-- Email -->
@@ -43,11 +50,17 @@
      required minlength="8" 
      maxlength="40">
     <span id="correoOk"></span>
-      <div>
-      <div> *ngIF="myForm.get("email").errors && myForm.get("email").dirty">
-      <p>*ngIF="myForm.get("email").hasError("required")">Correo Requerido</p>
-      </div>
-      </div>
+
+
+     <div class="email">
+           <span *ngIf="this.myForm.get('email')?.errors?.['required']">
+            Email Requerido!
+           </span>
+           <span *ngIf="this.myForm.get('email')?.errors?.['email']">
+            (El mail no es válido)
+          </span>
+     </div>
+      
 
     <!-- Password -->
     <input formControlName="password"
@@ -56,21 +69,30 @@
      name="password"
      id="password"
      placeholder="Ingrese su Contraseña"
-     required minlength="8"
-     maxlength="80">
-       <div>
-       <div> *ngIF="myForm.get("password").errors && myForm.get("password").dirty">
-       <p>*ngIF="myForm.get("password").hasError("required")">Contraseña requerida</p>
-       <p>*ngIF="myForm.get("password").hasError("minLength")">minimo 5 caracteres</p>
-       <p>*ngIF="myForm.get("password").hasError("maxLength")">maximo 10 caracteres</p>
-       </div>
-       </div>
+
+     required minlength="5"
+     maxlength="15">
+      <div class="password">
+           <span *ngIf="this.myForm.get('password')?.errors?.['required']">
+           Contraseña Requerida!
+           </span>
+           <span *ngIf="this.myForm.get('password')?.errors?.['minlength']">
+            Debe tener como mínimo 5 caracteres!
+           </span>
+           <span *ngIf="this.myForm.get('password')?.errors?.['maxlength']">
+            Debe tener como maximo 10 caracteres!
+           </span>
+      </div>
+
 
     <p>
       <input type="checkbox" name="Aceptar" id="checkbox"> Acuerdo
       <a class="enlaces-negros" target="_blank" href="termycond" required>Terminos y Condiciones</a>
     </p>
-    <button type="submit" [disabled]="myForm.invalid" class="btn btn-azul">Registrar</button>
+
+    <div class="resultado">{{resultado}}</div>
+    <button type="submit"  class="btn btn-azul">Registrar</button>
+
     <p>
       <a class="enlaces-negros" href="login">¿Ya tengo Cuenta?</a>
     </p>
