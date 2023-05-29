@@ -1,31 +1,31 @@
 
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 6px;
     box-sizing: border-box;
 }
 
-html {
-    font-size: 12px;
+.titulo{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .bodyContacto {
-    width: min(45rem , 100%);
-    background: #78baeb;
+    width: min(30rem , 100%);
+    background: #ffffff;
     padding: 30px;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     border-radius: 4px;
     font-family: 'Roboto';
     color: rgb(5, 3, 3);
     box-shadow: 7px 13px 37px #000000;
 }
 
-.titulo{
-  text-align: center;
-  font-weight: 600;
-}
+
 
 .mainContacto {
     width: 40rem;
@@ -54,20 +54,6 @@ form label, form legend {
 
 .checkbox {
     margin:20px 0;
-}
-
-.enviar {
-    width: 150px;
-    padding: 15px 0;
-    font-size: 15px;
-    font-weight: bold;
-    color:white;
-    background: #0a6bf2;
-    border:none;
-    border-radius: 5px;
-    transition: 1s all;
-    cursor:pointer;
-    margin-left: 230px;
 }
 
 

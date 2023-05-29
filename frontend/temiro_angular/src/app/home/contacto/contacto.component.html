@@ -1,5 +1,6 @@
 <div class="bodyContacto mainContacto">
-  <p class="titulo">Formulario de Contacto</p>
+  <p class="titulo">FORMULARIO DE CONTACTO Y CONSULTAS</p>
+
   <form class="formContacto">
     <label for="nombreapellido">Nombre y Apellido</label>
     <input type="text" id="nombreapellido" class="input-padron" required>
@@ -19,6 +20,7 @@
         <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
         <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
     </fieldset>
+
     <fieldset>
         <legend>¿En cuál horario prefiere ser atendido?</legend>
         <select>
@@ -29,8 +31,10 @@
     </fieldset>
 
     <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de Óptica Temiro?</label>
-    <input type="submit" value="Enviar formulario" class="enviar">
+    
+    <button type="submit" class="btn btn-primary w-100">ENVIAR</button>
   </form>
+  
   <table class="tableContacto">
     <thead>
         <tr>

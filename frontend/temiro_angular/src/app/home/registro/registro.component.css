@@ -2,20 +2,23 @@
 * {
   margin: 0;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 6px;
   box-sizing: border-box;
 }
 
 h4{
   text-align: center;
+  font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .form-register {
   width: min(30rem, 100%);
-  background: #78baeb;
+  background: #ffffff;
   padding: 30px;
   margin: auto;
   margin-top: 100px;
+  margin-bottom: 100px;
   border-radius: 4px;
   font-family: 'Roboto';
   color: rgb(5, 3, 3);
@@ -100,4 +103,19 @@ text-align: center;
 .password{
   font-size: large;
   text-align: center;
+}
+
+.invalid-feedback {
+  text-align: center;
+}
+
+
+.form-control{
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  font-family: 'roboto';
+  font-size: 18px;
+  color: rgb(0, 0, 0);
 }
