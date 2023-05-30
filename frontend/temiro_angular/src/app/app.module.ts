@@ -20,7 +20,8 @@ import { TermycondicionesComponent } from './home/termycondiciones/termycondicio
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
-import { DetallesComponent } from './dashboard/productos/detalles/detalles.component';
+import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
+import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { DetallesComponent } from './dashboard/productos/detalles/detalles.compo
     ProductosComponent,
     ProductoComponent,
     ServiciosComponent,
-    DetallesComponent
+    DetallesComponent,
+    FormuProductosComponent
   ],
   imports: [
     BrowserModule,
