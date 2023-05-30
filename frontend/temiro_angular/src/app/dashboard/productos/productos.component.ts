@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProductosComponent {
 
-  clickDetalles1(){
+  
+
+  /* clickDetalles1(){
     alert('Bloquean el 99% de los rayos UVA y UVB.Cuentan con una pantalla 90% de luz visible y coinciden perfectamente en color y no presentan distorsiones e imperfecciones. Ideal para vos!!!');
   }
 
@@ -21,5 +23,5 @@ export class ProductosComponent {
 
   clickDetalles4(){
     alert('Corrigen los problemas de visión y le devuelven una visión nítida.');
-  }
+  }*/
 }
