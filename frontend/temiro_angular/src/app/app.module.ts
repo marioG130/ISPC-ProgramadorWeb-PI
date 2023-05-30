@@ -20,6 +20,7 @@ import { TermycondicionesComponent } from './home/termycondiciones/termycondicio
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
+import { DetallesComponent } from './dashboard/productos/detalles/detalles.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ServiciosComponent }        from './dashboard/servicios/servicios.compo
     ProductosComponent,
     ProductoComponent,
     ServiciosComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,

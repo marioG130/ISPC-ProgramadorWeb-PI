@@ -1,70 +1,22 @@
-{
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "RegistroUsuarios": [
-    {
-      "fullname": "maria gonzalez",
-      "email": "maria@gmail.com",
-      "username": "maria2020",
-      "password": "12345",
-      "id": 1
-    },
-    {
-      "fullname": "hector rodriguez",
-      "email": "hector@gmail.com",
-      "username": "hector2020",
-      "password": "qwe12345",
-      "id": 2
-    },
-    {
-      "fullname": "eric dominguez",
-      "email": "eric20@gmail.com",
-      "username": "eric2020",
-      "password": "qwe12345",
-      "id": 3
-    },
-    {
-      "fullname": "gustavo suarez",
-      "email": "gustavo2020@gmail.com",
-      "username": "gustavo2023",
-      "password": "12345qwe",
-      "id": 4
-    },
-    {
-      "fullname": "guillermo benitez",
-      "email": "guille2020@gmail.com",
-      "username": "guille2020",
-      "password": "12345",
-      "id": 5
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "producto": [
+export const products = [
     {
       "name": "Lentes de Sol",
-      "description": "Anteojo de sol Gaal 1004 ngm g15 Color del cristal Negro Estilo Rectangular Genero Unisex Color Negro",
+      "description": "Bloquean el 99% de los rayos UVA y UVB.Cuentan con una pantalla 90% de luz visible y coinciden perfectamente en color y no presentan distorsiones e imperfecciones. Ideal para vos!!!",
       "category": "Lentes de sol",
-      "id": 1,
+      "id": 1,    
       "price": 12000,
-      "identifier": "Anteojo de sol Gaal 1004 ngm g15",
+      "identifier": "Anteojo de sol Gaal 1004 ngm g15 Color del cristal Negro Estilo Rectangular Genero Unisex Color Negro",
       "Stock": "Disponible",
       "img": "../../assets/img/lente de sol.jpg",
       "qty": 1
     },
     {
       "name": "Lentes Blue Filter",
-      "description": "Anteojo Blue Filter Gaal 2004 tr bf14 Color del cristal Transparente Estilo Redondo Genero Unisex Color Dorado opaco",
+      "description": "Diseñadas para reducir y filtrar la cantidad de rayos de luz azul que llega al ojo y ayudan a evitar que causen daños potenciales. Reducen la fatiga ocular y mejoran el contraste.",
       "category": "Lentes Blue Filter",
-      "id": 1,
+      "id": 2,
       "price": 15000,
-      "identifier": "Anteojo Blue Filter Gaal 2004 tr bf14",
+      "identifier": "Anteojo Blue Filter Gaal 2004 tr bt40 Color del cristal Transparente Estilo Redondo Genero Unisex Color Dorado opaco",
       "Stock": "Disponible",
       "img": "../../assets/img/lentes bluefilter.jpg",
       "qty": 1
@@ -145,6 +97,5 @@
       "Stock": "Disponible",
       "img": "../../assets/img/gafas de proteccion.jpg",
       "qty": 1
-    }
-  ]
-}
+    },
+]
