@@ -1,4 +1,4 @@
-import { NgModule }             from '@angular/core';
+import { Component, NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BodyComponent } from './home/body/body.component';
@@ -14,6 +14,7 @@ import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
 import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
+import { FormuProductosComponent } from './dashboardadmin/formu-productos/formu-productos.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: 'productos', component: ProductosComponent},
   {path: 'servicios', component: ServiciosComponent},
   {path: 'products/:productId', component: DetallesComponent},
+  {path: 'formuproductos', component: FormuProductosComponent}
 ];
 
 @NgModule({
