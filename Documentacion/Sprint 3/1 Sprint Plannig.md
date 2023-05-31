@@ -1,7 +1,7 @@
-# Reunión del sábado 24 de Mayo de 2023
+# Reunión del miércoles 24 de Mayo de 2023
 ***
 
-Siendo las 21 horas del Miércoles de Mayo comienza la reunión del grupo “Óptica TeMiro” para poder llevar a cabo el Sprint Planning correspondiente al Sprint 3. A la misma asisten Tatiana, Mario, Alejandro, Noelia, Gonzalo y Fernanda.
+Siendo las 21 horas del Miércoles 24 de Mayo comienza la reunión del grupo “Óptica TeMiro” para poder llevar a cabo el Sprint Planning correspondiente al Sprint 3. A la misma asisten Tatiana, Mario, Alejandro, Noelia, Gonzalo y Fernanda.
 
 En la misma leimos las consignas del Sprint3 y  nos repartimos las tareas del siguiento modo:
 <center>
