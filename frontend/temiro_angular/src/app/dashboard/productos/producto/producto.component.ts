@@ -1,28 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { products } from '../products';
+import { listaProductos } from '../lista-productos';
 
 @Component({
-  selector: 'app-producto',
-  templateUrl: './producto.component.html',
-  styleUrls: ['./producto.component.css']
+    selector: 'app-producto',
+    templateUrl: './producto.component.html',
+    styleUrls: ['./producto.component.css']
 })
 export class ProductoComponent implements OnInit {
-  producto=products
 
-  Caracteristicas(){}
+    prds = listaProductos
 
-  constructor(private route: ActivatedRoute){}
-  ngOnInit(): void {
-  }
+    Caracteristicas() {
+
+    }
+
+    constructor(private route: ActivatedRoute){
+
+    }
+
+    ngOnInit(): void {
+
+    }
 
 
   /*
-    constructor(private route: ActivatedRoute,){}
+    constructor(private route: ActivatedRoute,){
 
+    }
 
-ngOnInit() {
-  this.route.paramMap.subscribe(paramsMap => {
+   ngOnInit() {
+    this.route.paramMap.subscribe(paramsMap => {
     this.products = products[+paramsMap.get('productId')!]
   })
   clickDetalles1(){

@@ -1,20 +1,24 @@
-import { Component, NgModule }             from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Component, NgModule }       from '@angular/core';
+import { RouterModule, Routes }      from '@angular/router';
 
-import { BodyComponent } from './home/body/body.component';
+import { BodyComponent }             from './comun/body/body.component';
+import { NoEncontradaComponent }     from './comun/no-encontrada/no-encontrada.component';
 
 import { ContactoComponent }         from './home/contacto/contacto.component';
 import { QuienesSomosComponent }     from './home/quienes-somos/quienes-somos.component';
 import { FaqComponent }              from './home/faq/faq.component';
 import { LoginComponent }            from './home/login/login.component';
 import { RegistroComponent }         from './home/registro/registro.component';
-import { TermycondicionesComponent } from './home/termycondiciones/termycondiciones.component';
+import { TermCondicionesComponent }  from './home/term-condic/term-condic.component';
 
+import { IndiceComponent }           from './dashboard/indice/indice.component';
 import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
 import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
-import { FormuProductosComponent } from './dashboardadmin/formu-productos/formu-productos.component';
+
+import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
+import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 
 
 const routes: Routes = [
@@ -26,13 +30,19 @@ const routes: Routes = [
   {path: 'faq', component: FaqComponent},
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
-  {path: 'termycond', component: TermycondicionesComponent},
+  {path: 'termycond', component: TermCondicionesComponent},
 
+  {path: 'indice', component: IndiceComponent},
   {path: 'carrito', component: CarrocomprasComponent},
   {path: 'productos', component: ProductosComponent},
   {path: 'servicios', component: ServiciosComponent},
   {path: 'products/:productId', component: DetallesComponent},
-  {path: 'formuproductos', component: FormuProductosComponent}
+
+  {path: 'indiceadm', component: IndiceAdmComponent},
+  {path: 'formuproductos', component: FormuProductosComponent},
+
+  {path: 'noencontrada-404', component: NoEncontradaComponent},
+  {path: '**', redirectTo: '/noencontrada-404'},
 ];
 
 @NgModule({

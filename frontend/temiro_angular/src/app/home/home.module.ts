@@ -1,15 +1,15 @@
-import { NgModule }            from '@angular/core';
-import { CommonModule }        from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
+import { NgModule }              from '@angular/core';
+import { CommonModule }          from '@angular/common';
+import { ReactiveFormsModule }   from '@angular/forms';
+import { HttpClientModule }      from '@angular/common/http';
 
-import { NavbarComponent }           from './navbar/navbar.component';
-import { BodyComponent }             from './body/body.component';
-import { FooterComponent }           from './footer/FooterComponent';
+import { NavbarComponent }          from '../comun/navbar/navbar.component';
+import { BodyComponent }            from '../comun/body/body.component';
+import { FooterComponent }          from '../comun/footer/footerComponent';
 
-import { QuienesSomosComponent }     from './quienes-somos/quienes-somos.component';
-import { ContactoComponent }         from './contacto/contacto.component';
-import { TermycondicionesComponent } from './termycondiciones/termycondiciones.component';
+import { QuienesSomosComponent }    from './quienes-somos/quienes-somos.component';
+import { ContactoComponent }        from './contacto/contacto.component';
+import { TermCondicionesComponent } from './term-condic/term-condic.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { TermycondicionesComponent } from './termycondiciones/termycondiciones.c
     FooterComponent,
     QuienesSomosComponent,
     ContactoComponent,
-    TermycondicionesComponent,
+    TermCondicionesComponent,
   ],
   imports: [
     CommonModule,

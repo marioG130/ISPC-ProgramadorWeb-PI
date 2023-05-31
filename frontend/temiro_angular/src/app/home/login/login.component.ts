@@ -10,37 +10,32 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-    myForm: FormGroup;
+    loginForm: FormGroup;
 
     resultado!: string;
 
-
-
-    constructor(
-      public fb: FormBuilder
-    ) {
-      this.myForm = this.fb.group({
+    constructor(public fb: FormBuilder, private http : HttpClient, private router : Router) {
+       this.loginForm = this.fb.group({
         username: ['', [Validators.required]],
         password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
       });
     }
-   ngOnInit() { }
-   saveData(){
-      console.log(this.myForm.value);
 
-      if (this.myForm.valid)
-      this.resultado = "Ingreso Exitoso";
-    else
-      this.resultado = "Usuario y Contraseña Invalidos";
-
+    ngOnInit() {
 
     }
-  
-  }
 
+    login() {
+        console.log(this.loginForm.value);
 
- 
-
+        if (this.loginForm.valid) {
+            this.resultado = "Ingreso Exitoso";
+            this.router.navigate(["indice"]);
+        } else {
+            this.resultado = "Usuario y Contraseña Invalidos";
+        }
+    }
+}
 
 
     /* Propiedad publica de inicio de sesion

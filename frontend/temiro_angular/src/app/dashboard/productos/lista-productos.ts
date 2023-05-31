@@ -1,9 +1,9 @@
-export const products = [
+export const listaProductos = [
     {
       "name": "Lentes de Sol",
       "description": "Bloquean el 99% de los rayos UVA y UVB.Cuentan con una pantalla 90% de luz visible y coinciden perfectamente en color y no presentan distorsiones e imperfecciones. Ideal para vos!!!",
       "category": "Lentes de sol",
-      "id": 1,    
+      "id": 1,
       "price": 12000,
       "identifier": "Anteojo de sol Gaal 1004 ngm g15 Color del cristal Negro Estilo Rectangular Genero Unisex Color Negro",
       "Stock": "Disponible",
@@ -27,7 +27,7 @@ export const products = [
       "category": "Deporte",
       "id": 3,
       "price": 54000,
-      "identifier": "Gafa sport Gaal 5000 tr kl80 Color de cristal Transparente y Resistente",   
+      "identifier": "Gafa sport Gaal 5000 tr kl80 Color de cristal Transparente y Resistente",
       "Stock": "Disponible",
       "img": "../../assets/img/gafas natacion.jpg",
       "qty": 1
