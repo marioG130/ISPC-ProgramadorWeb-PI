@@ -2,13 +2,12 @@ import { NgModule }            from '@angular/core';
 import { CommonModule }        from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
-import { IndicesComponent } from './indices/indices.component';
 
-
+import { IndiceComponent } from './indice/indice.component';
 
 @NgModule({
   declarations: [
-    IndicesComponent ],
+    IndiceComponent ],
   imports: [
     CommonModule,
     ReactiveFormsModule,

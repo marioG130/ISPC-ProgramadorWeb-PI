@@ -1,16 +1,15 @@
 <section class="contenedor" >
     <!--Contenedor de productos -->
-    <div class="contenedor-items" *ngFor="let products of producto; index as productoId">
-        <h3><a [title]="products.name + ' details'" [routerLink]="['/products', productoId]">
-        {{ products.name }}</a></h3>
-        <img src="{{products.img}}" alt="" class="img-item">
-        <h4 style="text-align: center;"><b>$ {{products.price}}</b></h4>
+    <div class="contenedor-items" *ngFor="let p of prds; index as productoId">
+        <h3><a [title]="p.name + ' details'" [routerLink]="['/products', productoId]">
+        {{ p.name }}</a></h3>
+        <img src="{{p.img}}" alt="" class="img-item">
+        <h4 style="text-align: center;"><b>$ {{p.price}}</b></h4>
         <div class="dispon">
-            <p>Producto {{products.Stock}}</p>
-            <p>Categoría: {{products.category}}</p>
-        </div>        
+            <p>Producto {{p.Stock}}</p>
+            <p>Categoría: {{p.category}}</p>
+        </div>
         <button class="boton-item" [routerLink]="['/carrito']">Agregar al Carrito</button>
     </div>
 </section>
 
-   

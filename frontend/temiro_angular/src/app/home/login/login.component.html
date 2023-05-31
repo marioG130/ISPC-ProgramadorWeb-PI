@@ -1,16 +1,15 @@
 <div class="cont form-box">
     <!-- Título -->
     <h1 class="form-title">INICIAR SESIÓN</h1>
-     <!--<form [formGroup]="loginForm"  (ngSubmit)="login()"> -->
-      <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
-        
+      <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+
         <!-- Usuario -->
         <div class="form-group was-validated">
           <input class="form-control" type="username" placeholder="USUARIO" id="username" required required minlength="5"
           maxlength="15">
-          <span *ngIf="this.myForm.get('username')?.errors?.['required']">
+          <span *ngIf="this.loginForm.get('username')?.errors?.['required']">
           *Requerido
-           </span> 
+           </span>
           <div class="invalid-feedback">
               Por favor, ingresa tu Usuario...
           </div>
@@ -20,17 +19,17 @@
       <div class="form-group was-validated">
           <input class="form-control" type="password" placeholder="CONTRASEÑA" id="password" required minlength="5"
           maxlength="30">
-          <span *ngIf="this.myForm.get('password')?.errors?.['required']">
+          <span *ngIf="this.loginForm.get('password')?.errors?.['required']">
           *Requerido
            </span>
           <div class="invalid-feedback">
               Por favor, ingresa tu Contraseña...
-          </div>  
+          </div>
       </div>
 
       <!-- Botón Final -->
-      <input class="btn btn-primary w-100" type="submit" value="INGRESAR">
-           
+      <input class="btn btn-primary w-100" type="submit" value="INGRESAR" onclick="location.href='/indice'">
+
         <!--<a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">-->
     </form>
          <p>¿No tiene una cuenta? Entrar en
