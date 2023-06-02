@@ -23,6 +23,8 @@ import { ServiciosComponent }        from './dashboard/servicios/servicios.compo
 import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
 
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
+import { IndiceComponent } from './dashboard/indice/indice.component';
+import { IndiceAdmComponent } from './dashboardadmin/indice-adm/indice-adm.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { FormuProductosComponent }   from './dashboardadmin/formu-productos/form
     ProductoComponent,
     ServiciosComponent,
     DetallesComponent,
-    FormuProductosComponent
+    FormuProductosComponent,
+    IndiceAdmComponent,
+    IndiceComponent
   ],
   imports: [
     BrowserModule,
