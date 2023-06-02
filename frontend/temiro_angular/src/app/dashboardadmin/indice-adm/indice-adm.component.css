@@ -21,3 +21,17 @@
     display: none;
   }
 }
+img{
+  width: 4%;
+  height: 4%;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.iconos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+
+}
