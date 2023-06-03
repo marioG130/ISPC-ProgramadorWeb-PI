@@ -46,6 +46,18 @@ class Usuario(models.Model):
     password = models.CharField(max_length=30)
     email = models.CharField(max_length=40)
     aceptatc = models.IntegerField(db_column='aceptaTC')
+    def autenticar(usr, pwd):
+        queryset = Usuario.objects.all()
+        for u in queryset:
+            # print(u.usuario,'\t',u.password)
+            if u.usuario == usr:
+                if u.password == pwd:
+                    return True
+                break
+        return False
+    def logout(usr):
+        # falta definir la sesion y hacer el logout
+        return True
     def __unicode__(self):
         return self.usuario
     class Meta:
