@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, FormArray} from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,38 +11,44 @@ import {FormBuilder, FormControl, FormGroup, FormArray} from '@angular/forms';
 })
 export class FormuProductosComponent implements OnInit {
 
-   form = new FormGroup({
-    name: new FormControl(''),
-    id: new FormControl(),
-    category: new FormControl(''),
-    identifier: new FormControl(''),
-    description: new FormControl(''),
-    price: new FormControl(),
-    unidades: new FormControl(),
-    Stock: new FormControl(''),
-    img: new FormControl('')
+    formProducto!: FormGroup;
 
-   });
+    constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
+        this.formProducto = this.fb.group({
+            idproducto: ['', ''],
+            descripcion: ['', ''],
+            idtipoproducto: ['', ''],
+            preciocosto: ['', ''],
+            precio: ['', ''],
+            fechaingreso: ['', ''],
+        });
+    }
 
-  constructor(private formBuilder: FormBuilder) { }
+    ngOnInit(): void {
+        this.formProducto.clearValidators();
+        this.formProducto.clearAsyncValidators();
+    }
 
-  ngOnInit(): void {
+    public altaProducto(event: Event) {
+        event.preventDefault;
+        if (this.formProducto.valid) {
+            this.http.post<any>("http://localhost:8000/webapi/altaproducto/",this.formProducto.value).subscribe(rest=> {
+                alert("Alta de Producto OK");
+                this.formProducto.clearValidators();
+                this.formProducto.clearAsyncValidators();
+            }, err=> {
+                alert("Algo salió mal al hacer el alta !")
+            });
+        } else {
+            alert("Hay datos inválidos en el formulario");
+            this.formProducto.markAllAsTouched();
+        }
+    }
 
-
-    this.form = this.formBuilder.group(
-      {
-          name:['',[]],
-          id: ['', []],
-          category: ['', []],
-          identifier: ['', []],
-          description: ['', []],
-          price: ['', []],
-          unidades: ['', []],
-          Stock: ['', []],
-          img: ['', []]      
-          })
-      
-    throw new Error('Method not implemented.');
-  }
+    public bajaProducto(event: Event) {
+        event.preventDefault;
+        alert("Todavía NO implementado !")
+        // this.http.post<any>("http://localhost:8000/webapi/bajaproducto/",this.formProducto.value).subscribe(rest=> {
+    }
 
 }
