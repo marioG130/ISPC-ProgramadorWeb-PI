@@ -1,13 +1,15 @@
-form{
+
+form {
     width: 80%;
-    
+
 }
-.mb-3{
+
+.mb-3 {
     width: 50%;
     margin-left: 35%;
 }
 
-.col-12{
+.col-12 {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;

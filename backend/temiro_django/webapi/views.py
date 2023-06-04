@@ -66,9 +66,10 @@ class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class UsuarioLogin(views.APIView):
     permission_classes = [AllowAny]
+    serializer_class = UsuarioSerializer
     def post(self, request):
-        usr = request.POST.get('usuario', None)
-        pwd = request.POST.get('password', None)
+        usr = request.data.get('usuario', None)
+        pwd = request.data.get('password', None)
         # print(usr,'\t',pwd)
         if Usuario.autenticar(usr, pwd):
             return Response(data='OK', status=status.HTTP_200_OK)
@@ -135,12 +136,12 @@ class ProductoAgregar(views.APIView):
 
 class ProductoBorrar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
-    def post(self, request, format=None):
-        prd = ProductoSerializer(data = request.data).instance
-        if prd:
-            prd.delete()
+    def post(self, request):
+        # print(request.data)
+        prd = request.data.get('idproducto', None)
+        if Producto.borrar(prd):
             return Response(data='OK', status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(data='ERROR', status=status.HTTP_400_BAD_REQUEST)
 
 class StockList(generics.ListCreateAPIView):
     permission_classes = [AllowAny]

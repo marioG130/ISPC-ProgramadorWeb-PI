@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-h4{
+h4 {
   text-align: center;
   font-size: 22px;
     margin-bottom: 20px;
@@ -17,8 +17,8 @@ h4{
   background: #ffffff;
   padding: 30px;
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 4px;
   font-family: 'Roboto';
   color: rgb(5, 3, 3);
@@ -59,7 +59,7 @@ h4{
   text-decoration: underline;
 }
 
-.form-register .btn{
+.form-register .btn {
   width: min(30rem, 100%);
   margin: 30px auto;
   padding: 15px 10px;
@@ -67,40 +67,39 @@ h4{
 
 
 /*VALIDACION REGISTRO*/
-.invalid{
+.invalid {
   border: solid 1px red;
   box-shadow: 0 0 1px red;
 }
 
-.error{
+.error {
   color: red;
   display: block;
   margin-top: 0 !important;
 }
 
-
 .resultado {
-font-size: 22px;
-text-align: center;
-
+  color: purple;
+  font-size: 20px;
+  text-align: center;
 }
 
-.fullname{
+.fullname {
   font-size: large;
   text-align: center;
 }
 
-.username{
+.username {
   font-size: large;
   text-align: center;
 }
 
-.email{
+.email {
   font-size: large;
   text-align: center;
 }
 
-.password{
+.password {
   font-size: large;
   text-align: center;
 }
@@ -109,8 +108,7 @@ text-align: center;
   text-align: center;
 }
 
-
-.form-control{
+.form-control {
   background: #ffffff;
   padding: 6px;
   border-radius: 4px;
