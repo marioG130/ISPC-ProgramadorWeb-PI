@@ -9,52 +9,90 @@ import { Router } from '@angular/router';
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
     loginForm: FormGroup;
-
-    resultado!: string;
-
+    url: string = 'http://127.0.0.1:8000/webapi/usuario';
+    
+    
     constructor(public fb: FormBuilder, private http : HttpClient, private router : Router) {
        this.loginForm = this.fb.group({
         username: ['', [Validators.required]],
         password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
       });
     }
-
-    ngOnInit() {
-
-    }
-
-    login() {
-        console.log(this.loginForm.value);
-
-        if (this.loginForm.valid) {
-            this.resultado = "Ingreso Exitoso";
-            this.router.navigate(["indice"]);
-        } else {
-            this.resultado = "Usuario y Contraseña Invalidos";
+    public getLocations() {
+        this.http.get(this.url).toPromise().then((data) => {
+        console.log(data);
+        });
         }
-    }
+    ngOnInit() {}
+    login() {
+        this.http.get<any>(this.url).subscribe(res=> {
+                    const user = res.find((a:any)=>{
+                        return a.username === this.loginForm.value.username && a.password === this.loginForm.value.password
+                    });
+            if(user) {
+                alert("Ingreso Exitoso");
+                this.router.navigate(["productos"])
+            } else {
+                alert("Usuario no encontrado !");
+           }
+         }) 
+        }
+        }
+        
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/*loginForm: FormGroup;
+
+resultado!: string;
+
+constructor(public fb: FormBuilder, private http : HttpClient, private router : Router) {
+   this.loginForm = this.fb.group({
+    username: ['', [Validators.required]],
+    password: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+  });
 }
 
+ngOnInit() {
 
-    /* Propiedad publica de inicio de sesion
-    public loginForm!: FormGroup
-    loginForms: any;
+}
+login() {
+    this.http.get<any>("http://localhost:8000/webapi/usuario").subscribe(res=> {
+                    const user = res.find((a:any)=> {
+                    return a.username === this.loginForm.value.username && a.password === this.loginForm.value.password
+                });
+        if(user) {
+            alert("Ingreso Exitoso");
+            this.router.navigate(["productos"])
+        } else {
+            alert("Usuario no encontrado !");
+        }
+    }, Err=> {
+        alert("Algo salio mal al hacer login !");
+    })
+}
+}*/
 
-    // Se inyecta dentro del constructor el generador de formularios
-    constructor(private FormBuilder: FormBuilder, private http : HttpClient,private router : Router) {
 
-    }
 
-    // se validan el usuario y la contraseñ
-    ngOnInit(): void {
+/*public loginForm!: FormGroup
+    loginForms: any;   
+    constructor(private FormBuilder: FormBuilder, private http : HttpClient,private router : Router) {}
+ngOnInit(): void {
         this.loginForm = this.FormBuilder.group({username:[""],password:[""]})
     }
-
-    // Metodo Inicio de sesion
-    login() {
-        this.http.get<any>("http://localhost:3000/RegistroUsuarios").subscribe(res=> {
+login() {
+        this.http.get<any>("http://localhost:8000/webapi/usuario?search=jonasdiaz").subscribe(res=> {
                         const user = res.find((a:any)=> {
                         return a.username === this.loginForm.value.username && a.password === this.loginForm.value.password
                     });
