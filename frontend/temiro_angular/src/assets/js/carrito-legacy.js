@@ -1,15 +1,15 @@
-//Variable que mantiene el estado visible del carrito
+// Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
 
-//Se espera que todos los elementos de la pàgina cargen para ejecutar el script
-if(document.readyState == 'loading'){
+// Se espera que todos los elementos de la página cargen para ejecutar el script
+if(document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
-}else{
+} else {
     ready();
 }
 
-function ready(){
-    
+function ready() {
+
     //Se agrego funcionalidad a los botones eliminar del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
     for(var i=0;i<botonesEliminarItem.length; i++){
@@ -168,7 +168,7 @@ function ocultarCarrito(){
         carrito.style.marginRight = '-100%';
         carrito.style.opacity = '0';
         carritoVisible = false;
-    
+
         var items =document.getElementsByClassName('contenedor-items')[0];
         items.style.width = '100%';
     }

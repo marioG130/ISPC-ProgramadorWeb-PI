@@ -1,0 +1,18 @@
+<section class="contenedor-d">
+    <h1 style="text-align: center;">Detalles del Producto</h1>
+       <!--<div class="contenedor-items-d"> -->
+        <div class="item-d">
+            <h2 style="text-align: center;">{{ prd.name}}</h2>
+            <div class="bloque">
+                <img src= "{{prd.img}}" alt="" class="img-item-d">
+                <h4 class="desc-d"><b>Características:</b><br></h4>
+                    <h5 style="text-align: center;"> {{ prd.description }}</h5>
+            </div><br>
+            <span class="amp-d"><b>Especificaciones del Producto:</b> {{prd.identifier}}</span>
+            <div><br>
+                <a><button class="boton-item-d" [routerLink]="['/productos']">Regresar</button></a>
+                <a><button class="boton-item-d" [routerLink]="['/carrito']">Agregar al carrito</button></a>
+            </div>
+
+        </div>
+</section>

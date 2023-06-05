@@ -1,0 +1,38 @@
+<section class="edit">
+
+    <h2 style="text-align: center;">EDITAR UN PRODUCTO</h2>
+
+    <form [formGroup]="formProducto" (ngSubmit)="altaProducto($event)" novalidate>
+
+        <div class="mb-3">
+            <label for="idproducto" class="form-label">IdProducto</label>
+            <input type="number" class="form-control" id="idproducto" formControlName="idproducto" placeholder="Id del Producto">
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <textarea class="form-control" id="descripcion" formControlName="descripcion" rows="3" placeholder="Descripción del Producto"></textarea>
+        </div>
+        <div class="mb-3">
+        <label for="idtipoproducto" class="form-label">IdTipoProducto</label>
+        <input type="text" class="form-control" id="idtipoproducto" formControlName="idtipoproducto" placeholder="Id del Tipo de Producto">
+        </div>
+        <div class="mb-3">
+        <label for="preciocosto" class="form-label">PrecioCosto</label>
+        <input type="number" class="form-control" id="preciocosto" formControlName="preciocosto" placeholder="Costo del Producto">
+        </div>
+        <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="precio" formControlName="precio" placeholder="Precio del Producto">
+        </div>
+        <div class="mb-3">
+        <label for="fechaingreso" class="form-label">Fecha de Ingreso</label>
+        <input type="date" class="form-control" id="fechaingreso" formControlName="fechaingreso" placeholder="Fecha de Ingreso del Producto">
+        </div>
+        <div class="col-12">
+        <button class="btn btn-primary" type="submit">Agregar Producto</button>
+        <button type="button" class="btn btn-primary" (click)="bajaProducto($event)">Eliminar Producto</button>
+        </div>
+
+    </form>
+
+</section>

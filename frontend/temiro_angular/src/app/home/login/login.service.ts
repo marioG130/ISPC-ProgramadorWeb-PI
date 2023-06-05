@@ -4,7 +4,9 @@ import { Router } from "@angular/router";
 @Injectable()
 export class LoginService{
 
-    constructor(private router:Router) {}
+    constructor(private router:Router) {
+
+    }
 
     //token:string;
     //login(Usuario:string, password:string revisar nombres){}

@@ -49,16 +49,33 @@ INSERT INTO `ciudad` VALUES (1,'Córdoba',1),(2,'VillaCarlos Paz',1),(3,'Alta Gr
 -- Dumping data for table `usuario`
 --
 
-
-INSERT INTO `usuario` VALUES (111,100,'matiasavalos','cc32cc','matiasavalos@hotmail.com',1),(112,90,'jonasdiaz','aa98aa','jonasdiaz@hotmail.com',1),(113,75,'carinacruz','55ee11','carinacruz@hotmail.com',1),(114,50,'danielapizarro','rrAE23','danielapizarro@hotmail.com',1),(115,25,'ismaelcarros','Q44211','ismaelcarros@hotmail.com',1),(116,99,'josemarquez','pw2321','josemarquez@hotmail.com',1),(117,80,'rominatoledo','M75111','rominatoledo@hotmail.com',1),(118,5,'jesicasuarez','Xs1234','jesicasuarez@hotmail.com',1),(119,10,'emanuelpaez','43ZAN3','emanuelpaez@hotmail.com',1),(120,2,'ivannavarro','Fa2023','ivannavarro@hotmail.com',1);
-
+INSERT INTO `usuario` VALUES (1,1,'admin','temiro.40','admin@mail.com',1);
+INSERT INTO `usuario` VALUES (111,100,'matiasavalos','cc32cc','matiasavalos@hotmail.com',1),
+                             (112,90,'jonasdiaz','aa98aa','jonasdiaz@hotmail.com',1),
+                             (113,75,'carinacruz','55ee11','carinacruz@hotmail.com',1),
+                             (114,50,'danielapizarro','rrAE23','danielapizarro@hotmail.com',1),
+                             (115,25,'ismaelcarros','Q44211','ismaelcarros@hotmail.com',1),
+                             (116,99,'josemarquez','pw2321','josemarquez@hotmail.com',1),
+                             (117,80,'rominatoledo','M75111','rominatoledo@hotmail.com',1),
+                             (118,5,'jesicasuarez','Xs1234','jesicasuarez@hotmail.com',1),
+                             (119,10,'emanuelpaez','43ZAN3','emanuelpaez@hotmail.com',1),
+                             (120,2,'ivannavarro','Fa2023','ivannavarro@hotmail.com',1);
 
 --
 -- Dumping data for table `cliente`
 --
 
 
-INSERT INTO `cliente` VALUES (111,111,'Avalos','Matias',4456877,'Isasmendi 876 Barrio Ipona','matiasavalos@hotmail.com',1,'4534566','3512345678','2001-08-12'),(112,112,'Díaz','Jonas',7786744,'Clemente 667 Barrio San Cristobal ','jonasdiaz@hotmail.com',5,'6645334','3512486900','1996-04-30'),(113,113,'Cruz','Carina',6499065,'Leon 798 Barrio Medina','carinacruz@hotmail.com',8,'5333257','3512309864','1986-07-15'),(114,114,'Pizarro','Daniela',3243567,'Israell 579 Barrio Chino','danielapizarro@hotmail.com',3,'1515671','3512896431','1981-09-04'),(115,115,'Carros','Ismael',3145793,'Carruso 246 Barrio Solano','ismaelcarros@hotmail.com',9,'5480653','3517060864','1969-12-08'),(116,116,'Marquez','Jose',5436890,'Roma 223 Barrio Crespo ','josemarquez@hotmail.com',2,'9874632','3513976432','2003-02-10'),(117,117,'Toledo','Romina',7468293,'Victorino 453 Barrio Matienzo','rominatoledo@hotmail.com',4,'8374768','3517394031','1998-05-06'),(118,118,'Suarez','Jesica',5837492,'Carmelo 289 Barrio Isidoro','jesicasuarez@hotmail.com',10,'4943204','3514374893','1975-05-23'),(119,119,'Paez','Emanuel',1937563,'Suipacha 986 Barrio Belgrano','emanuelpaez@hotmail.com',6,'9684767','3516384909','2006-11-25'),(120,120,'Navarro','Ivana',2628439,'Postorino 239 Barrio Sobremonte','ivannavarro@hotmail.com',7,'4743939','3513959684','1994-06-03');
+INSERT INTO `cliente` VALUES (111,111,'Avalos','Matias',4456877,'Isasmendi 876 Barrio Ipona','matiasavalos@hotmail.com',1,'4534566','3512345678','2001-08-12'),
+                             (112,112,'Díaz','Jonas',7786744,'Clemente 667 Barrio San Cristobal ','jonasdiaz@hotmail.com',5,'6645334','3512486900','1996-04-30'),
+                             (113,113,'Cruz','Carina',6499065,'Leon 798 Barrio Medina','carinacruz@hotmail.com',8,'5333257','3512309864','1986-07-15'),
+                             (114,114,'Pizarro','Daniela',3243567,'Israell 579 Barrio Chino','danielapizarro@hotmail.com',3,'1515671','3512896431','1981-09-04'),
+                             (115,115,'Carros','Ismael',3145793,'Carruso 246 Barrio Solano','ismaelcarros@hotmail.com',9,'5480653','3517060864','1969-12-08'),
+                             (116,116,'Marquez','Jose',5436890,'Roma 223 Barrio Crespo ','josemarquez@hotmail.com',2,'9874632','3513976432','2003-02-10'),
+                             (117,117,'Toledo','Romina',7468293,'Victorino 453 Barrio Matienzo','rominatoledo@hotmail.com',4,'8374768','3517394031','1998-05-06'),
+                             (118,118,'Suarez','Jesica',5837492,'Carmelo 289 Barrio Isidoro','jesicasuarez@hotmail.com',10,'4943204','3514374893','1975-05-23'),
+                             (119,119,'Paez','Emanuel',1937563,'Suipacha 986 Barrio Belgrano','emanuelpaez@hotmail.com',6,'9684767','3516384909','2006-11-25'),
+                             (120,120,'Navarro','Ivana',2628439,'Postorino 239 Barrio Sobremonte','ivannavarro@hotmail.com',7,'4743939','3513959684','1994-06-03');
 
 
 --

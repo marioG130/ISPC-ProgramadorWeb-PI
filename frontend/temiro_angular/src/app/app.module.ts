@@ -6,20 +6,25 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule }          from './app-routing.module';
 import { AppComponent }              from './app.component';
 
-import { NavbarComponent }           from './home/navbar/navbar.component';
-import { FooterComponent }           from './home/footer/FooterComponent';
-import { BodyComponent }             from './home/body/body.component';
+import { NavbarComponent }           from './comun/navbar/navbar.component';
+import { BodyComponent }             from './comun/body/body.component';
+import { FooterComponent }           from './comun/footer/footer.component';
 
 import { QuienesSomosComponent }     from './home/quienes-somos/quienes-somos.component';
 import { FaqComponent }              from './home/faq/faq.component';
 import { LoginComponent }            from './home/login/login.component';
 import { RegistroComponent }         from './home/registro/registro.component';
-import { TermycondicionesComponent } from './home/termycondiciones/termycondiciones.component';
+import { TermCondicionesComponent }  from './home/term-condic/term-condic.component';
 
-import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
+
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
+import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
+
+import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
+import { IndiceComponent } from './dashboard/indice/indice.component';
+import { IndiceAdmComponent } from './dashboardadmin/indice-adm/indice-adm.component';
 
 
 @NgModule({
@@ -32,11 +37,14 @@ import { ServiciosComponent }        from './dashboard/servicios/servicios.compo
     FaqComponent,
     LoginComponent,
     RegistroComponent,
-    TermycondicionesComponent,
-    CarrocomprasComponent,
+    TermCondicionesComponent,
     ProductosComponent,
     ProductoComponent,
     ServiciosComponent,
+    DetallesComponent,
+    FormuProductosComponent,
+    IndiceAdmComponent,
+    IndiceComponent
   ],
   imports: [
     BrowserModule,

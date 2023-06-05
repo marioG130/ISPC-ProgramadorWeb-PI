@@ -1,18 +1,51 @@
 <div class="form-register">
-  <form [formGroup]="signupForm" (ngSubmit)="signup()">
-    <h4>Formulario Registro</h4>
-    <input formControlName="fullname" class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required minlength="5" maxlength="30">
-    <input formControlName="username" class="controls" type="text" name="usuario" id="usuario" placeholder="Usuario" required minlength="5" maxlength="30">
-    <input formControlName="email" class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo" required minlength="8" maxlength="40">
-    <span id="correoOk"></span>
-    <input formControlName="password" class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required minlength="8" maxlength="80">
+
+  <h4>REGISTRARSE</h4>
+
+  <form [formGroup]="formRegistro" (ngSubmit)="registrarse($event)" novalidate>
+
+    <!-- Nombre y Apellido -->
+    <div class="form-group was-validated">
+      <input type="text" class="form-control" placeholder="NOMBRE Y APELLIDO" id="fullname" formControlName="fullname" required minlength="5" maxlength="30">
+      <span *ngIf="Fullname?.errors?.['required']">* Requerido</span>
+      <div class="invalid-feedback">Por favor, ingresa tu Nombre y Apellido...</div>
+    </div>
+
+    <!-- Usuario -->
+    <div class="form-group was-validated">
+      <input type="text" class="form-control" placeholder="USUARIO" id="username" formControlName="username" required minlength="5" maxlength="15">
+      <span *ngIf="Username?.errors?.['required']">* Requerido</span>
+      <div class="invalid-feedback">Por favor, ingresa tu Usuario...</div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group was-validated">
+      <input type="email" class="form-control" placeholder="CORREO ELECTRÓNICO" id="email" formControlName="email" required minlength="8" maxlength="40">
+      <span *ngIf="Email?.errors?.['required']">* Requerido</span>
+      <div class="invalid-feedback">Por favor, ingresa tu Correo Electrónico (Email inválido)...</div>
+    </div>
+
+    <!-- Contraseña -->
+    <div class="form-group was-validated">
+      <input type="password" class="form-control" placeholder="CONTRASEÑA" id="password" formControlName="password" required minlength="5" maxlength="30">
+      <span *ngIf="Password?.errors?.['required']">* Requerido</span>
+      <div class="invalid-feedback">Por favor, ingresa tu Contraseña...</div>
+    </div>
+
+    <!-- ¿Acepta Terminos y Condiciones? -->
     <p>
-      <input type="checkbox" name="Aceptar" id="checkbox"> Acuerdo
-      <a class="enlaces-negros" target="_blank" href="termycond" required>Terminos y Condiciones</a>
+      <input type="checkbox" name="Aceptar" id="checkbox" formControlName="checkbox"> Acepto los
+      <a class="enlaces-negros" href="termycond" required>TERMINOS Y CONDICIONES</a>
     </p>
-    <button type="submit" class="btn btn-azul">Registrar</button>
+
+    <!-- Botón Final -->
+    <div class="resultado">{{datosValidados}}</div>
+    <div class="resultado">{{datosRegistrados}}</div>
+    <button type="submit" class="btn btn-primary w-100">REGISTRAR</button>
+
+    <!-- ¿Ya tiene cuenta? -->
     <p>
-      <a class="enlaces-negros" href="login">¿Ya tengo Cuenta?</a>
+      <a class="enlaces-negros" href="login">Ya tengo CUENTA</a>
     </p>
   </form>
 </div>

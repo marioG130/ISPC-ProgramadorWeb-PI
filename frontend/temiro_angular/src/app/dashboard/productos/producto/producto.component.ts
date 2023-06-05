@@ -1,12 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { listaProductos } from '../lista-productos';
 
 @Component({
-  selector: 'app-producto',
-  templateUrl: './producto.component.html',
-  styleUrls: ['./producto.component.css']
+    selector: 'app-producto',
+    templateUrl: './producto.component.html',
+    styleUrls: ['./producto.component.css']
 })
-export class ProductoComponent {
+export class ProductoComponent implements OnInit {
 
+    prds = listaProductos
+
+    Caracteristicas() {
+
+    }
+
+    constructor(private route: ActivatedRoute){
+
+    }
+
+    ngOnInit(): void {
+
+    }
+
+
+  /*
+    constructor(private route: ActivatedRoute,){
+
+    }
+
+   ngOnInit() {
+    this.route.paramMap.subscribe(paramsMap => {
+    this.products = products[+paramsMap.get('productId')!]
+  })
   clickDetalles1(){
     alert('Bloquean el 99% de los rayos UVA y UVB.Cuentan con una pantalla 90% de luz visible y coinciden perfectamente en color y no presentan distorsiones e imperfecciones. Ideal para vos!!!');
   }
@@ -21,6 +47,6 @@ export class ProductoComponent {
 
   clickDetalles4(){
     alert('Corrigen los problemas de visión y le devuelven una visión nítida.');
-  }
+  }*/
 
 }

@@ -1,0 +1,38 @@
+.container-fluid{
+  padding: 0%;
+}
+
+@media screen and (max-width: 800px) {
+  .titulo{
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+  .card {
+    text-align: center;
+    max-width: 400px;
+    margin-left: 50px;
+  }
+
+  .seccion-texto{
+      font-size: 18px;
+  }
+
+  .presentacion{
+    display: none;
+  }
+}
+
+img{
+  width: 4%;
+  height: 4%;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.iconos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+
+}

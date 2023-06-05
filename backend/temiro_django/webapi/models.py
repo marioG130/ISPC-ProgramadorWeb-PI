@@ -46,6 +46,19 @@ class Usuario(models.Model):
     password = models.CharField(max_length=30)
     email = models.CharField(max_length=40)
     aceptatc = models.IntegerField(db_column='aceptaTC')
+    isAdmin = (usuario == 'admin')
+    def autenticar(usr, pwd):
+        queryset = Usuario.objects.all()
+        for u in queryset:
+            # print(u.usuario,'\t',u.password)
+            if u.usuario == usr:
+                if u.password == pwd:
+                    return True
+                break
+        return False
+    def logout(usr):
+        # falta definir la sesion y hacer el logout
+        return True
     def __unicode__(self):
         return self.usuario
     class Meta:
@@ -94,6 +107,14 @@ class Producto(models.Model):
     preciocosto = models.IntegerField(db_column='precioCosto')
     precio = models.IntegerField()
     fechaingreso = models.DateField(db_column='fechaIngreso')
+    def borrar(prd):
+        queryset = Producto.objects.all()
+        for p in queryset:
+            # print(p.idproducto,'\t',p.descripcion)
+            if p.idproducto == int(prd):
+                p.delete()
+                return True
+        return False
     def __unicode__(self):
         return self.descripcion
     class Meta:

@@ -1,20 +1,27 @@
 <div class="cont form-box">
-    <!-- ¿logo de la óptica? -->
-    <h1 class="form-title">Iniciar sesión</h1>
-    <form [formGroup]="loginForm"  (ngSubmit)="login()" >
-        <input formControlName="username" type="text" placeholder="Usuario" class="transfor" required minlength="5" maxlength="30"> <!--ngModel-->
-        <div class="invalid-feedback">
-          Por favor ingrese su nombre de usuario (entre 5 y 30 caract.)<br><br>
+
+    <h1 class="form-title">INICIAR SESIÓN</h1>
+
+    <form [formGroup]="formLogin" (ngSubmit)="ingresar($event)" validate>
+
+        <!-- Usuario -->
+        <div class="form-group was-validated">
+          <input type="text" class="form-control" formControlName="usuario" placeholder="USUARIO" id="usuario" required minlength="5" maxlength="15">
+          <span *ngIf="Usuario?.errors?.['required']">* Requerido</span>
+          <div class="invalid-feedback">Por favor, ingresa tu Usuario...</div>
         </div>
-        <input formControlName="password" type="password" placeholder="Contraseña" class="transfor" required minlength="8" maxlength="80"> <!--ngModel-->
-        <div class="invalid-feedback">
-          Por favor ingrese su contraseña (entre 8 y 80 caract.)<br><br>
-        </div>
-        <!--<a href="dashboard"> </a>-->
-        <button type="submit" class="btn btn-azul">Ingresar</button>
-        <!--<a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">-->
+
+      <!-- Contraseña -->
+      <div class="form-group was-validated">
+          <input type="password" class="form-control" formControlName="password" placeholder="CONTRASEÑA" id="password" required minlength="5" maxlength="30">
+          <span *ngIf="Password?.errors?.['required']">* Requerido</span>
+          <div class="invalid-feedback">Por favor, ingresa tu Contraseña...</div>
+      </div>
+
+      <!-- Botón Final  -->
+      <input type="submit" class="btn btn-primary w-100" value="INGRESAR">
     </form>
-    <p>¿No tiene una cuenta? Entrar en
-      <a class="enlaces-negros" href="registro"> Registrarse</a>
+    <p>
+        ¿No tiene una cuenta? Entrar en <a class="enlaces-negros" href="registro"> REGISTRARSE</a>
     </p>
 </div>

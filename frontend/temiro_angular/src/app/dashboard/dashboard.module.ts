@@ -4,10 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 
 import { CarrocomprasComponent } from './carrocompras/carrocompras.component';
+import { MisComprasComponent }   from './mis-compras/mis-compras.component';
 
 @NgModule({
   declarations: [
     CarrocomprasComponent,
+    MisComprasComponent,
   ],
   imports: [
     CommonModule,
