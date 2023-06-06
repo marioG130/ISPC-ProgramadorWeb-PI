@@ -2,22 +2,41 @@
 
     <h1 class="form-title">INICIAR SESIÓN</h1>
 
-    <form [formGroup]="formLogin" (ngSubmit)="ingresar($event)" validate>
+    <form [formGroup]="formLogin"  (ngSubmit)="ingresar($event)" >
 
         <!-- Usuario -->
         <div class="form-group was-validated">
-          <input type="text" class="form-control" formControlName="usuario" placeholder="USUARIO" id="usuario" required minlength="5" maxlength="15">
-          <span *ngIf="Usuario?.errors?.['required']">* Requerido</span>
-          <div class="invalid-feedback">Por favor, ingresa tu Usuario...</div>
+          <input type="text" class="form-control" formControlName="usuario" placeholder="USUARIO" id="usuario" required minlength="5" maxlength="15" (focus)="onFocus()">
+          <div *ngIf="formLogin.get('usuario')?.errors && (formLogin.get('usuario')?.dirty || formLogin.get('usuario')?.touched)" class="error-message">
+          <div class="center" *ngIf="showUserRequiredMessage && !usuario">
+            <span *ngIf="this.formLogin.get('usuario')?.errors?.['required']">
+              Por favor ingresa tu usuario!
+             </span>
+             <span *ngIf="this.formLogin.get('usuario')?.errors?.['minlength']">
+              Debe tener como mínimo 5 caracteres!
+             </span>
+          </div>
+        </div>
         </div>
 
       <!-- Contraseña -->
       <div class="form-group was-validated">
-          <input type="password" class="form-control" formControlName="password" placeholder="CONTRASEÑA" id="password" required minlength="5" maxlength="30">
-          <span *ngIf="Password?.errors?.['required']">* Requerido</span>
-          <div class="invalid-feedback">Por favor, ingresa tu Contraseña...</div>
-      </div>
-
+          <input type="password" class="form-control" formControlName="password"  placeholder="CONTRASEÑA" id="password" required minlength="5" maxlength="30" (focus)="onFocus()">
+          <div *ngIf="formLogin.get('password')?.errors && (formLogin.get('password')?.dirty || formLogin.get('password')?.touched)" class="error-message">
+          <div class="center" *ngIf="showPasswordRequiredMessage && !password">
+          <span *ngIf="this.formLogin.get('password')?.errors?.['required']">
+            Contraseña Requerida!
+           </span>
+           <span *ngIf="this.formLogin.get('password')?.errors?.['minlength']">
+            Debe tener como mínimo 5 caracteres!
+           </span>
+           <span *ngIf="this.formLogin.get('password')?.errors?.['maxlength']">
+           Debe tener como maximo 10 caracteres!
+           </span>
+          </div>
+          </div>
+          </div>
+          
       <!-- Botón Final  -->
       <input type="submit" class="btn btn-primary w-100" value="INGRESAR">
     </form>

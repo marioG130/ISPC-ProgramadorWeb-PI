@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     box-sizing: border-box;
 }
 
@@ -45,7 +45,7 @@ p {
     display: block;
 }
 
-.invalid-feedback {
+.center {
     text-align: center;
 }
 
@@ -98,3 +98,7 @@ p {
     font-size: 18px;
     color: rgb(0, 0, 0);
 }
+.error-message {
+    color: red;
+  }
+  

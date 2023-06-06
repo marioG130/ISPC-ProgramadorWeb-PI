@@ -11,6 +11,10 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
     formLogin: FormGroup;
+    usuario?: string;
+    password?: string;
+  showPasswordRequiredMessage?: boolean;
+  showUserRequiredMessage?: boolean;
 
     constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
         this.formLogin = this.fb.group({
@@ -31,6 +35,10 @@ export class LoginComponent implements OnInit {
     get Password() {
         return this.formLogin.get("password");
     }
+    onFocus(): void {
+        this.showPasswordRequiredMessage = true;
+        this.showUserRequiredMessage = true;
+      }
 
     public ingresar(event: Event) {
         event.preventDefault;
