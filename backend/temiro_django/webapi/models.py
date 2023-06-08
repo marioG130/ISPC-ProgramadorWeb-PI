@@ -107,16 +107,18 @@ class Producto(models.Model):
     preciocosto = models.IntegerField(db_column='precioCosto')
     precio = models.IntegerField()
     fechaingreso = models.DateField(db_column='fechaIngreso')
-    def borrar(prd):
+    
+    def borrar(self, prd):
         queryset = Producto.objects.all()
         for p in queryset:
-            # print(p.idproducto,'\t',p.descripcion)
             if p.idproducto == int(prd):
                 p.delete()
                 return True
         return False
+    
     def __unicode__(self):
         return self.descripcion
+    
     class Meta:
         db_table = 'producto'
         managed = False

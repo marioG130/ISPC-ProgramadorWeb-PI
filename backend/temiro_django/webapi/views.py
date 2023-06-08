@@ -136,10 +136,11 @@ class ProductoAgregar(views.APIView):
 
 class ProductoBorrar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
-    def post(self, request):
-        # print(request.data)
-        prd = request.data.get('idproducto', None)
-        if Producto.borrar(prd):
+
+    def delete(self, request, *args, **kwargs):
+        prd = kwargs.get('idproducto', None)
+        producto = Producto()  # Crear una instancia de la clase Producto
+        if producto.borrar(prd):  # Llamar al método borrar en la instancia de Producto
             return Response(data='OK', status=status.HTTP_200_OK)
         return Response(data='ERROR', status=status.HTTP_400_BAD_REQUEST)
 
