@@ -1,5 +1,6 @@
 from django.urls import path, re_path
-
+from django.views.decorators.http import require_http_methods
+from .views import ProductoBorrar
 from .views import *
 
 urlpatterns = [
@@ -30,7 +31,7 @@ urlpatterns = [
     # ---- Urls referidas a los productos
 
     path('altaproducto/', ProductoAgregar.as_view(), name='altaproducto'),
-    path('bajaproducto/', ProductoBorrar.as_view(), name='bajaproducto'),
+    path('bajaproducto/<int:idproducto>/', ProductoBorrar.as_view(), name='bajaproducto'),
     re_path(r'^tipoproducto$', TipoProductoList.as_view()),
     re_path(r'^tipoproducto/(?P<pk>[0-9]+)$', TipoProductoDetail.as_view()),
 
