@@ -47,6 +47,7 @@ class Usuario(models.Model):
     email = models.CharField(max_length=40)
     aceptatc = models.IntegerField(db_column='aceptaTC')
     isAdmin = (usuario == 'admin')
+
     def autenticar(usr, pwd):
         queryset = Usuario.objects.all()
         for u in queryset:
@@ -56,11 +57,14 @@ class Usuario(models.Model):
                     return True
                 break
         return False
+
     def logout(usr):
         # falta definir la sesion y hacer el logout
         return True
+
     def __unicode__(self):
         return self.usuario
+
     class Meta:
         db_table = 'usuario'
         managed = False
@@ -79,8 +83,18 @@ class Cliente(models.Model):
     telefono = models.CharField(max_length=20, blank=True, null=True)
     celular = models.CharField(max_length=20, blank=True, null=True)
     fechanac = models.DateField(db_column='fechaNac')
+
+    def borrar(self, cli):
+        queryset = Cliente.objects.all()
+        for c in queryset:
+            if c.idcliente == int(cli):
+                c.delete()
+                return True
+        return False
+
     def __unicode__(self):
         return self.nombre + ' ' + self.apellido
+
     class Meta:
         db_table = 'cliente'
         managed = False
@@ -107,7 +121,7 @@ class Producto(models.Model):
     preciocosto = models.IntegerField(db_column='precioCosto')
     precio = models.IntegerField()
     fechaingreso = models.DateField(db_column='fechaIngreso')
-    
+
     def borrar(self, prd):
         queryset = Producto.objects.all()
         for p in queryset:
@@ -115,10 +129,10 @@ class Producto(models.Model):
                 p.delete()
                 return True
         return False
-    
+
     def __unicode__(self):
         return self.descripcion
-    
+
     class Meta:
         db_table = 'producto'
         managed = False

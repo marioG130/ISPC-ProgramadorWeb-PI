@@ -83,7 +83,16 @@ INSERT INTO `cliente` VALUES (111,111,'Avalos','Matias',4456877,'Isasmendi 876 B
 --
 
 
-INSERT INTO `tipoProducto` VALUES (11,'Cont.Color'),(12,'Cont.Aume.'),(13,'Lectura'),(14,'Polariz.'),(15,'Filtro UV'),(16,'Monofoc.'),(17,'Bifocales'),(18,'FiltroAzul'),(19,'Descanso'),(20,'Tendencia');
+INSERT INTO `tipoProducto` VALUES (11,'Cont.Color'),
+                                  (12,'Cont.Aume.'),
+                                  (13,'Lectura'),
+                                  (14,'Polariz.'),
+                                  (15,'Filtro UV'),
+                                  (16,'Monofoc.'),
+                                  (17,'Bifocales'),
+                                  (18,'FiltroAzul'),
+                                  (19,'Descanso'),
+                                  (20,'Tendencia');
 
 
 --
@@ -91,7 +100,16 @@ INSERT INTO `tipoProducto` VALUES (11,'Cont.Color'),(12,'Cont.Aume.'),(13,'Lectu
 --
 
 
-INSERT INTO `producto` VALUES (301,'Cont.Color',11,3000,6000,'2023-03-01'),(302,'Cont.Aume.',12,7000,10000,'2023-03-01'),(303,'Lectura',13,11000,16000,'2023-03-01'),(304,'Polariz.',14,15000,18000,'2023-03-01'),(305,'Filtro UV',15,17000,20000,'2023-03-01'),(306,'Monofoc.',16,22000,25000,'2023-03-01'),(307,'Bifocales',17,27000,30000,'2023-03-01'),(308,'FiltroAzul',18,25000,28000,'2023-03-01'),(309,'Descanso',19,17000,20000,'2023-03-01'),(310,'Tendencia',20,37000,40000,'2023-03-01');
+INSERT INTO `producto` VALUES (301,'Cont.Color',11,3000,6000,'2023-03-01'),
+                              (302,'Cont.Aume.',12,7000,10000,'2023-03-01'),
+                              (303,'Lectura',13,11000,16000,'2023-03-01'),
+                              (304,'Polariz.',14,15000,18000,'2023-03-01'),
+                              (305,'Filtro UV',15,17000,20000,'2023-03-01'),
+                              (306,'Monofoc.',16,22000,25000,'2023-03-01'),
+                              (307,'Bifocales',17,27000,30000,'2023-03-01'),
+                              (308,'FiltroAzul',18,25000,28000,'2023-03-01'),
+                              (309,'Descanso',19,17000,20000,'2023-03-01'),
+                              (310,'Tendencia',20,37000,40000,'2023-03-01');
 
 
 --

@@ -16,15 +16,15 @@ import { LoginComponent }            from './home/login/login.component';
 import { RegistroComponent }         from './home/registro/registro.component';
 import { TermCondicionesComponent }  from './home/term-condic/term-condic.component';
 
-
+import { IndiceComponent }           from './dashboard/indice/indice.component';
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
 import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
 
+import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
-import { IndiceComponent } from './dashboard/indice/indice.component';
-import { IndiceAdmComponent } from './dashboardadmin/indice-adm/indice-adm.component';
+import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-clientes.component';
 
 
 @NgModule({
@@ -38,13 +38,14 @@ import { IndiceAdmComponent } from './dashboardadmin/indice-adm/indice-adm.compo
     LoginComponent,
     RegistroComponent,
     TermCondicionesComponent,
+    IndiceComponent,
     ProductosComponent,
     ProductoComponent,
     ServiciosComponent,
     DetallesComponent,
-    FormuProductosComponent,
     IndiceAdmComponent,
-    IndiceComponent
+    FormuProductosComponent,
+    AbmClientesComponent
   ],
   imports: [
     BrowserModule,

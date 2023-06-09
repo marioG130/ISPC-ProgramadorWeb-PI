@@ -6,22 +6,22 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductosService {
-  private apiUrl = 'http://localhost:8000/webapi/altaproducto/'; 
-  
-  
 
-  constructor(private http: HttpClient) {}
+    private apiUrl = "http://localhost:8000/webapi";
 
-  getProductos(): Observable<any> {
-    return this.http.get(this.apiUrl);
-  }
+    constructor(private http: HttpClient) {
+    }
 
-  agregarProducto(producto: any): Observable<any> {
-    return this.http.post(this.apiUrl, producto);
-  }
+    getProductos(): Observable<any> {
+        return this.http.get(this.apiUrl+"/producto");
+    }
 
-  eliminarProducto(id: number): Observable<any> {
-    const url = `${this.apiUrl}${id}/`;
-    return this.http.delete(url);
-  }
+    agregarProducto(producto: any): Observable<any> {
+        return this.http.post(this.apiUrl+"/altaproducto", producto);
+    }
+
+    eliminarProducto(id: number): Observable<any> {
+        const url = "${this.apiUrl}${id}/";
+        return this.http.delete(url);
+    }
 }

@@ -19,6 +19,7 @@ import { DetallesComponent }         from './dashboard/productos/detalles/detall
 
 import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
+import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-clientes.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
 
   {path: 'indiceadm', component: IndiceAdmComponent},
   {path: 'formuproductos', component: FormuProductosComponent},
+  {path: 'abmclientes', component: AbmClientesComponent},
 
   {path: 'noencontrada-404', component: NoEncontradaComponent},
   {path: '**', redirectTo: '/noencontrada-404'},
