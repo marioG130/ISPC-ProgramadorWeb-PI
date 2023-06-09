@@ -1,4 +1,5 @@
 <h2 class="agregarProducto">Lista de Productos</h2>
+<br>
 <table>
   <thead>
     <tr>
@@ -28,6 +29,7 @@
 
 <br>
 <h2 class="agregarProducto">Agregar Producto</h2>
+<br>
 <form [formGroup]="formProducto"  (submit)="altaProducto($event)" novalidate>
   <div class="container">
     <div class="form-container">
@@ -38,16 +40,16 @@
   <input type="text" class="form-control" id="descripcion" formControlName="descripcion" [(ngModel)]="nuevoProducto.descripcion" required>
   <br>
   <label>ID del Tipo:</label>
-  <input type="text" class="form-control" id="idtipoproducto" formControlName="idtipoproducto"   [(ngModel)]="nuevoProducto.idtipoproducto" required>
+  <input type="number" class="form-control" id="idtipoproducto" formControlName="idtipoproducto" [(ngModel)]="nuevoProducto.idtipoproducto" required>
   <br>
   <label>Costo:</label>
-  <input type="number" class="form-control" id="preciocosto" formControlName="preciocosto"  [(ngModel)]="nuevoProducto.preciocosto" required>
+  <input type="number" class="form-control" id="preciocosto" formControlName="preciocosto" [(ngModel)]="nuevoProducto.preciocosto" required>
   <br>
   <label>Precio:</label>
-  <input type="number" class="form-control" id="precio" formControlName="precio"  [(ngModel)]="nuevoProducto.precio" required>
+  <input type="number" class="form-control" id="precio" formControlName="precio" [(ngModel)]="nuevoProducto.precio" required>
   <br>
   <label>Fecha de Ingreso:</label>
-  <input type="date" class="form-control" id="fechaingreso" formControlName="fechaingreso"  [(ngModel)]="nuevoProducto.fechaingreso" required>
+  <input type="date" class="form-control" id="fechaingreso" formControlName="fechaingreso" [(ngModel)]="nuevoProducto.fechaingreso" required>
   <br>
   <button type="submit" class="agregarProducto">Agregar Producto</button>
 </div>
