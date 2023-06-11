@@ -11,6 +11,7 @@ import { LoginComponent }            from './home/login/login.component';
 import { RegistroComponent }         from './home/registro/registro.component';
 import { TermCondicionesComponent }  from './home/term-condic/term-condic.component';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { IndiceComponent }           from './dashboard/indice/indice.component';
 import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
 import { ProductosComponent }        from './dashboard/productos/productos.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
   {path: 'termycond', component: TermCondicionesComponent},
 
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'indice', component: IndiceComponent},
   {path: 'carrito', component: CarrocomprasComponent},
   {path: 'productos', component: ProductosComponent},
