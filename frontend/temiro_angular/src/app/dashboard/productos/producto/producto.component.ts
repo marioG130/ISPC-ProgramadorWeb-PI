@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-import { listaProductos } from '../lista-productos';
+import { datosExtra } from '../datos-extra';
+
 
 @Component({
     selector: 'app-producto',
@@ -9,44 +12,42 @@ import { listaProductos } from '../lista-productos';
 })
 export class ProductoComponent implements OnInit {
 
-    prds = listaProductos
+    private apiUrl = "http://localhost:8000/webapi";
+    public prodBack: any[] = [];
+    public prodFront: any[] = [];
 
-    Caracteristicas() {
-
-    }
-
-    constructor(private route: ActivatedRoute){
-
+    constructor(private http: HttpClient, private router: Router){
     }
 
     ngOnInit(): void {
-
+        this.obtenerProductos();
     }
 
-
-  /*
-    constructor(private route: ActivatedRoute,){
-
+    obtenerProductos() {
+        this.http.get<any[]>(this.apiUrl+"/producto").subscribe(resp => {
+            // console.log(resp);
+            this.prodBack = resp;
+            for (let p of this.prodBack) {
+                let img = "none.jpg";
+                for (let dx of datosExtra) {
+                    // console.log(dx.idproducto , Number(p.idproducto) );
+                    if (dx.idproducto==Number(p.idproducto)) {
+                        img = dx.imagen;
+                        break;
+                    }
+                }
+                this.prodFront.push({
+                    "idproducto": p.idproducto,
+                    "descripcion": p.descripcion,
+                    "precio": p.precio,
+                    // los productos en el front tienen campos adicionales
+                    "stock": "Disponible",           // falta traer el verdadero stock
+                    "categoria": p.idtipoproducto,   // falta convertir el numero a descripcion
+                    // datos extras por ahora solo en el front
+                    "imagen": "../../assets/img/"+img
+                });
+            }
+        });
     }
-
-   ngOnInit() {
-    this.route.paramMap.subscribe(paramsMap => {
-    this.products = products[+paramsMap.get('productId')!]
-  })
-  clickDetalles1(){
-    alert('Bloquean el 99% de los rayos UVA y UVB.Cuentan con una pantalla 90% de luz visible y coinciden perfectamente en color y no presentan distorsiones e imperfecciones. Ideal para vos!!!');
-  }
-
-  clickDetalles2(){
-    alert('Diseñadas para reducir y filtrar la cantidad de rayos de luz azul que llega al ojo y ayudan a evitar que causen daños potenciales. Reducen la fatiga ocular y mejoran el contraste');
-  }
-
-  clickDetalles3(){
-    alert('Proporcionan una buena visibilidad, son tu mejor elección si nadas por ocio y para mantenerte en forma, especialmente si no tienes costumbre de usar Gafas de Natación.');
-  }
-
-  clickDetalles4(){
-    alert('Corrigen los problemas de visión y le devuelven una visión nítida.');
-  }*/
 
 }
