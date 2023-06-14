@@ -22,37 +22,38 @@
       <td>{{ producto.fechaingreso }}</td>
       <td>
         <button (click)="bajaProducto(producto.idproducto)">Eliminar</button>
+        &nbsp; &nbsp;
+        <button (click)="seleccionarProducto(producto)">Modificar Producto</button>
       </td>
     </tr>
   </tbody>
 </table>
 
 <br>
-<h2 class="agregarProducto">Agregar Producto</h2>
+<h2 class="agregarProducto">{{ modificarProductoId ? 'Modificar Producto' : 'Agregar Producto' }}</h2>
 <br>
-<form [formGroup]="formProducto"  (submit)="altaProducto($event)" novalidate>
+<form [formGroup]="formProducto" (submit)="modificarProducto()" novalidate>
   <div class="container">
     <div class="form-container">
-    <label >ID del Producto:</label>
-  <input type="number" class="form-control" id="idproducto" formControlName="idproducto"  [(ngModel)]="nuevoProducto.idproducto" required>
-  <br>
-  <label>Descripción:</label>
-  <input type="text" class="form-control" id="descripcion" formControlName="descripcion" [(ngModel)]="nuevoProducto.descripcion" required>
-  <br>
-  <label>ID del Tipo:</label>
-  <input type="number" class="form-control" id="idtipoproducto" formControlName="idtipoproducto" [(ngModel)]="nuevoProducto.idtipoproducto" required>
-  <br>
-  <label>Costo:</label>
-  <input type="number" class="form-control" id="preciocosto" formControlName="preciocosto" [(ngModel)]="nuevoProducto.preciocosto" required>
-  <br>
-  <label>Precio:</label>
-  <input type="number" class="form-control" id="precio" formControlName="precio" [(ngModel)]="nuevoProducto.precio" required>
-  <br>
-  <label>Fecha de Ingreso:</label>
-  <input type="date" class="form-control" id="fechaingreso" formControlName="fechaingreso" [(ngModel)]="nuevoProducto.fechaingreso" required>
-  <br>
-  <button type="submit" class="agregarProducto">Agregar Producto</button>
-</div>
-</div>
-
+      <label>ID del Producto:</label>
+      <input type="number" class="form-control" id="idproducto" formControlName="idproducto" [(ngModel)]="nuevoProducto.idproducto" required>
+      <br>
+      <label>Descripción:</label>
+      <input type="text" class="form-control" id="descripcion" formControlName="descripcion" [(ngModel)]="nuevoProducto.descripcion" required>
+      <br>
+      <label>ID del Tipo:</label>
+      <input type="number" class="form-control" id="idtipoproducto" formControlName="idtipoproducto" [(ngModel)]="nuevoProducto.idtipoproducto" required>
+      <br>
+      <label>Costo:</label>
+      <input type="number" class="form-control" id="preciocosto" formControlName="preciocosto" [(ngModel)]="nuevoProducto.preciocosto" required>
+      <br>
+      <label>Precio:</label>
+      <input type="number" class="form-control" id="precio" formControlName="precio" [(ngModel)]="nuevoProducto.precio" required>
+      <br>
+      <label>Fecha de Ingreso:</label>
+      <input type="date" class="form-control" id="fechaingreso" formControlName="fechaingreso" [(ngModel)]="nuevoProducto.fechaingreso" required>
+      <br>
+      <button type="submit" class="agregarProducto">{{ modificarProductoId ? 'Modificar Producto' : 'Agregar Producto' }}</button>
+    </div>
+  </div>
 </form>

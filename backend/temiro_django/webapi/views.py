@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework import generics, filters, status, views
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
+from .models import Producto
+from .serializers import ProductoSerializer
 
 from .models import *
 from .serializers import *
@@ -177,9 +179,9 @@ class ProductoBorrar(views.APIView):
     
 class ProductoModificar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
-    def post(self, request, *args, **kwargs):
+    def put(self, request, *args, **kwargs):
         prd = kwargs.get('idproducto', None)
-        producto = Producto.objects.get(idcliente=cli)
+        producto = Producto.objects.get(idproducto=prd)
         serializer = ProductoSerializer(producto, data = request.data)
         if serializer.is_valid():
             serializer.save()

@@ -36,7 +36,7 @@ urlpatterns = [
     re_path(r'^tipoproducto/(?P<pk>[0-9]+)$', TipoProductoDetail.as_view()),
 
     path('altaproducto/', ProductoAgregar.as_view(), name='altaproducto'),
-    path('modproducto/<int:idproducto>/', ProductoModificar.as_view(), name='modproducto'),
+    path('modproducto/<int:idproducto>/', ProductoModificar.as_view()),
     path('bajaproducto/<int:idproducto>/', ProductoBorrar.as_view(), name='bajaproducto'),
     re_path(r'^producto$', ProductoList.as_view()),
     re_path(r'^producto/(?P<pk>[0-9]+)$', ProductoDetail.as_view()),
