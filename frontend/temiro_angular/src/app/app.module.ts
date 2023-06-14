@@ -18,13 +18,12 @@ import { TermCondicionesComponent }  from './home/term-condic/term-condic.compon
 
 import { IndiceComponent }           from './dashboard/indice/indice.component';
 import { ProductosComponent }        from './dashboard/productos/productos.component';
-import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
-import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
 import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
 
 import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-clientes.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 @NgModule({
@@ -38,19 +37,18 @@ import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-cli
     LoginComponent,
     RegistroComponent,
     TermCondicionesComponent,
-    IndiceComponent,
+
     ProductosComponent,
-    ProductoComponent,
-    ServiciosComponent,
     DetallesComponent,
     IndiceAdmComponent,
     FormuProductosComponent,
-    AbmClientesComponent
+    AbmClientesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    DashboardModule,
     HttpClientModule,
   ],
   providers: [
