@@ -109,7 +109,7 @@ class ClienteAgregar(views.APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+
 class ClienteBorrar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
     def delete(self, request, *args, **kwargs):
@@ -167,7 +167,7 @@ class ProductoAgregar(views.APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+
 class ProductoBorrar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
     def delete(self, request, *args, **kwargs):
@@ -176,7 +176,7 @@ class ProductoBorrar(views.APIView):
         if producto.borrar(prd):  # Llamar al método borrar en la instancia de Producto
             return Response(data='OK', status=status.HTTP_200_OK)
         return Response(data='ERROR', status=status.HTTP_400_BAD_REQUEST)
-    
+
 class ProductoModificar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
     def put(self, request, *args, **kwargs):
