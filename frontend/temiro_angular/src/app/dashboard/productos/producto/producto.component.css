@@ -1,10 +1,10 @@
 .contenedor {
-    width: 90%;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 50px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 2fr);
     column-gap: 20px;
     row-gap: 20px;
@@ -13,7 +13,7 @@
 }
 
 .contenedor-items {
-    width: 85%;
+    width: 95%;
     text-align: center;
     border: 1.5px solid black;
     border-radius: 10px;

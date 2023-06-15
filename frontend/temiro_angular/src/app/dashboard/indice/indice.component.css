@@ -1,4 +1,5 @@
-*{
+
+* {
   margin: 0;
   padding: 0;
   outline: none;
@@ -7,12 +8,11 @@
   box-sizing: border-box;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-
-.sidebar{
+.sidebar {
   top: 0;
   bottom: 0;
   height: 90vh;
@@ -24,22 +24,24 @@ ul{
   box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
 }
 
-.foto_perfil{
+.foto_perfil {
   text-align: center;
   display: flex;
   transition: all 0.5s ease;
   margin: 10px 0 0 10px;
 }
 
-.foto_perfil img{
+.foto_perfil img {
   width: 65px;
   height: 65px;
   border-radius: 50%;
 }
 
-a:link, a:visited{text-decoration: none;}
+a:link, a:visited {
+  text-decoration: none;
+}
 
-.foto_perfil span{
+.foto_perfil span {
   font-weight: bold;
   padding: 20px;
   padding-top: 10px;
@@ -49,8 +51,7 @@ a:link, a:visited{text-decoration: none;}
   color: black;
 }
 
-
-a{
+a {
   position: relative;
   color: rgb(85, 83, 83);
   font-size: 15px;
@@ -59,12 +60,12 @@ a{
   padding: 10px;
 }
 
-span:hover{
+span:hover {
   color: rgb(8, 65, 221);
   cursor: pointer;
 }
 
-.bi{
+.bi {
   position: relative;
   width: 70px;
   margin-left: 10px;
@@ -75,7 +76,7 @@ span:hover{
   color: rgb(30,81,110);
 }
 
-.menu_item{
+.menu_item {
   position: relative;
   top: 12px;
   margin-left: 50px;
@@ -84,16 +85,30 @@ span:hover{
   font-weight: 400;
 }
 
-a:hover{
+a:hover {
   background-color: rgba(175, 205, 207, 0.181);
   color: blue;
 }
 
-.sidebar:hover{
+.sidebar:hover {
   width: 280px;
   transition: all 0.5s ease;
 }
 
-.salir{
+.salir {
   bottom: 0;
+}
+
+.container {
+  display: flex;
+  margin: 10px 0 0 5px;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
 }

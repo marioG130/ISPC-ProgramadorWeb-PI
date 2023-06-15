@@ -1,4 +1,4 @@
-<h2 class="agregarProducto">Lista de Productos</h2>
+<h2 class="agregarProducto">ABM de Productos</h2>
 <br>
 <table>
   <thead>
@@ -13,17 +13,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let producto of productos">
-      <td>{{ producto.idproducto }}</td>
-      <td>{{ producto.descripcion }}</td>
-      <td>{{ producto.idtipoproducto }}</td>
-      <td>{{ producto.preciocosto }}</td>
-      <td>{{ producto.precio }}</td>
-      <td>{{ producto.fechaingreso }}</td>
+    <tr *ngFor="let p of productos">
+      <td>{{ p.idproducto }}</td>
+      <td>{{ p.descripcion }}</td>
+      <td>{{ p.idtipoproducto }}</td>
+      <td>{{ p.preciocosto }}</td>
+      <td>{{ p.precio }}</td>
+      <td>{{ p.fechaingreso }}</td>
       <td>
-        <button (click)="bajaProducto(producto.idproducto)">Eliminar</button>
+        <button (click)="bajaProducto(p.idproducto)">Eliminar</button>
         &nbsp; &nbsp;
-        <button (click)="seleccionarProducto(producto)">Modificar Producto</button>
+        <button (click)="seleccionarProducto(p)">Modificar Producto</button>
       </td>
     </tr>
   </tbody>
@@ -32,7 +32,7 @@
 <br>
 <h2 class="agregarProducto">{{ modificarProductoId ? 'Modificar Producto' : 'Agregar Producto' }}</h2>
 <br>
-<form [formGroup]="formProducto" (submit)="modificarProducto()" novalidate>
+<form [formGroup]="formProducto" (submit)="guardarProducto($event)" novalidate>
   <div class="container">
     <div class="form-container">
       <label>ID del Producto:</label>

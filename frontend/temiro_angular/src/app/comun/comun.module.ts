@@ -11,5 +11,6 @@ import { NoEncontradaComponent } from './no-encontrada/no-encontrada.component';
     CommonModule
   ]
 })
-export class ComunModule { 
+export class ComunModule {
+
 }
