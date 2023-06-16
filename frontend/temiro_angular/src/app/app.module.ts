@@ -29,6 +29,7 @@ import { ServiciosComponent }        from './dashboard/servicios/servicios.compo
 import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-clientes.component';
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
+import { FormularioConsultaComponent } from './dashboard/servicios/FormuConsultas/formulario-consulta.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-ad
     AbmClientesComponent,
     FormuProductosComponent,
     IndiceAdmComponent,
+    FormularioConsultaComponent
   ],
   imports: [
     BrowserModule,
