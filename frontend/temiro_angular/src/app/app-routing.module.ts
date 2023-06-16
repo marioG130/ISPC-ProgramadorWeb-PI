@@ -19,12 +19,13 @@ import { MisComprasComponent }       from './dashboard/mis-compras/mis-compras.c
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
 import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
+import { ComprarComponent }          from './dashboard/productos/comprar/comprar.component';
 import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
+import { FormularioConsultaComponent } from './dashboard/servicios/FormuConsultas/formulario-consulta.component';
 
 import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-clientes.component';
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
-import { FormularioConsultaComponent } from './dashboard/servicios/FormuConsultas/formulario-consulta.component';
 
 
 const routes: Routes = [
@@ -37,13 +38,14 @@ const routes: Routes = [
   {path: 'quienes-somos', component: QuienesSomosComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'termycond', component: TermCondicionesComponent},
-  { path: 'formulario-consulta', component: FormularioConsultaComponent },
 
   {path: 'carrito', component: CarrocomprasComponent},
   {path: 'indice', component: IndiceComponent},
   {path: 'productos', component: ProductosComponent},
   {path: 'detalle/:idproducto', component: DetallesComponent},
+  {path: 'comprar/:precio', component: ComprarComponent},
   {path: 'servicios', component: ServiciosComponent},
+  {path: 'formulario-consulta', component: FormularioConsultaComponent },
 
   {path: 'abmclientes', component: AbmClientesComponent},
   {path: 'formuproductos', component: FormuProductosComponent},

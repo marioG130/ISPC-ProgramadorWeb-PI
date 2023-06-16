@@ -7,6 +7,7 @@ import { datosExtra } from '../datos-extra';
 export class DetProducto {
     idproducto: number;
     descripcion: string;
+    precio: number;
     detalle: string;
     especificaciones: string;
     imagen: string;
@@ -14,6 +15,7 @@ export class DetProducto {
     constructor() {
         this.idproducto = 0;
         this.descripcion = "";
+        this.precio = 0;
         this.detalle = "";
         this.especificaciones = "";
         this.imagen = "";
@@ -43,10 +45,14 @@ export class DetallesComponent implements OnInit {
     obtenerProducto(idprd: string) {
         let idproducto = Number(idprd);
         this.http.get<any>(this.apiUrl+"/producto/"+idprd).subscribe(resp => {
+            this.prd.idproducto = idproducto;
+            this.prd.descripcion = resp.descripcion;
+            this.prd.precio = resp.precio;
+            this.prd.detalle = '...';
+            this.prd.especificaciones = '...';
+            this.prd.imagen = "../../assets/img/none.jpg";
             for (let dx of datosExtra) {
                 if (dx.idproducto==idproducto) {
-                    this.prd.idproducto = dx.idproducto;
-                    this.prd.descripcion = resp.descripcion;
                     this.prd.detalle = dx.detalle;
                     this.prd.especificaciones = dx.especificaciones;
                     this.prd.imagen = "../../assets/img/"+dx.imagen;

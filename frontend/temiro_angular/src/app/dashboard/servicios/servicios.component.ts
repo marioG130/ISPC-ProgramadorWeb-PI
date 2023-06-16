@@ -9,6 +9,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./servicios.component.css']
 })
 export class ServiciosComponent implements OnInit {
+
+  ////Interpolacion//////
+  titulo= "Servicios";
+  examenvisual= "./assets/img/examenvisual.jpg"
+
+  /////////Property Binding/////
+  tallerdemontaje="./assets/img/taller.jpg"
+  textotaller= "taller de montaje";
+  desabilitado= true;
+
   formularioConsulta: FormGroup;
 
   constructor(private router: Router) {
@@ -19,19 +29,13 @@ export class ServiciosComponent implements OnInit {
       telefono: new FormControl('', Validators.required),
       consulta: new FormControl('', Validators.required)
     });
-  } 
+  }
+
   redirigirAFormularioConsulta() {
     this.router.navigate(['/formulario-consulta']);
   }
 
   ngOnInit():void {
   }
-  ////Interpolacion//////
-  titulo= "Servicios";
-  examenvisual= "./assets/img/examenvisual.jpg"
 
-  /////////Property Binding/////
-  tallerdemontaje="./assets/img/taller.jpg"
-  textotaller= "taller de montaje";
-  desabilitado= true;
 }
