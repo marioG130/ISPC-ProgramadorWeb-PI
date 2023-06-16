@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h2>Formulario de Consulta</h2>
+  <form [formGroup]="formularioConsulta" (ngSubmit)="enviarConsulta()">
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" class="form-control" formControlName="apellido" required>
+    </div>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" class="form-control" formControlName="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" class="form-control" formControlName="email" required>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" class="form-control" formControlName="telefono" required>
+    </div>
+    <div class="form-group">
+      <label for="consulta">Consulta:</label>
+      <textarea id="consulta" class="form-control" formControlName="consulta" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>

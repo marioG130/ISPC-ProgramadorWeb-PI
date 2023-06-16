@@ -24,6 +24,7 @@ import { ServiciosComponent }        from './dashboard/servicios/servicios.compo
 import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-clientes.component';
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
+import { FormularioConsultaComponent } from './dashboard/servicios/FormuConsultas/formulario-consulta.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'quienes-somos', component: QuienesSomosComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'termycond', component: TermCondicionesComponent},
+  { path: 'formulario-consulta', component: FormularioConsultaComponent },
 
   {path: 'carrito', component: CarrocomprasComponent},
   {path: 'indice', component: IndiceComponent},
@@ -49,7 +51,7 @@ const routes: Routes = [
 
   {path: 'noencontrada-404', component: NoEncontradaComponent},
   {path: '**', redirectTo: '/noencontrada-404'},
-];
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
