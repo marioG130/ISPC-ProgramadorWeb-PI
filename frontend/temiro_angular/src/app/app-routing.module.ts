@@ -16,6 +16,7 @@ import { TermCondicionesComponent }  from './home/term-condic/term-condic.compon
 import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
 import { IndiceComponent }           from './dashboard/indice/indice.component';
 import { MisComprasComponent }       from './dashboard/mis-compras/mis-compras.component';
+import { PerfilComponent }           from './dashboard/perfil/perfil.component';
 import { ProductosComponent }        from './dashboard/productos/productos.component';
 import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
 import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
@@ -42,6 +43,7 @@ const routes: Routes = [
   {path: 'carrito', component: CarrocomprasComponent},
   {path: 'indice', component: IndiceComponent},
   {path: 'productos', component: ProductosComponent},
+  {path: 'perfil', component: PerfilComponent},
   {path: 'detalle/:idproducto', component: DetallesComponent},
   {path: 'comprar/:precio', component: ComprarComponent},
   {path: 'servicios', component: ServiciosComponent},
