@@ -8,6 +8,7 @@ import { MisComprasComponent }    from './mis-compras/mis-compras.component';
 import { IndiceComponent }        from './indice/indice.component';
 import { ProductoComponent }      from './productos/producto/producto.component';
 import { ComprarComponent } from './productos/comprar/comprar.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ComprarComponent } from './productos/comprar/comprar.component';
     CarrocomprasComponent,
     MisComprasComponent,
     ComprarComponent,
+    PerfilComponent,
   ],
   imports: [
     CommonModule,
