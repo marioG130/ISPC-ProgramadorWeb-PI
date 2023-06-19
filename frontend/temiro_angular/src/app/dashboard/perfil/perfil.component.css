@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  margin-top: 70px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 180px;
+}
+.editar_foto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  margin-left: 50px;
+}
+
+.foto{
+  margin-bottom: 20px;
+}
+
+.lbl_foto{
+  margin: 20px;
+}
+p{
+  font-weight: 500;
+  font-size: 30px;
+}
+
+img{
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-top: 50px;
+}
+
+.editar_perfil{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+}
+form{
+  display: flex;
+  flex-direction: column;
+
+}
+
+label{
+  margin-top: 20px 0 10px 0;
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+input{
+  width: 400px;
+  height: 40px;
+  border: none
+}
+
+
+form input{
+  border-bottom: 1px solid #c7c7c7;
+  outline: none;
+}
+
+.btn_guardar{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(251, 251, 251);
+  margin-left: 20px;
+  background-color: rgb(3, 72, 246);
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+}

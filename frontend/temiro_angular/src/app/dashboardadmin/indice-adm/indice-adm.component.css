@@ -21,9 +21,10 @@
     display: none;
   }
 }
+
 img{
-  width: 4%;
-  height: 4%;
+  width: 8%;
+  height: 8%;
   padding: 5px;
   margin-left: 20px;
 }

@@ -15,9 +15,10 @@
             <div class="badges">
               <span class="badge badge-warning"></span>
             </div>                                  <!-- (Event) Binding -->
-            <button class="btn btn-primary" (click)="incrementarvisual(1)"><h5 class="card-title seccion-texto">Examen Visual</h5></button>
-            <h3>{{ numerovisual }}</h3>
-            <p class="card-text seccion-texto">Los exámenes visuales o graduación de la vista y todo lo que tiene que ver con la optometría forman el núcleo de nuestra filosofía de
+            <button class="btn btn-primary" (click)="redirigirAFormularioConsulta()">
+              <h5 class="card-title seccion-texto">Examen Visual</h5>
+            </button>
+            <p class="card-text seccion-texto"><br>Los exámenes visuales o graduación de la vista y todo lo que tiene que ver con la optometría forman el núcleo de nuestra filosofía de
                empresa,Durante el examen se realizarán TODAS las pruebas necesarias para conseguir un diagnóstico preciso del defecto visual.De esta forma, encontraremos la mejor
                 solución a los problemas que refiere el paciente.</p>
           </div>
@@ -32,9 +33,10 @@
             <span class="badge badge-warning"><div inerhtml="textotaller"></div></span>
             </div>
                     <!-- Property Binding -->                            <!-- (Event) Binding -->
-            <button [disabled]="desabilitado" class="btn btn-primary" (click)="incrementartaller()"><h5 class="card-title seccion-texto">Taller de Montaje</h5></button>
-            <h3>{{ numerotaller }}</h3>
-            <p class="card-text seccion-texto">Otro de nuestros puntos importantes es que disponemos de un taller de montaje de gafas propio.Este completo taller de montaje con
+                    <button class="btn btn-primary" (click)="redirigirAFormularioConsulta()">
+                      <h5 class="card-title seccion-texto">Taller De Montaje</h5>
+                    </button>
+            <p class="card-text seccion-texto"><br>Otro de nuestros puntos importantes es que disponemos de un taller de montaje de gafas propio.Este completo taller de montaje con
                que contamosnos permite montar cualquiera de los tipos de gafas disponibles actualmente en el mercado y no tener que enviar montajes a otros talleres, evitando así
                 el sobrecoste y la demora de tiempo que ello conlleva.</p>
           </div>
@@ -48,9 +50,10 @@
               <span class="badge badge-warning">Seguro Rotura Lentes</span>
             </div>
                                             <!-- (Event) Binding -->
-            <button class="btn btn-primary" (click)="incrementarseguro()"><h5 class="card-title seccion-texto">Seguro de Rotura para Lentes </h5></button>
-            <h3>{{ numeroseguro }}</h3>
-            <p class="card-text seccion-texto"> Aunque las lentes que más se utilizan últimamente son las orgánicas (difíciles de romper), cuando te compres unas gafas graduadas en
+              <button class="btn btn-primary" (click)="redirigirAFormularioConsulta()">
+              <h5 class="card-title seccion-texto">Seguro Rotura Cristal</h5>
+              </button>
+            <p class="card-text seccion-texto"><br>Aunque las lentes que más se utilizan últimamente son las orgánicas (difíciles de romper), cuando te compres unas gafas graduadas en
                TemiroOptica, además de la garantía propia que tendrán tus gafas, llevarás incluido un seguro de rotura para los cristales.  Este seguro de rotura es totalmente 
                gratuito y siempre está incluido en la compra de tus gafas graduadas.</p>
           </div>

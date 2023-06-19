@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-
+from django.views.decorators.http import require_http_methods
 from .views import *
 
 urlpatterns = [
@@ -24,16 +24,20 @@ urlpatterns = [
     re_path(r'^usuario$', UsuarioList.as_view()),
     re_path(r'^usuario/(?P<pk>[0-9]+)$', UsuarioDetail.as_view()),
 
+    path('altacliente/', ClienteAgregar.as_view(), name='altacliente'),
+    path('modcliente/<int:idcliente>/', ClienteModificar.as_view(), name='modcliente'),
+    path('bajacliente/<int:idcliente>/', ClienteBorrar.as_view(), name='bajacliente'),
     re_path(r'^cliente$', ClienteList.as_view()),
     re_path(r'^cliente/(?P<pk>[0-9]+)$', ClienteDetail.as_view()),
 
     # ---- Urls referidas a los productos
 
-    path('altaproducto/', ProductoAgregar.as_view(), name='altaproducto'),
-    path('bajaproducto/', ProductoBorrar.as_view(), name='bajaproducto'),
     re_path(r'^tipoproducto$', TipoProductoList.as_view()),
     re_path(r'^tipoproducto/(?P<pk>[0-9]+)$', TipoProductoDetail.as_view()),
 
+    path('altaproducto/', ProductoAgregar.as_view(), name='altaproducto'),
+    path('modproducto/<int:idproducto>/', ProductoModificar.as_view()),
+    path('bajaproducto/<int:idproducto>/', ProductoBorrar.as_view(), name='bajaproducto'),
     re_path(r'^producto$', ProductoList.as_view()),
     re_path(r'^producto/(?P<pk>[0-9]+)$', ProductoDetail.as_view()),
 

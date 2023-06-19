@@ -1,38 +1,114 @@
-.container-fluid{
-  padding: 0%;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 800px) {
-  .titulo{
-    font-size: 1.5rem;
-    padding: 10px 0;
-  }
-  .card {
-    text-align: center;
-    max-width: 400px;
-    margin-left: 50px;
-  }
-
-  .seccion-texto{
-      font-size: 18px;
-  }
-
-  .presentacion{
-    display: none;
-  }
+ul {
+  list-style: none;
 }
 
-img{
-  width: 4%;
-  height: 4%;
-  padding: 5px;
-  margin-left: 20px;
+.sidebar {
+  top: 0;
+  bottom: 0;
+  height: 90vh;
+  left: 0;
+  background-color: white;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
 }
 
-.iconos{
+.foto_perfil {
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items:center;
+  transition: all 0.5s ease;
+  margin: 10px 0 0 10px;
+}
 
+.foto_perfil img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+.foto_perfil span {
+  font-weight: bold;
+  padding: 20px;
+  padding-top: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 15px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+
+span:hover {
+  color: rgb(8, 65, 221);
+  cursor: pointer;
+}
+
+.bi {
+  position: relative;
+  width: 70px;
+  margin-left: 10px;
+  height: 40px;
+  top: 14px;
+  font-size: 40px;
+  text-align: center;
+  color: rgb(30,81,110);
+}
+
+.menu_item {
+  position: relative;
+  top: 12px;
+  margin-left: 50px;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+a:hover {
+  background-color: rgba(175, 205, 207, 0.181);
+  color: blue;
+}
+
+.sidebar:hover {
+  width: 280px;
+  transition: all 0.5s ease;
+}
+
+.salir {
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+  margin: 10px 0 0 5px;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
 }

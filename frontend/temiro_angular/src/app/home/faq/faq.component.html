@@ -1,100 +1,70 @@
-
 <div class="content" role="main">
   <h1>PREGUNTAS FRECUENTES</h1>
-  <p>Haz click en la pregunta de tu interés y la respuesta
-  <br>saldrá en la pantalla del final de la página.</p>
+  <p>Haz click en la pregunta de tu interés
+  <br>y la respuesta se desplegara en la pantalla.</p>
   <input type="hidden" #selection>
   <div class="card-container">
-    <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>¿Cómo pagar mi compra?</span>
-    </button>
-    <button class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>¿Cómo recibir o retirar mi producto?</span>
-    </button>
-    <button class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>¿Cómo protegen a los compradores?</span>
-    </button>
-    <button class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>¿Cómo funciona el beneficio de envíos gratis?</span>
-    </button>
-    <button class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>¿Cómo hacer una cancelación de compra?</span>
-    </button>
-    <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>¿Cómo hacer una devolución de producto?</span>
-    </button>
-  </div>
-  <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>Podes pagar con cualquiera de estos medios y tu
-        <br>compra va a estar 100% protegida. Y si el producto
-        <br>no es lo que esperabas, te devolveremos el dinero.
+    <div class="desplegables">
+
+    <details>
+      <summary class="pregunta">¿Cómo pagar mi compra?</summary>
+      <p>Podes pagar con cualquiera de estos medios y tu compra va a estar 100% protegida.
+        <br>Y si el producto no es lo que esperabas, te devolveremos el dinero.
+        <br>
         <br>Elegí entre alguna de estas formas de pago...
+        <br>
+        <br>- Tarjeta de crédito: Visa, Mastercard, Nativa (hasta 6 pagos sin interés);
+        <br>- Tarjeta de débito: Visa, Mastercard, Nativa (hasta 6 pagos sin interés);
+        <br>- Efectivo con Pago Fácil o Rapipago (en 1 pago). </p>
+   </details>
 
-- Tarjeta de crédito: Visa, Mastercard, Nativa
-  (hasta 6 pagos sin interés);
+   <details>
+      <summary class="pregunta">¿Cómo recibir o retirar mi producto?</summary>
+      <p>Podes recibir el producto en tu domicilio mientras estés ubicado dentro de la Argentina.
+        <br>Calculas el costo y tiempo de envío desde la compra, y luego pagas todo junto.
+        <br>Otra opción es retirar el producto en nuestra sucursal o por Correo Argentino,
+        <br>a través de una persona designada, la cual debe presentar su DNI y
+        <br>el código de seguimiento que figura en el email de "envío" o en tu cuenta.
+        <br>Y también puede hacer el retiro cualquier mayor de edad, en caso de que la persona
+        <br>designada no pueda hacerlo, con la siguiente documentación a presentar…
+        <br>
+        <br>DNI + Fotocopia del DNI de la persona designada + El código de seguimiento +
+        <br>El mail de aviso de paquete en sucursal impreso + El formulario de autorización completo.</p>
+   </details>
 
-- Tarjeta de débito: Visa, Mastercard, Nativa
-  (hasta 6 pagos sin interés);
+   <details>
+      <summary class="pregunta">¿Cómo protegen a los compradores?</summary>
+      <p>Si tuvieras algún problema con la compra, estaremos ahí para ayudarte.
+        <br>Lo primero que debes hacer es: Iniciar un "reclamo" a través de la sección
+        <br>"contacto" dejando un "mesaje" para solucionar la cuestión, lo antes posible.
+        <br>Si completaste el pago desde nuestro sitio y llegas a tener una dificultad,
+        <br>te devolvemos el 100% del dinero. Porque tu compra siempre debe ser segura.</p>
+   </details>
 
-- Efectivo con Pago Fácil o Rapipago (en 1 pago).</pre>
-      <pre *ngSwitchCase="'material'">Podes recibir el producto en tu domicilio mientras
-        <br>estés ubicado dentro de la Argentina. Calculas el
-        <br>costo y tiempo de envío desde la compra, y luego
-        <br>pagas todo junto. Otra opción es retirar el producto
-        <br>en nuestra sucursal o por Correo Argentino, a través
-        <br>de una persona designada, la cual debe presentar su
-        <br>DNI y el código de seguimiento que figura en el
-        <br>email de "envío" o en tu cuenta. Y también puede hacer
-        <br>el retiro cualquier mayor de edad, en caso de que la
-        <br>persona designada no pueda hacerlo, con la siguiente
-        <br>documentación a presentar…
+   <details>
+    <summary class="pregunta">¿Cómo funciona el beneficio de envíos gratis?</summary>
+    <p>Si ya sos cliente registrado, que compraste en otra oportunidad en nuestra tienda online y
+      <br>superas los $50.000 en la compra de nuevos productos, tienes el beneficio del "envío sin cargo".</p>
+ </details>
 
-- DNI;
+ <details>
+    <summary class="pregunta">¿Cómo hacer una cancelación de compra?</summary>
+    <p>Si la compra está en preparación, podes cancelarla desde el estado de la compra.
+      <br>Si la compra ya está en camino, podes rechazarla cuando llegue o no retirarla del correo.
+      <br>Si elegiste envío a domicilio, cuando el paquete llegue, pídele al transportista que se lo lleve de vuelta.
+      <br>Si elegiste retirar en la sucursal, no vayas a buscar el paquete.
+      <br>Si ya recibiste la compra, podes devolverla.</p>
+ </details>
 
-- Fotocopia del DNI de la persona designada;
-
-- El código de seguimiento;
-
-- El mail de aviso de paquete en sucursal impreso;
-
-- El formulario de autorización completo.</pre>
-      <pre *ngSwitchCase="'pwa'">Si tuvieras algún problema con la compra, estaremos
-        <br>ahí para ayudarte. Lo primero que debes hacer es:
-        <br>Iniciar un "reclamo" a través de la sección "consultas"
-        <br>para solucionar la cuestión, lo antes posible.
-        <br>Si completaste el pago desde nuestro sitio y llegas
-        <br>a tener una dificultad, te devolvemos el 100% del
-        <br>dinero. Porque tu compra siempre debe ser segura.</pre>
-      <pre *ngSwitchCase="'dependency'">Si ya sos cliente registrado, que compraste en otra
-        <br>oportunidad en nuestra tienda online y superas los
-        <br>$50.000 en la compra de nuevos productos, tienes el
-        <br>beneficio del "envío sin cargo".</pre>
-      <pre *ngSwitchCase="'test'">Si la compra está en preparación, podes cancelarla
-        <br>desde el estado de la compra. Si la compra ya está
-        <br>en camino, podes rechazarla cuando llegue o no
-        <br>retirarla del correo. Si elegiste envío a domicilio,
-        <br>cuando el paquete llegue, pídele al transportista que
-        <br>se lo lleve de vuelta. Si elegiste retirar en la
-        <br>sucursal, no vayas a buscar el paquete. Si ya
-        <br>recibiste la compra, podes devolverla.</pre>
-      <pre *ngSwitchCase="'build'">Podrás hacer una devolución del producto que
-        <br>compraste, siempre y cuando, este en excelentes
-        <br>condiciones y empaquetado, además de realizar el
-        <br>pedido de "devolución" a través de la sección "consultas"
-        <br>dentro de las 48 horas hábiles desde que recibes dicho
-        <br>paquete. Luego, te contactaremos por email o
-        <br>telefónicamente para darte un "código" el cual te
-        <br>respaldara para entregar el producto en el local
-        <br>o para que un transportista de nuestro negocio lo
-        <br>pase a buscar en tu domicilio. Y te devolvemos el
-        <br>100% del costo de la compra realizada.</pre>
-  </div>
+ <details>
+    <summary class="pregunta">¿Cómo hacer una devolución de producto?</summary>
+    <p>Podrás hacer una devolución del producto que compraste, siempre y cuando,
+      <br>este en excelentes condiciones y empaquetado, además de realizar el pedido de "devolución"
+      <br>como "mensaje" a través de la sección "contacto" dentro de las 48 horas hábiles desde que
+      <br>recibes dicho paquete. Luego, te contactaremos por email o telefónicamente para darte un
+      <br>"código" el cual te respaldara para entregar el producto en el local o para que
+      <br>un transportista de nuestro negocio lo pase a buscar en tu domicilio.
+      <br>Y te devolvemos el 100% del costo de la compra realizada.</p>
+ </details>
 
 </div>

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "@popperjs/core": "^2.11.7",
+    "@stripe/stripe-js": "^1.54.0",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.4",
     "rxjs": "~7.8.0",

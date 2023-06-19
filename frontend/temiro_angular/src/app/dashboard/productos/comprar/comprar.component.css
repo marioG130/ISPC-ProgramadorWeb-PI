@@ -1,0 +1,16 @@
+
+.cajaPago {
+    width: 450px;
+    margin: 50px;
+    padding: 10px;
+    background-color: #EEEEDD;
+}
+
+.tarjetaPago {
+    font-size: 22px;
+    background-color: #FFFFFF;
+}
+
+.erroresTarjeta {
+    background-color: #FF0000;
+}

@@ -5,7 +5,6 @@ import { HttpClientModule }      from '@angular/common/http';
 
 import { NavbarComponent }          from '../comun/navbar/navbar.component';
 import { BodyComponent }            from '../comun/body/body.component';
-import { FooterComponent }          from '../comun/footer/footerComponent';
 
 import { QuienesSomosComponent }    from './quienes-somos/quienes-somos.component';
 import { ContactoComponent }        from './contacto/contacto.component';
@@ -16,15 +15,14 @@ import { TermCondicionesComponent } from './term-condic/term-condic.component';
   declarations: [
     NavbarComponent,
     BodyComponent,
-    FooterComponent,
     QuienesSomosComponent,
     ContactoComponent,
-    TermCondicionesComponent,
+    TermCondicionesComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ]
 })
 export class HomeModule {

@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework import generics, filters, status, views
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
+from .models import Producto
+from .serializers import ProductoSerializer
 
 from .models import *
 from .serializers import *
@@ -98,6 +100,37 @@ class ClienteDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
 
+class ClienteAgregar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def post(self, request, format=None):
+        # print(request.data)
+        serializer = ClienteSerializer(data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ClienteBorrar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def delete(self, request, *args, **kwargs):
+        cli = kwargs.get('idcliente', None)
+        cliente = Cliente()
+        if cliente.borrar(cli):
+            return Response(data='OK', status=status.HTTP_200_OK)
+        return Response(data='ERROR', status=status.HTTP_400_BAD_REQUEST)
+
+class ClienteModificar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def post(self, request, *args, **kwargs):
+        cli = kwargs.get('idcliente', None)
+        # print(cli)
+        cliente = Cliente.objects.get(idcliente=cli)
+        serializer = ClienteSerializer(cliente, data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 # ---- Vistas referidas a los productos
 
@@ -128,6 +161,7 @@ class ProductoDetail(generics.RetrieveUpdateDestroyAPIView):
 class ProductoAgregar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
     def post(self, request, format=None):
+        # print(request.data)
         serializer = ProductoSerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
@@ -136,12 +170,23 @@ class ProductoAgregar(views.APIView):
 
 class ProductoBorrar(views.APIView):
     permission_classes = [AllowAny]  # [IsAdminUser]
-    def post(self, request):
-        # print(request.data)
-        prd = request.data.get('idproducto', None)
-        if Producto.borrar(prd):
+    def delete(self, request, *args, **kwargs):
+        prd = kwargs.get('idproducto', None)
+        producto = Producto()  # Crear una instancia de la clase Producto
+        if producto.borrar(prd):  # Llamar al método borrar en la instancia de Producto
             return Response(data='OK', status=status.HTTP_200_OK)
         return Response(data='ERROR', status=status.HTTP_400_BAD_REQUEST)
+
+class ProductoModificar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def put(self, request, *args, **kwargs):
+        prd = kwargs.get('idproducto', None)
+        producto = Producto.objects.get(idproducto=prd)
+        serializer = ProductoSerializer(producto, data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class StockList(generics.ListCreateAPIView):
     permission_classes = [AllowAny]

@@ -1,0 +1,72 @@
+<h2 class="tituloCentrado">ABM de Clientes</h2>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>idCliente</th>
+      <th>idUsuario</th>
+      <th>Apellido</th>
+      <th>Nombre</th>
+      <th>DNI</th>
+      <th>dirección</th>
+      <th>email</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of clientes">
+      <td>{{ c.idcliente }}</td>
+      <td>{{ c.idusuario }}</td>
+      <td>{{ c.apellido }}</td>
+      <td>{{ c.nombre }}</td>
+      <td>{{ c.dni }}</td>
+      <td>{{ c.direccion }}</td>
+      <td>{{ c.email }}</td>
+      <td>
+        <button (click)="modificarCliente(c.idcliente,c.idusuario,c.apellido,c.nombre,
+                                          c.dni,c.direccion,c.email)">Modificar</button>
+        &nbsp; &nbsp;
+        <button (click)="bajaCliente(c.idcliente)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<h2 class="tituloCentrado">{{fAccion}} Cliente</h2>
+<br>
+
+<form [formGroup]="formCliente" (submit)="enviarCliente($event)" novalidate>
+  <div class="container">
+  <div class="form-container">
+    <label>ID Cliente:</label>
+    <input type="number" class="form-control" id="idcliente" formControlName="idcliente" [(ngModel)]="fCliente.idcliente" required>
+    <br>
+    <label>ID Usuario:</label>
+    <input type="numbre" class="form-control" id="idusuario" formControlName="idusuario" [(ngModel)]="fCliente.idusuario" required>
+    <br>
+    <label>Apellido:</label>
+    <input type="text" class="form-control" id="apellido" formControlName="apellido" [(ngModel)]="fCliente.apellido" required>
+    <br>
+    <label>Nombre:</label>
+    <input type="text" class="form-control" id="nombre" formControlName="nombre" [(ngModel)]="fCliente.nombre" required>
+    <br>
+    <label>DNI:</label>
+    <input type="number" class="form-control" id="dni" formControlName="dni" [(ngModel)]="fCliente.dni" required>
+    <br>
+    <label>Dirección:</label>
+    <input type="text" class="form-control" id="direccion" formControlName="direccion" [(ngModel)]="fCliente.direccion" required>
+    <br>
+    <label>EMAIL:</label>
+    <input type="email" class="form-control" id="email" formControlName="email" [(ngModel)]="fCliente.email" required>
+    <br>
+    <input type="number" class="form-control" formControlName="idciudad" [(ngModel)]="fCliente.idciudad">
+    <input type="text" class="form-control" formControlName="telefono" [(ngModel)]="fCliente.telefono">
+    <input type="text" class="form-control" formControlName="celular" [(ngModel)]="fCliente.celular">
+    <input type="date" class="form-control" formControlName="fechanac" [(ngModel)]="fCliente.fechanac">
+    <button type="submit" class="tituloCentrado">{{fAccion}} Cliente</button>
+  </div>
+  </div>
+</form>
+

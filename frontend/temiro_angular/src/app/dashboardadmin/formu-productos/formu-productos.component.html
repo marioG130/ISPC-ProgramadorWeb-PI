@@ -1,38 +1,59 @@
-<section class="edit">
+<h2 class="agregarProducto">ABM de Productos</h2>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>IdProducto</th>
+      <th>Descripción</th>
+      <th>ID Tipo</th>
+      <th>PrecioCosto</th>
+      <th>Precio</th>
+      <th>Fecha de Ingreso</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productos">
+      <td>{{ p.idproducto }}</td>
+      <td>{{ p.descripcion }}</td>
+      <td>{{ p.idtipoproducto }}</td>
+      <td>{{ p.preciocosto }}</td>
+      <td>{{ p.precio }}</td>
+      <td>{{ p.fechaingreso }}</td>
+      <td>
+        <button (click)="bajaProducto(p.idproducto)">Eliminar</button>
+        &nbsp; &nbsp;
+        <button (click)="seleccionarProducto(p)">Modificar Producto</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-    <h2 style="text-align: center;">EDITAR UN PRODUCTO</h2>
-
-    <form [formGroup]="formProducto" (ngSubmit)="altaProducto($event)" novalidate>
-
-        <div class="mb-3">
-            <label for="idproducto" class="form-label">IdProducto</label>
-            <input type="number" class="form-control" id="idproducto" formControlName="idproducto" placeholder="Id del Producto">
-        </div>
-        <div class="mb-3">
-            <label for="descripcion" class="form-label">Descripcion</label>
-            <textarea class="form-control" id="descripcion" formControlName="descripcion" rows="3" placeholder="Descripción del Producto"></textarea>
-        </div>
-        <div class="mb-3">
-        <label for="idtipoproducto" class="form-label">IdTipoProducto</label>
-        <input type="text" class="form-control" id="idtipoproducto" formControlName="idtipoproducto" placeholder="Id del Tipo de Producto">
-        </div>
-        <div class="mb-3">
-        <label for="preciocosto" class="form-label">PrecioCosto</label>
-        <input type="number" class="form-control" id="preciocosto" formControlName="preciocosto" placeholder="Costo del Producto">
-        </div>
-        <div class="mb-3">
-        <label for="precio" class="form-label">Precio</label>
-        <input type="number" class="form-control" id="precio" formControlName="precio" placeholder="Precio del Producto">
-        </div>
-        <div class="mb-3">
-        <label for="fechaingreso" class="form-label">Fecha de Ingreso</label>
-        <input type="date" class="form-control" id="fechaingreso" formControlName="fechaingreso" placeholder="Fecha de Ingreso del Producto">
-        </div>
-        <div class="col-12">
-        <button class="btn btn-primary" type="submit">Agregar Producto</button>
-        <button type="button" class="btn btn-primary" (click)="bajaProducto($event)">Eliminar Producto</button>
-        </div>
-
-    </form>
-
-</section>
+<br>
+<h2 class="agregarProducto">{{ modificarProductoId ? 'Modificar Producto' : 'Agregar Producto' }}</h2>
+<br>
+<form [formGroup]="formProducto" (submit)="guardarProducto($event)" novalidate>
+  <div class="container">
+    <div class="form-container">
+      <label>ID del Producto:</label>
+      <input type="number" class="form-control" id="idproducto" formControlName="idproducto" [(ngModel)]="nuevoProducto.idproducto" required>
+      <br>
+      <label>Descripción:</label>
+      <input type="text" class="form-control" id="descripcion" formControlName="descripcion" [(ngModel)]="nuevoProducto.descripcion" required>
+      <br>
+      <label>ID del Tipo:</label>
+      <input type="number" class="form-control" id="idtipoproducto" formControlName="idtipoproducto" [(ngModel)]="nuevoProducto.idtipoproducto" required>
+      <br>
+      <label>Costo:</label>
+      <input type="number" class="form-control" id="preciocosto" formControlName="preciocosto" [(ngModel)]="nuevoProducto.preciocosto" required>
+      <br>
+      <label>Precio:</label>
+      <input type="number" class="form-control" id="precio" formControlName="precio" [(ngModel)]="nuevoProducto.precio" required>
+      <br>
+      <label>Fecha de Ingreso:</label>
+      <input type="date" class="form-control" id="fechaingreso" formControlName="fechaingreso" [(ngModel)]="nuevoProducto.fechaingreso" required>
+      <br>
+      <button type="submit" class="agregarProducto">{{ modificarProductoId ? 'Modificar Producto' : 'Agregar Producto' }}</button>
+    </div>
+  </div>
+</form>
