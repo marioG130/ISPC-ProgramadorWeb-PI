@@ -2,27 +2,33 @@ import { NgModule }              from '@angular/core';
 import { CommonModule }          from '@angular/common';
 import { ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule }      from '@angular/common/http';
+import { RouterModule }          from '@angular/router';
 
-import { NavbarComponent }          from '../comun/navbar/navbar.component';
-import { BodyComponent }            from '../comun/body/body.component';
+
 
 import { QuienesSomosComponent }    from './quienes-somos/quienes-somos.component';
 import { ContactoComponent }        from './contacto/contacto.component';
 import { TermCondicionesComponent } from './term-condic/term-condic.component';
+import { FaqComponent }             from './faq/faq.component';
+import { LoginComponent }           from './login/login.component';
+import { RegistroComponent }        from './registro/registro.component';
+
 
 
 @NgModule({
   declarations: [
-    NavbarComponent,
-    BodyComponent,
     QuienesSomosComponent,
     ContactoComponent,
-    TermCondicionesComponent
+    TermCondicionesComponent,
+    FaqComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule
   ]
 })
 export class HomeModule {

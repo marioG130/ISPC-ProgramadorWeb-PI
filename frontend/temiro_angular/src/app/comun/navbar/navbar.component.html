@@ -10,29 +10,29 @@
       </a>
       <ul class="navbar-nav d-flex justify-content-center align-items-center">
         <li class="nav-item">
-          <a class="nav-link" href="quienes-somos">¿Quiénes Somos?</a>
+          <a class="nav-link" routerLink="/quienes-somos" routerLinkActive="'active'">¿Quiénes Somos?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="productos">Productos</a>
+          <a class="nav-link" routerLink="/productos">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="servicios">Servicios</a>
+          <a class="nav-link" routerLink="/servicios">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contacto">Contacto</a>
+          <a class="nav-link" routerLink="/contacto">Contacto</a>
         </li>
         <li class="nav-item">
           <!-- en li *ngIf="!estaLogueado()"-->
-          <a class="nav-link" routerLink="/login" class="nav-link text-info" href="login">Ingresar</a>
+          <a class="nav-link" routerLink="/login" class="nav-link text-info">Ingresar</a>
         </li>
         <!-- <li class="nav-item" *ngIf="estaLogueado()">
           <a class="nav-link" (click)="logout()" ó routerLink="/" class="nav-link text-info" href="logout">Salir</a>
         </li>-->
         <li class="nav-item">
-          <a class="nav-link text-info" href="registro" data-target="#modallogin">Registrarse</a>
+          <a class="nav-link text-info" routerLink="/registro" data-target="#modallogin">Registrarse</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="carrito" data-target="#modallogin">Carrito de Compras</a>
+          <a class="nav-link" routerLink="/carrito" data-target="#modallogin">Carrito de Compras</a>
         </li>
       </ul>
     </div>
