@@ -14,14 +14,17 @@ export class ServClientesService {
         this.http = h;
     }
 
-    public eliminar(idcli: number) {
+    public eliminar(idcli: number): Observable<boolean> {
+        let resu = false;
         if (idcli && confirm("¿Está seguro de eliminar al cliente N° "+idcli+" ?")) {
             this.http.delete<any>(this.apiUrl+"/bajacliente/"+idcli).subscribe(() => {
                 alert("Cliente N° "+idcli+" eliminado correctamente");
+                resu = true;
             }, err=> {
                 alert("Algo salió mal al eliminar el cliente");
             });
         }
+        return of(resu);
     }
 
 }

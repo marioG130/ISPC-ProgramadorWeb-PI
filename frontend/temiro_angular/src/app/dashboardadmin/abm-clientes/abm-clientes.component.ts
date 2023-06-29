@@ -93,8 +93,12 @@ export class AbmClientesComponent {
         } */
 
         // Baja de cliente usando un servicio
-        this.srvcli.eliminar(idcliente);
-        this.obtenerClientes();
+        this.srvcli.eliminar(idcliente).subscribe(data => {
+            if (data) {
+                // Si elimina el cliente se actualiza la lista de clientes
+                this.obtenerClientes();
+            }
+        });
     }
 
     modificarCliente(idcliente:number, idusuario:number, apellido:string, nombre: string,
