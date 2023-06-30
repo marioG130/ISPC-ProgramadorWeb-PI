@@ -61,6 +61,9 @@ urlpatterns = [
     re_path(r'^venta$', VentaList.as_view()),
     re_path(r'^venta/(?P<pk>[0-9]+)$', VentaDetail.as_view()),
 
+    path('altadetalleventa/', DetalleVentaAgregar.as_view(), name='altadetalleventa'),
+    path('moddetalleventa/<int:idventa>/', DetalleVentaModificar.as_view()),
+    path('bajadetalleventa/<int:idventa>/', DetalleVentaBorrar.as_view(), name='bajadetalleventa'),
     re_path(r'^detalleventa$', DetalleVentaList.as_view()),
     re_path(r'^detalleventa/(?P<pk>[0-9]+)$', DetalleVentaDetail.as_view()),
 
