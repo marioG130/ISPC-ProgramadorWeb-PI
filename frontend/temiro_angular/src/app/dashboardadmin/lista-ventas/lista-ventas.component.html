@@ -1,0 +1,20 @@
+<br>
+<h2>Listado de Ventas</h2>
+<br>
+
+<app-una-venta *ngFor="let v of ventas; let i=index" [kv]="v" [ki]="i">
+</app-una-venta>
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let v of ventas; let i=index">
+        {{i+1}} : {{v.fecha}} - {{v.idcliente}} - {{v.descripcion}}
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<br>
+<br>

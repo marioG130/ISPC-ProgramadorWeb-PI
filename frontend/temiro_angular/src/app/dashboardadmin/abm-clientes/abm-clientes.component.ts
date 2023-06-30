@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { ServClientesService } from './serv-clientes.service';
 
 @Component({
   selector: 'app-abm-clientes',
@@ -10,13 +11,21 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class AbmClientesComponent {
 
+    private apiUrl = "http://localhost:8000/webapi";
+    private fb: FormBuilder;
+    private http: HttpClient;
+    private router: Router;
+    private srvcli: ServClientesService;
     formCliente!: FormGroup;
     clientes: any[] = [];
     fCliente: any = {};
     fAccion: string = "Agregar";
-    private apiUrl = "http://localhost:8000/webapi";
 
-    constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
+    constructor(f: FormBuilder, h: HttpClient, r: Router, s: ServClientesService) {
+        this.fb = f;
+        this.http = h;
+        this.router = r;
+        this.srvcli = s;
         this.formCliente = this.fb.group({
             idcliente: ['', [Validators.required]],
             idusuario: ['', [Validators.required]],
@@ -73,14 +82,23 @@ export class AbmClientesComponent {
     }
 
     bajaCliente(idcliente: number) {
-        if (idcliente && confirm("¿Está seguro de eliminar al cliente N° "+idcliente+" ?")) {
+        // Baja de cliente directa en este mismo método
+     /* if (idcliente && confirm("¿Está seguro de eliminar al cliente N° "+idcliente+" ?")) {
             this.http.delete<any>(this.apiUrl+"/bajacliente/"+idcliente).subscribe(() => {
                 alert("Cliente N° "+idcliente+" eliminado correctamente");
                 this.obtenerClientes();
             }, err=> {
                 alert("Algo salió mal al eliminar el cliente");
             });
-        }
+        } */
+
+        // Baja de cliente usando un servicio
+        this.srvcli.eliminar(idcliente).subscribe(data => {
+            if (data) {
+                // Si elimina el cliente se actualiza la lista de clientes
+                this.obtenerClientes();
+            }
+        });
     }
 
     modificarCliente(idcliente:number, idusuario:number, apellido:string, nombre: string,

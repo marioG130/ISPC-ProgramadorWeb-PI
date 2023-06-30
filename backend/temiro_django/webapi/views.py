@@ -242,7 +242,66 @@ class DetalleVentaDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [AllowAny]
     queryset = DetalleVenta.objects.all()
     serializer_class = DetalleVentaSerializer
+    
+class VentaAgregar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def post(self, request, format=None):
+        # print(request.data)
+        serializer = VentaSerializer(data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class VentaBorrar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def delete(self, request, *args, **kwargs):
+        vta = kwargs.get('idventa', None)
+        venta = Venta()  # Crear una instancia de la clase Venta
+        if venta.borrar(vta):  # Llamar al método borrar en la instancia de Producto
+            return Response(data='OK', status=status.HTTP_200_OK)
+        return Response(data='ERROR', status=status.HTTP_400_BAD_REQUEST)
+
+class VentaModificar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def put(self, request, *args, **kwargs):
+        vta = kwargs.get('idventa', None)
+        venta = Venta.objects.get(idventa=vta)
+        serializer = VentaSerializer(producto, data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class DetalleVentaAgregar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def post(self, request, format=None):
+        # print(request.data)
+        serializer = DetalleVentaSerializer(data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class DetalleVentaBorrar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def delete(self, request, *args, **kwargs):
+        detvnta = kwargs.get('iddetalleventa', None)
+        detventa = DetalleVenta()  # Crear una instancia de la clase Producto
+        if detventa.borrar(detvnta):  # Llamar al método borrar en la instancia de Producto
+            return Response(data='OK', status=status.HTTP_200_OK)
+        return Response(data='ERROR', status=status.HTTP_400_BAD_REQUEST)
+
+class DetalleVentaModificar(views.APIView):
+    permission_classes = [AllowAny]  # [IsAdminUser]
+    def put(self, request, *args, **kwargs):
+        detvnta = kwargs.get('iddetalleventa', None)
+        detventa = DetalleVenta.objects.get(iddetalleventa=detvnta)
+        serializer = DetalleVentaSerializer(detventa, data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # ---- Vistas referidas a servicios adicionales
 
