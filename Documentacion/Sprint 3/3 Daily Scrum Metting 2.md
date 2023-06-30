@@ -2,6 +2,7 @@
 
 Siendo las 21 horas del miércoles 27 de mayo comienza la reunión del grupo “Óptica TeMiro” para poder llevar a cabo en la daily número 2 del Sprint 3. A la misma asisten Tatiana, Mario, Gonzalo, Alejandro, Noelia y Fernanda.
 
+A partir de la fecha Mariano Delfino deja la tecnicatura y al ser el Scrum-Master, decidimos como grupo que el Nuevo Scrum-Master será Mario Guerra.
 En la reunión se socializan los cambios realizados tanto en el frontend como en el backend, además luego se acordaron las tareas y responsables a realizar hasta la próxima reunión programada para el sábado 03 de junio.
 
 ## En cuanto al frontend y documentación
