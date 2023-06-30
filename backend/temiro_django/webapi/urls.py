@@ -40,11 +40,17 @@ urlpatterns = [
     path('bajaproducto/<int:idproducto>/', ProductoBorrar.as_view(), name='bajaproducto'),
     re_path(r'^producto$', ProductoList.as_view()),
     re_path(r'^producto/(?P<pk>[0-9]+)$', ProductoDetail.as_view()),
-
+    
     re_path(r'^stock$', StockList.as_view()),
     re_path(r'^stock/(?P<pk>[0-9]+)$', StockDetail.as_view()),
 
     # ---- Urls referidas a las ventas
+    
+   path('altaventa/', VentaAgregar.as_view(), name='ventaproducto'),
+   path('modventa/<int:idventa>/', VentaModificar.as_view()),
+   path('bajaventa/<int:idventa>/', VentaBorrar.as_view(), name='bajaventa'),
+   re_path(r'^venta$', VentaList.as_view()),
+   re_path(r'^venta/(?P<pk>[0-9]+)$', VentaDetail.as_view()),
 
     re_path(r'^vendedor$', VendedorList.as_view()),
     re_path(r'^vendedor/(?P<pk>[0-9]+)$', VendedorDetail.as_view()),
