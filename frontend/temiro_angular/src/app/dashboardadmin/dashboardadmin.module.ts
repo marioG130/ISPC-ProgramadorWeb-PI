@@ -8,12 +8,17 @@ import { FormuProductosComponent } from './formu-productos/formu-productos.compo
 import { IndiceAdmComponent }      from './indice-adm/indice-adm.component';
 import { AbmClientesComponent }    from './abm-clientes/abm-clientes.component';
 import { ServClientesService }     from './abm-clientes/serv-clientes.service';
+import { ListaVentasComponent }    from './lista-ventas/lista-ventas.component';
+import { ServVentasService }       from './lista-ventas/serv-ventas.service';
+import { UnaVentaComponent }       from './lista-ventas/una-venta/una-venta.component';
 
 @NgModule({
   declarations: [
     FormuProductosComponent,
     IndiceAdmComponent,
-    AbmClientesComponent
+    AbmClientesComponent,
+    ListaVentasComponent,
+    UnaVentaComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +27,8 @@ import { ServClientesService }     from './abm-clientes/serv-clientes.service';
     RouterModule
   ],
   providers: [
-    ServClientesService
+    ServClientesService,
+    ServVentasService
   ],
 })
 export class DashboardAdminModule {

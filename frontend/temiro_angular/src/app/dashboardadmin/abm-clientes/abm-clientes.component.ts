@@ -21,7 +21,7 @@ export class AbmClientesComponent {
     fCliente: any = {};
     fAccion: string = "Agregar";
 
-    constructor(f: FormBuilder, h: HttpClient, r: Router, s:ServClientesService) {
+    constructor(f: FormBuilder, h: HttpClient, r: Router, s: ServClientesService) {
         this.fb = f;
         this.http = h;
         this.router = r;
