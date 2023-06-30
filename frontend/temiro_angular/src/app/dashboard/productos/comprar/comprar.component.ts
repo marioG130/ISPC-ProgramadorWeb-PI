@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { loadStripe, Stripe } from '@stripe/stripe-js';
-
+import { VentaService } from './venta.service';
 
 @Component({
   selector: 'app-comprar',
@@ -16,7 +16,7 @@ export class ComprarComponent implements OnInit {
     private pasarela!: Stripe | null;
     private montoPesos: number;
 
-    constructor(private http: HttpClient, private route: ActivatedRoute, private location: Location) {
+    constructor(private http: HttpClient, private route: ActivatedRoute, private location: Location, private ventaService: VentaService) {
         this.montoPesos = 0;
     }
 
@@ -56,18 +56,40 @@ export class ComprarComponent implements OnInit {
                 // console.log(resu);
                 let estado = resu.source!.status;         // valor devuelto por Stripe
                 let debito = resu.source!.amount! / 100;  // valor devuelto por Stripe
-                if (estado=='chargeable') {
-                    alert('Pago Exitoso! \n'+
-                          'Se debitaron $ '+String(debito)+'\n'+
-                          'Muchas gracias');
-                    this.location.back();
-                } else {
+                if (estado == 'chargeable') {
+                    alert('Pago Exitoso! \n' +
+                      'Se debitaron $ ' + String(debito) + '\n' +
+                      'Muchas gracias');
+                  
+                    const id_venta = 1;
+                    const id_producto = 1;
+                    const cantidad = 2;
+                    const descuento = 0.1;
+                  
+                    // Insertar registro de venta y detalleventa
+                    const detallesVenta = {
+                        'iddetalleventa': 1, 
+                        'idventa': id_venta,
+                        'idproducto': id_producto,
+                        'cantidad': cantidad,
+                        'descuento': descuento
+                    };
+                    this.ventaService.insertarVenta(detallesVenta).subscribe(
+                      (respuesta) => {
+                        console.log('Registro de venta y detalleventa insertado con éxito');
+                        this.location.back();
+                      },
+                      (error) => {
+                        console.error('Error al insertar el registro de venta y detalleventa', error);
+                        this.location.back();
+                      }
+                    );
+                  } else {
                     alert('Hubieron problemas al procesar el pago!');
-                }
+                  }
             } catch (e) {
                 console.warn(e);
             }
         });
     }
-
-}
+ }
